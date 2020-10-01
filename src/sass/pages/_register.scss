@@ -1,0 +1,32 @@
+.register {
+    width: 100%;
+    margin-bottom: 80px;
+
+    &__content {
+        width: 100%;
+
+        &__form {
+            &__notification {
+                display: flex;
+                align-items: baseline;
+                font-size: 12px;
+                font-weight: 600;
+
+                .point {
+                    width: 5px;
+                    height: 5px;
+                    background: #eaeaea;
+                    margin-right: 5px;
+                }
+            }
+
+            &__title2 {
+                margin-top: 30px;
+            }
+
+            &__btn {
+                justify-content: space-between;
+            }
+        }
+    }
+}

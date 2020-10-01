@@ -1,0 +1,96 @@
+.cart {
+    &__content {
+        display: block;
+        width: 100%;
+
+        &__title {
+            h1 {
+                text-transform: uppercase;
+                font-size: 28px;
+                font-weight: 500;
+                margin: 20px 0;
+            }
+        }
+
+        &__table {
+            width: 100%;
+
+            table {
+                width: 100%;
+                
+                th {
+                    background-color: #fafafa;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 5px 0;
+                }
+
+                td {
+                    font-size: 13px;
+                    height: 200px;
+                }
+
+                .price {
+                    color: #000;
+                }
+
+                .num {
+                    span {
+                        border: 1px solid #e8e8e8;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+
+            table, th, td {
+                border: 1px solid #e8e8e8;
+                border-collapse: collapse;
+                text-align: center;
+            }
+        }
+
+        &__btn {
+            margin: 30px 0 80px;
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                margin-left: 10px;
+                @include button(#000, 12px, 5px 10px, #fff);
+                text-transform: uppercase;
+
+                &:hover {
+                    background: $green;
+                }
+            }
+
+            .delete,
+            .update {
+                width: 82px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cart__content__table {
+        table {
+            th {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            td {
+                min-width: 55px;
+                img {
+                    width: 50% !important;
+                }
+
+                .price {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

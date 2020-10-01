@@ -1,0 +1,46 @@
+@import './base/global';
+@import './base/mixins';
+@import './base/placeholders';
+@import './base/variables';
+@import './components/components';
+
+// Home Page
+@import './layouts/header';
+@import './pages/index';
+@import './layouts/footer';
+
+// Detail Page
+@import './pages/detail';
+
+// Grid Page
+@import './pages/grid';
+
+// List Page
+@import './pages/list';
+
+// Cart Page
+@import './pages/cart';
+
+// Account Page
+@import './pages/account';
+
+// Register Page
+@import './pages/register';
+
+// Login Page
+@import './pages/login';
+
+// About Us
+@import './pages/about';
+
+// Contact Us
+@import './pages/contact';
+
+// Blog Page
+@import './pages/blog';
+
+// Blog Detail
+@import './pages/blog-detail';
+
+// Notfound Page
+@import './pages/notfound';

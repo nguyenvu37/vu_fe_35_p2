@@ -1,0 +1,105 @@
+.list {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    display: flex;
+
+    &__content {
+        margin-left: 15px;
+
+        &__product {
+            display: block;
+            margin: 40px 0;
+
+            &__item {
+                display: flex;
+                margin-top: 30px;
+                height: 310px;
+
+                &__info {
+                    margin-left: 30px;
+
+                    h4 {
+                        @include font-a(#000, 18px, 400);
+                        margin-bottom: 10px;
+                    }
+
+                    .list__content__product__item__info--appreciate {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        i {
+                            margin-right: 3px;
+                        }
+
+                        p {
+                            margin-left: 10px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                &__text {
+                    margin-bottom: 20px;
+                    
+                    p {
+                        margin-bottom: 3px;
+                    }
+                }
+
+                &__icon {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 10px;
+
+                    button {
+                        padding: 10px 20px;
+                        font-size: 14px;
+                    }
+
+                    a {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .list-product1,
+            .list-product2 {
+                img {
+                    border-bottom: 1px dashed #e6e6e6;
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media screen and (max-width: 1300px) {
+    .list {
+        flex-direction: column;
+
+        &__content {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
+
+    aside,
+    article {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .list__content__product__item  {
+        flex-direction: column;
+        height: 700px;
+
+        img {
+            height: 500px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+}

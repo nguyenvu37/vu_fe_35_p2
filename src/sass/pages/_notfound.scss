@@ -1,0 +1,72 @@
+.notfound {
+    width: 100%;
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        &__img {
+            width: 805px;
+            height: 403px;
+            background-image: url('../../../assets/img/404-page/bg-404.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        &__notification {
+            text-align: center;
+
+            h2 {
+                font-family: $roboto;
+                font-size: 31.56px;
+                font-weight: 400;
+                color: #3a4c53;
+                margin-top: 30px;
+                word-spacing: 0.3rem;
+            }
+
+            &__search {
+                width: 568px;
+                margin: 40px auto 30px;
+                position: relative;
+
+                input {
+                    width: 568px;
+                    font-size: 20px;
+                    padding: 10px 20px;
+                    border-radius: 25px;
+                    outline: none;
+                    border: 1px solid #666262;
+                }
+
+                i {
+                    position: absolute;
+                    right: 20px;
+                    font-size: 25px;
+                    top: 20%;
+                    cursor: pointer;
+                }
+            } 
+        }
+
+        &__btn {
+            text-align: center;
+
+            a {
+                text-transform: uppercase;
+                @include font-a(#000, 15px, 500);
+                text-decoration: none;
+            }
+
+            .btn-contact {
+                border-right: 1px solid #666262;
+                padding-right: 30px;
+            }
+
+            .btn-home {
+                padding-left: 30px;
+            }
+        }
+    }
+}

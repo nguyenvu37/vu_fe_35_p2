@@ -1,0 +1,88 @@
+@import './variables';
+@import url(//db.onlinewebfonts.com/c/11f83a01c429e081482bf04fec422565?family=UTM+ViceroyJF);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: UTMAvoBold;
+    src: url(../../../assets/font/utm-avobold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: UTMasgraceland;
+    src:url(../../../assets/font/UTMASGraceland.ttf);
+}
+
+@font-face {
+    font-family: Timenewroman;
+    src:url(../../../assets/font/TimesNewRoman400.ttf);
+}
+
+@font-face {
+    font-family: UTMAndrogyne;
+    src:url(../../../assets/font/UTMAndrogyne.ttf);
+}
+
+.box {
+    display: flex;
+    width: 1180px;
+    margin: 0 auto;
+
+    h3 {
+        font-size: 18px;
+        color: #ffffffc7;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+ul {
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+// Responsive
+@media screen and (max-width: 1300px) {
+    .box {
+        width: 720px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .box {
+        width: 450px !important;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .box {
+        width: 320px !important;
+    }
+}

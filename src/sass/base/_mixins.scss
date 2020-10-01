@@ -1,0 +1,28 @@
+@mixin  font-a($cl, $s, $fw:700) {
+    color: $cl;
+    font-size: $s;
+    font-weight: $fw;
+}
+
+@mixin button($bg, $s, $pd, $cl:#fff) {
+    background: $bg;
+    color: $cl;
+    font-size: $s;
+    padding: $pd;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+@mixin position-absolute($text, $top, $left) {
+    position: absolute;
+    text-transform: $text;
+    top: $top;
+    left: $left;
+}
+
+@mixin content-goods($color) {
+    background: $color;
+    width: 100%;
+    height: 100%;
+}
