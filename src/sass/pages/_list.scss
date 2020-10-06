@@ -1,3 +1,4 @@
+@import "../base/mixins";
 .list {
     margin-top: 50px;
     margin-bottom: 80px;
@@ -41,7 +42,7 @@
 
                 &__text {
                     margin-bottom: 20px;
-                    
+
                     p {
                         margin-bottom: 3px;
                     }
@@ -91,7 +92,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .list__content__product__item  {
+    .list__content__product__item {
         flex-direction: column;
         height: 700px;
 

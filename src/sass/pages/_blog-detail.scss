@@ -1,3 +1,5 @@
+@import "../base/variables";
+@import "../base/mixins";
 .blog-detail {
     width: 100%;
     margin-bottom: 80px;
@@ -74,7 +76,7 @@
                 &__img {
                     width: 97%;
                     height: 200px;
-                    background-image: url('../../../assets//img/blog-detail/video.jpg');
+                    background-image: url("../../assets//img/blog-detail/video.jpg");
                     background-size: cover;
                     background-position: center;
                     margin-top: 10px;
@@ -207,7 +209,7 @@
 
                 .form-btn {
                     margin-top: 30px;
-                    
+
                     a {
                         @include button(#000, 14px, 10px 20px, #fff);
                         text-transform: uppercase;

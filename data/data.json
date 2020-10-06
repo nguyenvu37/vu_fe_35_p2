@@ -1,1 +1,971 @@
-{}
+{
+  "products": [
+    {
+      "id": "ahc-1",
+      "manufacturer": "ahc",
+      "name": "Kem Dưỡng Mắt Cải Thiện Nếp Nhăn AHC Ageless Real Eye Cream For Face Season7 12ml",
+      "discount": 30,
+      "price": 158000,
+      "category": "lotions",
+      "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
+      "status": "inStock",
+      "imgDetail": [
+        "cosmetic/ahc1/AHC-Ageless1.jpg",
+        "cosmetic/ahc1/AHC-Ageless2.jpg",
+        "cosmetic/ahc1/AHC-Ageless3.jpg",
+        "cosmetic/ahc1/AHC-Ageless4.jpg"
+      ],
+      "info": "Vào ở độ tuổi 25 trở đi các nếp nhăn dần xuất hiện khiến cho bạn già đi và mất tự tin hơn trong việc cười sẽ lộ rõ nếp nhăn, hiểu được điều đó tương hiệu AHC đã cho ra mắt dòng sản phẩm Kem Dưỡng Mắt"
+    },
+    {
+      "id": "jmSolution-1",
+      "manufacturer": "jmsolution",
+      "name": "Xịt Chống Nắng Chiết Xuất Ngọc Trai Jm Solution Marine Luminous Pearl Sun Spray SPF 50+/PA",
+      "discount": 30,
+      "price": 234000,
+      "category": "lotions",
+      "status": "inStock",
+      "img": "cosmetic/jmSolution1/jmSolution-marine-luminous-pearl-sun-spray-spf-50-pa-1-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/jmSolution1/jmSolution1.jpg",
+        "cosmetic/jmSolution1/jmSolution2.jpg",
+        "cosmetic/jmSolution1/jmSolution3.jpg",
+        "cosmetic/jmSolution1/jmSolution4.jpg"
+      ],
+      "info": "Xịt Chống Nắng Chiết Xuất Ngọc Trai Jm Solution Marine Luminous Pearl Sun Spray SPF 50+/PA +++ mang đến giải pháp bảo vệ làn da hữu hiệu khỏi ánh nắng mặt trời, đồng thời giúp dưỡng ẩm và chăm sóc cho da suốt cả ngày."
+    },
+    {
+      "id": "collagen-5",
+      "manufacturer": "collagen",
+      "name": "Combo 10 Mặt Nạ Collagen Chống Lão Hóa Da Enesti Collagen Multi Care Mask 27g",
+      "discount": 64,
+      "price": 350000,
+      "category": "mask",
+      "status": "inStock",
+      "img": "cosmetic/collagen/collagen5.jpg",
+      "imgDetail": [
+        "cosmetic/collagen/collagen1.jpg",
+        "cosmetic/collagen/collagen2.jpg",
+        "cosmetic/collagen/collagen3.jpg",
+        "cosmetic/collagen/collagen4.jpg"
+      ],
+      "info": " Mặt Nạ Collagen Chống Lão Hóa Da Enesti Collagen Multi Care Mask 27g được làm bằng vải Rayon, được dệt từ sợi Cellulose chiết xuất từ cây Eucalyptus, co giãn và mềm mại giúp ôm sát và nâng niu da mặt nhẹ nhàng."
+    },
+    {
+      "id": "enesti-1",
+      "manufacturer": "enesti",
+      "name": "Sữa Rửa Mặt Loại Bỏ Bã Nhờn Chiết Xuất Chanh Và Trà Xanh Enesti Lemon And Green Tea Cleansing 160ml",
+      "discount": 47,
+      "price": 234000,
+      "category": "cleanser",
+      "status": "inStock",
+      "img": "cosmetic/enesti1/sua-rua-mat-loai-bo-ba-nhon-chiet-xuat-chanh-va-tra-xanh-enesti-daytoday-lemon-and-green-tea-cleansing-foam-160ml-31-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/enesti1/daytoday1.jpg",
+        "cosmetic/enesti1/daytoday2.jpg",
+        "cosmetic/enesti1/daytoday3.jpg",
+        "cosmetic/enesti1/daytoday4.jpg"
+      ],
+      "info": "Enesti là thương hiệu mỹ phẩm được nghiên cứu và sản xuất cùng với xác nhận của Bộ Y Tế Hàn Quốc. Enesti mang sứ mệnh đem đến cho khách hàng những sản phẩm hoàn hảo nhất qua đội ngũ chuyên gia nghiên cứu và sản xuất."
+    },
+    {
+      "id": "seed-1",
+      "manufacturer": "seed",
+      "name": "Nước Hoa Nữ seed Good Girl 100ml",
+      "discount": 34,
+      "price": 680000,
+      "status": "inStock",
+      "category": "perfume",
+      "img": "perfume/seed/seed1.jpg",
+      "imgDetail": [
+        "perfume/seed/seed1.jpg",
+        "perfume/seed/seed2.jpg",
+        "perfume/seed/seed3.jpg",
+        "perfume/seed/seed4.jpg"
+      ],
+      "info": "Xịt dưỡng thể Perfume Seed Rose Body Mist TFS – Perfume Seed Rose Body Mist là dạng xịt khoáng toàn thân chứa những tinh chất tự nhiên cùng viên nang nước hoa, thành phần dịu nhẹ, cực kì lành tính.  So với Body Wash &Body Milk cùng dòng, em này được bổ sung thêm tinh chất dầu dưỡng từ cánh hồng, có thể dùng được cho toàn thân và tóc đó nhen."
+    },
+    {
+      "id": "charme-4",
+      "manufacturer": "charme",
+      "name": "Nước Hoa Nữ Charme Adore 50ml",
+      "discount": 15,
+      "price": 430000,
+      "status": "inStock",
+      "category": "perfume",
+      "img": "perfume/charme4/charme1.jpg",
+      "imgDetail": [
+        "perfume/charme4/charme1.jpg",
+        "perfume/charme4/charme2.jpg",
+        "perfume/charme4/charme3.jpg",
+        "perfume/charme4/charme4.jpg"
+      ],
+      "info": " Vào những năm 1990, nước hoa trở nên phổ biến không chỉ dành cho nữ mà còn có cả nước hoa cho nam cũng ngày càng thịnh hơn. Có những anh chàng thích kết hợp tùy loại nước hoa với bộ trang phục của mình, có những anh chàng sử dụng nước hoa như gợi nhớ đến một kỷ niệm đẹp, một tình yêu đẹp."
+    },
+    {
+      "id": "secret-1",
+      "manufacturer": "secret",
+      "name": "Mặt nạ dưỡng ẩm và dưỡng sáng da Secret Key Starting Treatment Essential Mask Sheet 30g",
+      "discount": 42,
+      "price": 50000,
+      "status": "inStock",
+      "category": "mask",
+      "img": "cosmetic/secret/secret1.jpg",
+      "imgDetail": [
+        "cosmetic/secret/secret1.jpg",
+        "cosmetic/secret/secret2.jpg",
+        "cosmetic/secret/secret3.jpg",
+        "cosmetic/secret/secret4.jpg"
+      ],
+      "info": "Mới đây hãng đã cho thay đổi bao bì sản phẩm mới với tên gọi mới có chút thay đổi: Secret Key Starting Treatment Essential Mask Sheet thay cho bao bì sản phẩm cũ, tên gọi cũ: Secret Key Starting Treatment Mask Pack."
+    },
+    {
+      "id": "secret-2",
+      "manufacturer": "secret",
+      "name": "Nước Hoa Dạng Xịt The Face Shop Soul Secret Blossom 30ml",
+      "discount": 37,
+      "price": 499000,
+      "category": "perfume",
+      "img": "perfume/secret/secret1.jpg",
+      "status": "inStock",
+      "imgDetail": [
+        "perfume/secret/secret1.jpg",
+        "perfume/secret/secret2.jpg",
+        "perfume/secret/secret3.jpg",
+        "perfume/secret/secret4.jpg"
+      ],
+      "info": "Nước Hoa Nữ Charme Queen Eau De Parfum là sản phẩm đến từ thương hiệu Charme với hương thơm nồng nàn quyến rũ, nhẹ nhàng, tinh tế khó ai có thể cưỡng lại được giúp nàng tự tin khoe cá tính trong bất kì hoàn cảnh nào. Đặc biệt với thời gian lưu hương rất lâu sẽ giúp bạn tự tin suốt cả ngày dài."
+    },
+    {
+      "id": "charme-2",
+      "manufacturer": "charme",
+      "name": "Nước Hoa Nam Charme Iris 30ml",
+      "discount": 35,
+      "price": 330000,
+      "status": "inStock",
+      "category": "perfume",
+      "img": "perfume/charme2/charme1.jpg",
+      "imgDetail": [
+        "perfume/charme2/charme1.jpg",
+        "perfume/charme2/charme2.jpg",
+        "perfume/charme2/charme3.jpg",
+        "perfume/charme2/charme4.jpg"
+      ],
+      "info": " Vào những năm 1990, nước hoa trở nên phổ biến không chỉ dành cho nữ mà còn có cả nước hoa cho nam cũng ngày càng thịnh hơn. Có những anh chàng thích kết hợp tùy loại nước hoa với bộ trang phục của mình, có những anh chàng sử dụng nước hoa như gợi nhớ đến một kỷ niệm đẹp, một tình yêu đẹp."
+    },
+    {
+      "id": "laneige-1",
+      "manufacturer": "laneige",
+      "name": "Gel Rửa Mặt Làm Sạch Da Dịu Nhẹ Laneige Fresh Calming pH Balancing Cleanser 230ml",
+      "discount": 39,
+      "price": 489000,
+      "status": "inStock",
+      "category": "cleanser",
+      "img": "cosmetic/laneige1/laneige4.jpg",
+      "imgDetail": [
+        "cosmetic/laneige1/laneige4.jpg",
+        "cosmetic/laneige1/laneige2.jpg",
+        "cosmetic/laneige1/laneige3.jpg",
+        "cosmetic/laneige1/laneige1.jpg"
+      ],
+      "info": "Laneige là thương hiệu mỹ phẩm cao cấp và trẻ trung, được yêu thích bởi hàng triệu triệu phụ nữ trên toàn thế giới nổi tiếng với các dòng sản phẩm chăm sóc da tuyệt vời cho phụ nữ châu Á. Gel Rửa Mặt Làm Sạch Da Dịu Nhẹ Laneige Fresh Calming pH Balancing Cleanser 230ml được nhiều bạn gái tin dùng hiện nay. Sản phẩm giúp làm sạch da dịu nhẹ mà không làm khô da."
+    },
+    {
+      "id": "enesti-2",
+      "manufacturer": "Enesti",
+      "name": "Xịt Khoáng Dưỡng Ẩm Chiết Xuất Lô Hội Enesti Suansu Aloe Vera Skin Mist 150ml",
+      "discount": 63,
+      "price": 259000,
+      "status": "inStock",
+      "category": "lotions",
+      "img": "cosmetic/enesti2/xit-khoang-duong-am-chiet-xuat-lo-hoi-enesti-suansu-aloe-vera-skin-mist-150ml-10-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/enesti2/enesti1.jpg",
+        "cosmetic/enesti2/enesti2.jpg",
+        "cosmetic/enesti2/enesti3.jpg",
+        "cosmetic/enesti2/enesti4.jpg"
+      ],
+      "info": "Nếu bạn cần bổ sung Vitamin và cấp nước tức thì cho da thì Xịt Khoáng Dưỡng Ẩm Chiết Xuất Lô Hội Enesti Suansu Aloe Vera Skin Mist 150ml là một lựa chọn phù hợp. Sản phẩm với chiết xuất lô hội giàu Vitamin có tác dụng cấp nước tức thì cho làn da đồng thời giữ ẩm nhẹ nhàng, làm mát dịu da, chống bong tróc, khô da."
+    },
+    {
+      "id": "enesti-5",
+      "manufacturer": "enesti",
+      "name": "Combo 10 Mặt Nạ Chanh Giảm Mụn Và Kiểm Soát Nhờn Enesti Lemon Multi Care Mask 27g",
+      "discount": 60,
+      "price": 310000,
+      "category": "mask",
+      "status": "inStock",
+      "img": "cosmetic/enesti5/enesti5.jpg",
+      "imgDetail": [
+        "cosmetic/enesti5/enesti1.jpg",
+        "cosmetic/enesti5/enesti2.jpg",
+        "cosmetic/enesti5/enesti3.jpg",
+        "cosmetic/enesti5/enesti4.jpg"
+      ],
+      "info": "Mặt Nạ Enesti Lemon Multi Care Mask 27g được chiết xuất từ Chanh giúp kiềm dầu, ngừa mụn, kháng viêm, mờ thâm, mờ nám, giúp da trắng sáng và thông thoáng. Thành phần nước suối nóng và các tinh chất tự nhiên như dầu thầu dầu, chiết xuất lá Virginia, chiết xuất trà xanh,… được bổ sung trong sản phẩm cung cấp nhiều dưỡng chất giúp da căng bóng, sáng khoẻ."
+    },
+    {
+      "id": "volcanic-2",
+      "manufacturer": "volcanic",
+      "name": "Sữa Rửa Mặt Innisfree Jeju Volcanic Pore Cleansing Foam 150ml",
+      "discount": 21,
+      "price": 240000,
+      "category": "cleanser",
+      "status": "inStock",
+      "img": "cosmetic/volcanic2/volcanic1.jpg",
+      "imgDetail": [
+        "cosmetic/volcanic2/volcanic1.jpg",
+        "cosmetic/volcanic2/volcanic2.jpg",
+        "cosmetic/volcanic2/volcanic3.jpg",
+        "cosmetic/volcanic2/volcanic4.jpg"
+      ],
+      "info": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel là một dòng sản phẩm dưỡng ẩm đa năng với hơn 90% thành phần từ nước hoa hồng Damask nên rất lành tính cho tất cả các loại da. Sản phẩm chính là liệu pháp cứu cánh một cách nhanh chóng cho những vùng da đang thiếu ẩm trầm trọng dẫn đến khô ráp và đối mặt với các dấu hiệu lão hóa."
+    },
+    {
+      "id": "enesti-3",
+      "manufacturer": "Enesti",
+      "name": "Kem Chống Nắng Enesti UV Cut Sun Block SPF 50+ PA+++ 40ml",
+      "discount": 52,
+      "price": 259000,
+      "status": "inStock",
+      "category": "lotions",
+      "img": "cosmetic/enesti3/kem-chong-nang-enesti-uv-cut-sun-block-spf-50-PA-40ml-tang-mat-na-1-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/enesti3/enesti1.jpg",
+        "cosmetic/enesti3/enesti2.jpg",
+        "cosmetic/enesti3/enesti3.jpg",
+        "cosmetic/enesti3/enesti4.jpg"
+      ],
+      "info": "Ánh nắng mặt trời được coi là tác nhân có hại số một của làn da, gây ra hiện tượng nám, sạm da. Các hắc tố hình thành mạnh khi có tín hiệu tiết kích thích từ tia UV, màu sắc của da là do quá trình tổng hợp Melanin trong tế bào biểu bì, chính các melanin này hình thành lên các hắc tố và hiển thị màu da."
+    },
+    {
+      "id": "enesti-4",
+      "manufacturer": "Enesti",
+      "name": "Sáp Chống Nắng Dạng Thỏi Enesti Sun Stick UV Cut Perfect SPF 50+ PA+++ 23g",
+      "discount": 63,
+      "price": 362000,
+      "status": "inStock",
+      "category": "lotions",
+      "img": "cosmetic/enesti4/sap-chong-nang-dang-thoi-enesti-sun-stick-uv-cut-perfect-spf-50-pa-23g-tang-kem-mat-na-1-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/enesti4/enesti1.jpg",
+        "cosmetic/enesti4/enesti2.jpg",
+        "cosmetic/enesti4/enesti3.jpg",
+        "cosmetic/enesti4/enesti4.jpg"
+      ],
+      "info": "Sáp Chống Nắng Dạng Thỏi Enesti Sun Stick UV Cut Perfect SPF 50+ PA+++ 23g bảo vệ tối ưu khỏi những tác hại của tia UVA và UVB tới 100% với chỉ số chống nắng SPF 50+ PA+++. Bên cạnh công dụng chống nắng tối ưu cho da, sản phẩm còn cung cấp những dưỡng chất cần thiết giữ ẩm cho da, giúp da chắc khỏe."
+    },
+    {
+      "id": "lime-1",
+      "manufacturer": "lime",
+      "name": "Kem Dưỡng Trắng Nâng Tone 3 Trong 1 Lime Giga White Tone Up Cream SPF50+ PA+++",
+      "discount": 72,
+      "price": 720000,
+      "status": "inStock",
+      "category": "lotions",
+      "img": "cosmetic/lime1/Lime-Giga-White-Tone-Up-Cream-36-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/lime1/lime1.jpg",
+        "cosmetic/lime1/lime2.jpg",
+        "cosmetic/lime1/lime3.jpg",
+        "cosmetic/lime1/lime4.jpg"
+      ],
+      "info": "Giga White Tone Up Cream là kem dưỡng trắng da kết hợp chức năng chống nắng làm từ 7 thành phần thiên nhiên hỗ trợ làm trắng da một cách tự nhiên và hiệu quả. Sản phẩm đã hoàn thành kiểm chứng ECOCERT là sản phẩm thiên nhiên an toàn cho làn da."
+    },
+    {
+      "id": "yehwadam-1",
+      "manufacturer": "yehwadam",
+      "name": "Kem Chống Nắng Lâu Trôi The Face Shop Yehwadam Tone Up Sun Cream SPF50+ PA+++ 50ml",
+      "discount": 50,
+      "price": 949000,
+      "status": "inStock",
+      "category": "lotions",
+      "img": "cosmetic/yehwadam1/Yehwadam-Tone-U-Sun-Cream-14-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/yehwadam1/yehwadam1.jpg",
+        "cosmetic/yehwadam1/yehwadam2.jpg",
+        "cosmetic/yehwadam1/yehwadam3.jpg",
+        "cosmetic/yehwadam1/yehwadam4.jpg"
+      ],
+      "info": "Bạn cảm nhận như thế nào khi mua một sản phẩm The Face Shop mà được tặng kèm theo một sản phẩm The Face Shop khác? Quá tuyệt vời đúng không. Và đó là câu chuyện có thật. Ngay từ bây giờ khi mua sản Kem Chống Nắng The Face Shop Yehwadam Tone Up Sun Cream SPF50+ PA+++ 50ml bạn sẽ được tặng kèm Sữa Rửa Mặt Yehwadam Deep Moisturizing Foaming Cleanser 50ml."
+    },
+    {
+      "id": "bivybes-1",
+      "manufacturer": "bivybes",
+      "name": "Sữa Rửa Mặt Sủi Bọt Khí 3 in 1 Bivybes Wonder Bath Super Vegitoks Cleanser 300ml",
+      "discount": 43,
+      "price": 279000,
+      "status": "inStock",
+      "category": "cleanser",
+      "img": "cosmetic/bivybes/bivybes1.jpg",
+      "imgDetail": [
+        "cosmetic/bivybes/bivybes1.jpg",
+        "cosmetic/bivybes/bivybes2.jpg",
+        "cosmetic/bivybes/bivybes3.jpg",
+        "cosmetic/bivybes/bivybes4.jpg"
+      ],
+      "info": "Nếu bạn là một cô nàng bận rộn hoặc muốn sở hữu một loại sản phẩm hội tụ nhiều chất năng thì thương hiệu Byvibes Wonder Bath có một sản phẩm Sữa Rửa Mặt Sủi Bọt Khí 3 in 1 Tẩy Trang - Rửa Mặt - Thải Độc Tố Bivybes Wonder Bath Super Vegitoks Cleanser. Với 3 chất năng trong cùng một loại sản phẩm, đây là sữa rửa mặt giúp tẩy sạch chất bẩn."
+    },
+    {
+      "id": "roman-1",
+      "manufacturer": "roman",
+      "name": "Kem Dưỡng Ẩm Sáng Da Gạo Romand Back Me Tone Up Cream 50ml",
+      "discount": 33,
+      "status": "inStock",
+      "price": 269000,
+      "category": "lotions",
+      "img": "cosmetic/roman1/kem-duong-am-sang-da-gao-romand-back-me-tone-up-cream.html9-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/roman1/roman1.jpg",
+        "cosmetic/roman1/roman2.jpg",
+        "cosmetic/roman1/roman3.jpg",
+        "cosmetic/roman1/roman4.jpg"
+      ],
+      "info": "Thiết kế đơn giản, giá thành tốt, cùng với công dụng dưỡng trắng tuyệt vời thì Kem Dưỡng Ẩm Sáng Da Gạo Romand Back Me Tone Up Cream đây sẽ là sản phẩm dưỡng da cũng như là lớp kem lót hoàn nhất cho da của các nàng đó nhé."
+    },
+    {
+      "id": "iope-1",
+      "manufacturer": "iope",
+      "name": "Bộ Dùng Thử Chống Lão Hóa Da IOPE Live Lift Special Gift Kit (5 Sản Phẩm)",
+      "discount": 34,
+      "price": 450000,
+      "status": "inStock",
+      "category": "lotions",
+      "img": "cosmetic/iope1/iope-live-lift-special-gift-1-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/iope1/iope1.jpg",
+        "cosmetic/iope1/iope2.jpg",
+        "cosmetic/iope1/iope3.jpg",
+        "cosmetic/iope1/iope4.jpg"
+      ],
+      "info": "Bộ Dùng Thử Chống Lão Hóa Da IOPE Live Lift Special Gift Kit sẽ xóa tan mọi nỗi lo về da lão hóa, chảy xệ, tái tạo da bị tổn thương đồng thời mang lại làn da săn chắc, mịn màng. IOPE Live Lift Special Gift Kit còn khắc phục tất cả các vấn đề về lỗ chân lông to nữa đấy các bạn nhé!"
+    },
+    {
+      "id": "yehwadam-2",
+      "manufacturer": "yehwadam",
+      "name": "Bộ Dưỡng Ẩm Chuyên Sâu Yehwadam Revitalizing Moisturizing Cream Special Gift Set (2 sản phẩm)",
+      "discount": 24,
+      "price": 850000,
+      "category": "lotions",
+      "status": "inStock",
+      "img": "cosmetic/yehwadam2/yehwadam-revitalizing-moisturizing-cream-special-gift-set-1-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/yehwadam2/yehwadam1.jpg",
+        "cosmetic/yehwadam2/yehwadam2.jpg",
+        "cosmetic/yehwadam2/yehwadam3.jpg",
+        "cosmetic/yehwadam2/yehwadam4.jpg"
+      ],
+      "info": "Kết hợp giữa Hoa Rum  từ Núi Jiri, Nhân Sâm Hàn Quốc từ Punggi và Goji Berry từ Cheongyang giúp đánh thức vẻ sáng đẹp tự nhiên từ sâu bên trong, phục hồi năng lượng cho làn da, cải thiện tone màu da và chống hiện tượng lão hóa sớm."
+    },
+    {
+      "id": "charme-5",
+      "manufacturer": "charme",
+      "name": "Nước Hoa Nữ Charme Good Girl 100ml",
+      "discount": 34,
+      "price": 680000,
+      "status": "inStock",
+      "category": "perfume",
+      "img": "perfume/charme5/charme1.jpg",
+      "imgDetail": [
+        "perfume/charme5/charme1.jpg",
+        "perfume/charme5/charme2.jpg",
+        "perfume/charme5/charme3.jpg",
+        "perfume/charme5/charme4.jpg"
+      ],
+      "info": "Nước Hoa Nữ Charme Good Girl 100ml là dòng nước hoa nữ đang được ưa chuộng nhất của thương hiệu nước hoa Charme hiện nay. Với sự kết hợp của các thành phần tự nhiên tạo nên mùi hương gợi cảm được phái đẹp yêu thích và tin dùng. Charme Good Girl được xem là một trong những dòng nước hoa đặc biệt bán chạy nhất tại nhà Charme."
+    },
+    {
+      "id": "yehwadam-3",
+      "manufacturer": "yehwadam",
+      "name": "Bộ Sữa Rửa Mặt Chống Lão Hóa Da Yehwadam Hwansaenggo Rejuvenating Cleansing Special Kit (4 sản phẩm)",
+      "discount": 29,
+      "price": 420000,
+      "status": "inStock",
+      "category": "cleanser",
+      "img": "cosmetic/yahwadam3/bo-sua-rua-mat-chong-lao-hoa-da-yehwadam-hwansaenggo-rejuvenating-cleansing-special-kit-4-items-11-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/yahwadam3/yehwadam1.jpg",
+        "cosmetic/yahwadam3/yehwadam2.jpg",
+        "cosmetic/yahwadam3/yehwadam3.jpg",
+        "cosmetic/yahwadam3/yehwadam4.jpg"
+      ],
+      "info": "Bộ Sữa Rửa Mặt Chống Lão Hóa Da Yehwadam Hwansaenggo Rejuvenating Cleansing Special Kit (4 Items) sử dụng công thức dưỡng da từ tinh chất vàng và 12 loại thảo dược truyền thống cao cấp như nhân sâm thiên nhiên, nấm thiên nhiên, nấm linh chi, v.v. Giúp phục hồi sự sáng khỏe cho làn da, chăm sóc tối ưu làn da bị lão hóa, giúp da tươi trẻ, săn chắc."
+    },
+    {
+      "id": "mamonde-1",
+      "manufacturer": "mamonde",
+      "name": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel 300ml",
+      "discount": 43,
+      "price": 279000,
+      "category": "lotions",
+      "status": "inStock",
+      "img": "cosmetic/mamonde1/AVA-500x500.jpg",
+      "imgDetail": [
+        "cosmetic/mamonde1/mamonde1.jpg",
+        "cosmetic/mamonde1/mamonde2.jpg",
+        "cosmetic/mamonde1/mamonde3.jpg",
+        "cosmetic/mamonde1/mamonde4.jpg"
+      ],
+      "info": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel là một dòng sản phẩm dưỡng ẩm đa năng với hơn 90% thành phần từ nước hoa hồng Damask nên rất lành tính cho tất cả các loại da. Sản phẩm chính là liệu pháp cứu cánh một cách nhanh chóng cho những vùng da đang thiếu ẩm trầm trọng dẫn đến khô ráp và đối mặt với các dấu hiệu lão hóa."
+    },
+    {
+      "id": "volcanic-1",
+      "manufacturer": "volcanic",
+      "name": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel 300ml",
+      "discount": 43,
+      "price": 279000,
+      "category": "cleanser",
+      "status": "inStock",
+      "img": "cosmetic/volcanic1/volcanic4.jpg",
+      "imgDetail": [
+        "cosmetic/volcanic1/volcanic1.jpg",
+        "cosmetic/volcanic1/volcanic2.jpg",
+        "cosmetic/volcanic1/volcanic3.jpg",
+        "cosmetic/volcanic1/volcanic4.jpg"
+      ],
+      "info": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel là một dòng sản phẩm dưỡng ẩm đa năng với hơn 90% thành phần từ nước hoa hồng Damask nên rất lành tính cho tất cả các loại da. Sản phẩm chính là liệu pháp cứu cánh một cách nhanh chóng cho những vùng da đang thiếu ẩm trầm trọng dẫn đến khô ráp và đối mặt với các dấu hiệu lão hóa."
+    },
+    {
+      "id": "innisfree-1",
+      "manufacturer": "innisfree",
+      "name": "Mặt Nạ Ngủ Dưỡng Trắng Da Và Se Khít Lỗ Chân Lông Innisfree Whitening Pore Sleeping Pack 100ml",
+      "discount": 42,
+      "price": 624000,
+      "status": "inStock",
+      "category": "mask",
+      "img": "cosmetic/innisfree1/innisfree1.jpg",
+      "imgDetail": [
+        "cosmetic/innisfree1/innisfree1.jpg",
+        "cosmetic/innisfree1/innisfree2.jpg",
+        "cosmetic/innisfree1/innisfree3.jpg",
+        "cosmetic/innisfree1/innisfree4.jpg"
+      ],
+      "info": "Mặt Nạ Ngủ Làm Trắng Da Và Se Khít Lỗ Chân Lông Innisfree Whitening Pore Sleeping Pack tổng hợp sực mạnh từ vỏ quýt giàu vitamin C và trà xanh giàu dưỡng chất mang lại cho làn da trắng sáng hơn, tươi hơn và rạng ngời hơn so với trước đây và cho bạn một làn da láng mịn không tì vết. Bên cạnh đó sản phẩm còn có tác dụng se khít lỗ chân lông."
+    },
+    {
+      "id": "volcanic-2",
+      "manufacturer": "volcanic",
+      "name": "Sữa Rửa Mặt Innisfree Jeju Volcanic Pore Cleansing Foam 150ml",
+      "discount": 21,
+      "price": 240000,
+      "status": "inStock",
+      "category": "cleanser",
+      "img": "cosmetic/volcanic2/volcanic1.jpg",
+      "imgDetail": [
+        "cosmetic/volcanic2/volcanic1.jpg",
+        "cosmetic/volcanic2/volcanic2.jpg",
+        "cosmetic/volcanic2/volcanic3.jpg",
+        "cosmetic/volcanic2/volcanic4.jpg"
+      ],
+      "info": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel là một dòng sản phẩm dưỡng ẩm đa năng với hơn 90% thành phần từ nước hoa hồng Damask nên rất lành tính cho tất cả các loại da. Sản phẩm chính là liệu pháp cứu cánh một cách nhanh chóng cho những vùng da đang thiếu ẩm trầm trọng dẫn đến khô ráp và đối mặt với các dấu hiệu lão hóa."
+    },
+    {
+      "id": "lanegie-1",
+      "manufacturer": "lanegie",
+      "name": "Mặt Nạ Ngủ Dưỡng Da Laneige Water Sleeping Mask Hương Lavender 70ml",
+      "discount": 36,
+      "price": 780000,
+      "category": "mask",
+      "status": "inStock",
+      "img": "cosmetic/lanegie1/lanegie1.jpg",
+      "imgDetail": [
+        "cosmetic/lanegie1/lanegie1.jpg",
+        "cosmetic/lanegie1/lanegie2.jpg",
+        "cosmetic/lanegie1/lanegie3.jpg",
+        "cosmetic/lanegie1/lanegie4.jpg"
+      ],
+      "info": "Các chuyên gia luôn khuyên dùng nên chăm sóc cho làn da kể cả khi đi ngủ để sở hữu được một làn da sáng mịn và tươi mới. Một trong những lựa chọn tốt nhất chính là sản phẩm Mặt Nạ Ngủ Dưỡng Da Laneige Water Sleeping Mask hương lavender đến từ thương hiệu nổi tiếng Laneige. Sản phẩm sẽ giúp quá trình chăm sóc da vào ban đêm được thực hiện tốt hơn với hương thơm dễ chịu từ Lavender."
+    },
+    {
+      "id": "tonymoly-1",
+      "manufacturer": "tonymoly",
+      "name": "Sữa Rửa Mặt Dưỡng Da TonyMoly Clean Dew Foam Cleanser 180ml",
+      "discount": 32,
+      "price": 145000,
+      "category": "cleanser",
+      "status": "inStock",
+      "img": "cosmetic/tonymoly/tonymoly1.jpg",
+      "imgDetail": [
+        "cosmetic/tonymoly/tonymoly1.jpg",
+        "cosmetic/tonymoly/tonymoly2.jpg",
+        "cosmetic/tonymoly/tonymoly3.jpg",
+        "cosmetic/tonymoly/tonymoly4.jpg"
+      ],
+      "info": "Sữa Rửa Mặt Dưỡng Da Tonymoly Clean Dew Foam Cleanser là dòng sữa rửa mặt đến từ thương hiệu Tonymoly với chiết xuất hoàn toàn từ trái cây và thực phẩm từ thiên nhiên, giúp mang đến một làn da khỏe khoắn và rạng rỡ đón chào ngày mới cho các cô gái xinh đẹp."
+    },
+    {
+      "id": "hokkaido-1",
+      "manufacturer": "hokkaido",
+      "name": "Sữa Rửa Mặt Dưỡng Trắng Da Chiết Xuất Sữa Bò Hokkaido Beauty Buffet Milk Plus Bright & White Facial Foam",
+      "discount": 32,
+      "price": 145000,
+      "category": "cleanser",
+      "img": "cosmetic/hokkaido/hokkaido1.jpg",
+      "status": "inStock",
+      "imgDetail": [
+        "cosmetic/hokkaido/hokkaido1.jpg",
+        "cosmetic/hokkaido/hokkaido2.jpg",
+        "cosmetic/hokkaido/hokkaido3.jpg",
+        "cosmetic/hokkaido/hokkaido4.jpg"
+      ],
+      "info": "Làn da mịn màng, trắng hồng luôn là ao ước và là niềm tự hào của tất cả phái đẹp, bạn đang cần tìm một loại sữa rửa mặt không những giúp làn sạch da mà còn dưỡng cho da trắng hồng, mịn màng thì Sữa Rửa Mặt Hokkaido Beauty Buffet Milk Plus Bright & White Facial Foam chắc chắc sản phẩm sẽ khiến bạn bất ngờ và hài lòng đấy."
+    },
+    {
+      "id": "cetaphil-1",
+      "manufacturer": "cetaphil",
+      "name": "Sữa Rửa Mặt Dưỡng Trắng Da Chiết Xuất Sữa Bò cetaphil Beauty Buffet Milk Plus Bright & White Facial Foam",
+      "discount": 19,
+      "price": 475000,
+      "category": "cleanser",
+      "status": "inStock",
+      "img": "cosmetic/cetaphil/cetaphil5.jpg",
+      "imgDetail": [
+        "cosmetic/cetaphil/cetaphil1.jpg",
+        "cosmetic/cetaphil/cetaphil2.jpg",
+        "cosmetic/cetaphil/cetaphil3.jpg",
+        "cosmetic/cetaphil/cetaphil4.jpg"
+      ],
+      "info": "Bạn đang tìm kiếm một sản phẩm sữa rửa mặt không tạo bọt và dịu nhẹ an toàn cho da, thì Sữa Rửa Mặt Cetaphil Gentle Skin Cleanser đến từ thương hiệu Cetaphil là một trong những lựa chọn hoàn hảo nhất. Sữa Rửa Mặt Cetaphil Gentle Skin Cleanser dạng lỏng, loãng, màu trắng đục, không mùi nên rất dễ sử dụng, khi bôi lên da và massage thì hoàn toàn mềm mại và không có bọt."
+    },
+    {
+      "id": "lebelage-1",
+      "manufacturer": "lebelage",
+      "name": "Combo 10 Mặt Nạ Tinh Chất Vàng LEBELAGE Heeyul Premium 24k Gold Essence Mask Pack 25g",
+      "discount": 19,
+      "price": 475000,
+      "category": "mask",
+      "img": "cosmetic/lebelage/lebelage1.jpg",
+      "status": "inStock",
+      "imgDetail": [
+        "cosmetic/lebelage/lebelage1.jpg",
+        "cosmetic/lebelage/lebelage2.jpg",
+        "cosmetic/lebelage/lebelage3.jpg",
+        "cosmetic/lebelage/lebelage4.jpg"
+      ],
+      "info": "Mặt Nạ Tinh Chất Vàng LEBELAGE Heeyul Premium 24k Gold Essence Mask Pack 25g sử dụng công nghệ hiện đại để điều chế mang lại hiệu quả dưỡng da cực tốt. Mặt nạ với  tinh chất collagen vàng Hàn Quốc giúp thúc đẩy lưu thông máu từ đó tăng cường sự trao đổi chất của các tế bào da, giúp bài tiết chất thải để da thông thoáng, sạch sẽ hơn, sản sinh các tế bào da mới."
+    },
+    {
+      "id": "innisfree-2",
+      "manufacturer": "innisfree",
+      "name": "Mặt Nạ Đất Sét Dạng Lăn Làm Sạch Bã Nhờn Và Se Khít Chân Lông Innisfree Super Volcanic Stick Mask X2",
+      "discount": 41,
+      "price": 299000,
+      "category": "mask",
+      "img": "cosmetic/innisfree2/innisfree1.jpg",
+      "status": "inStock",
+      "imgDetail": [
+        "cosmetic/innisfree2/innisfree1.jpg",
+        "cosmetic/innisfree2/innisfree2.jpg",
+        "cosmetic/innisfree2/innisfree3.jpg",
+        "cosmetic/innisfree2/innisfree4.jpg"
+      ],
+      "info": "Nằm trong dòng mặt nạ đất sét núi lửa Super Volcanic X2 đến từ Innisfree, Mặt Nạ Đất Sét Dạng Lăn Làm Sạch Bã Nhờn Và Se Khít Chân Lông Innisfree Super Volcanic Stick Mask X2 đã được cải tiến bởi thiết kế riêng biệt và chuyên sâu trong việc làm sạch bã nhờn và giúp se khít lổ chân lông. Đem lại sự tiện dụng và hiệu quả trong việc chăm sóc da mặt."
+    },
+    {
+      "id": "queen-1",
+      "manufacturer": "queen",
+      "name": "Nước Hoa Nữ Charme Queen Eau De Parfum 100ml",
+      "discount": 37,
+      "price": 455000,
+      "category": "perfume",
+      "status": "inStock",
+      "img": "perfume/queen/queen1.jpg",
+      "imgDetail": [
+        "perfume/queen/queen1.jpg",
+        "perfume/queen/queen2.jpg",
+        "perfume/queen/queen3.jpg",
+        "perfume/queen/queen4.jpg"
+      ],
+      "info": "Nước Hoa Nữ Charme Queen Eau De Parfum là sản phẩm đến từ thương hiệu Charme với hương thơm nồng nàn quyến rũ, nhẹ nhàng, tinh tế khó ai có thể cưỡng lại được giúp nàng tự tin khoe cá tính trong bất kì hoàn cảnh nào. Đặc biệt với thời gian lưu hương rất lâu sẽ giúp bạn tự tin suốt cả ngày dài."
+    },
+
+    {
+      "id": "charme-3",
+      "manufacturer": "charme",
+      "name": "Nước Hoa Nam Tính Đẳng Cấp Charme King 60ml",
+      "discount": 32,
+      "price": 550000,
+      "status": "inStock",
+      "category": "perfume",
+      "img": "perfume/charme3/charme1.jpg",
+      "imgDetail": [
+        "perfume/charme3/charme1.jpg",
+        "perfume/charme3/charme1.jpg",
+        "perfume/charme3/charme1.jpg",
+        "perfume/charme3/charme1.jpg"
+      ],
+      "info": " Vào những năm 1990, nước hoa trở nên phổ biến không chỉ dành cho nữ mà còn có cả nước hoa cho nam cũng ngày càng thịnh hơn. Có những anh chàng thích kết hợp tùy loại nước hoa với bộ trang phục của mình, có những anh chàng sử dụng nước hoa như gợi nhớ đến một kỷ niệm đẹp, một tình yêu đẹp. Nước Hoa Nam Charme Iris là một gợi ý hoàn hảo."
+    },
+    {
+      "id": "ck-1",
+      "manufacturer": "ck",
+      "name": "Nước Hoa Ck Be Calvin Klein",
+      "discount": 21,
+      "price": 1395000,
+      "category": "perfume",
+      "status": "outStock",
+      "img": "perfume/ck1/ck1.jpg",
+      "imgDetail": [
+        "perfume/ck1/ck1.jpg",
+        "perfume/ck1/ck2.jpg",
+        "perfume/ck1/ck3.jpg",
+        "perfume/ck1/ck4.jpg"
+      ],
+      "info": "Được xếp vào dòng nước hoa Unisex thì nước hoa Ck Be của hãng Calvin Klein chính là sản phẩm bạn đáng sở hữu. Nước Hoa Ck Be Calvin Klein sở một mùi hương gỗ phương Đông hòa quyện với hương của cây oải hương , bạc hà và cây bách xù cùng với một nét tinh tế của quýt hồng và cỏ xanh . Nước hoa được sáng tạo bởi Ann Gottlieb từ năm 1996."
+    },
+    {
+      "id": "fmgt-1",
+      "manufacturer": "fmgt",
+      "name": "Son Kem Lì Quyến Rũ Có Dưỡng The Face Shop Fmgt Ink Serum Lip Tint",
+      "discount": 60,
+      "price": 390000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/fmgt/fmgt1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/fmgt/fmgt1.jpg",
+        "makeup/lipstick/fmgt/fmgt2.jpg",
+        "makeup/lipstick/fmgt/fmgt3.jpg",
+        "makeup/lipstick/fmgt/fmgt4.jpg"
+      ],
+      "info": "The Face Shop trứ danh với nhiều dòng mỹ phẩm trang điểm mà không ít cô nàng mê mệt, trong đó nổi bật nhất là cơn sốt của những dòng son. The Face Shop với nhiều dòng son đa dạng từ matte đến tint, từ màu sắc điệu đà đến tone màu quyến rũ phá cách dành cho những cô nàng năng động. Và cũng như vậy Son Kem Lì Quyến Rũ."
+    },
+    {
+      "id": "roroko-1",
+      "manufacturer": "roroko",
+      "name": "Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip",
+      "discount": 49,
+      "price": 350000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/roroko/roroko1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/roroko/roroko1.jpg",
+        "makeup/lipstick/roroko/roroko2.jpg",
+        "makeup/lipstick/roroko/roroko3.jpg",
+        "makeup/lipstick/roroko/roroko4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "matte-1",
+      "manufacturer": "matte",
+      "name": "Son Thỏi Lì Mịn Môi TOI Matte Rouge Lipstick (T01 – T08) 3,5g",
+      "discount": 48,
+      "price": 190000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/matte/matte1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/matte/matte1.jpg",
+        "makeup/lipstick/matte/matte2.jpg",
+        "makeup/lipstick/matte/matte3.jpg",
+        "makeup/lipstick/matte/matte4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "apieu-1",
+      "manufacturer": "apieu",
+      "name": "Son Tint Có Dưỡng Lâu Trôi Apieu Color Lip Stain Gel Tint",
+      "discount": 56,
+      "price": 180000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/apieu/apieu1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/apieu/apieu1.jpg",
+        "makeup/lipstick/apieu/apieu2.jpg",
+        "makeup/lipstick/apieu/apieu3.jpg",
+        "makeup/lipstick/apieu/apieu4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "3ce-1",
+      "manufacturer": "3ce",
+      "name": "Son Tint Lì Mềm Mịn Môi 3CE Stimmung Red Contour Collection 3g",
+      "discount": 24,
+      "price": 230000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/3ce/3ce1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/3ce/3ce1.jpg",
+        "makeup/lipstick/3ce/3ce2.jpg",
+        "makeup/lipstick/3ce/3ce3.jpg",
+        "makeup/lipstick/3ce/3ce4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "velvet-1",
+      "manufacturer": "velvet",
+      "name": "Son Kem Lì Black Rouge Air Fit Velvet Tint 4.5g",
+      "discount": 43,
+      "price": 260000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/velvet/velvet1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/velvet/velvet1.jpg",
+        "makeup/lipstick/velvet/velvet2.jpg",
+        "makeup/lipstick/velvet/velvet3.jpg",
+        "makeup/lipstick/velvet/velvet4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "3ce-2",
+      "manufacturer": "3ce",
+      "name": "Son Thỏi Lì Mềm Mịn Môi 3CE Matte Lip Color New Version",
+      "discount": 20,
+      "price": 500000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/3ce2/3ce1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/3ce2/3ce1.jpg",
+        "makeup/lipstick/3ce2/3ce2.jpg",
+        "makeup/lipstick/3ce2/3ce3.jpg",
+        "makeup/lipstick/3ce2/3ce4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "taste-1",
+      "manufacturer": "taste",
+      "name": "Son Thỏi Lì Ống Bơ 16 Brand Taste Chu Edition",
+      "discount": 43,
+      "price": 260000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/taste/taste1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/taste/taste1.jpg",
+        "makeup/lipstick/taste/taste2.jpg",
+        "makeup/lipstick/taste/taste3.jpg",
+        "makeup/lipstick/taste/taste4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "3ce-3",
+      "manufacturer": "3ce",
+      "name": "Son Thỏi Lì Ống Bơ 16 Brand 3ce Chu Edition",
+      "discount": 34,
+      "price": 260000,
+      "category": "lipstick",
+      "status": "inStock",
+      "img": "makeup/lipstick/3ce3/3ce1.jpg",
+      "imgDetail": [
+        "makeup/lipstick/3ce3/3ce1.jpg",
+        "makeup/lipstick/3ce3/3ce2.jpg",
+        "makeup/lipstick/3ce3/3ce3.jpg",
+        "makeup/lipstick/3ce3/3ce4.jpg"
+      ],
+      "info": "Là phái đẹp chắc hẳn trong túi các bạn lúc nào cũng có ít nhất một thỏi son cho riêng mình. Son Thỏi Dưỡng Ẩm Lên Màu Tự Nhiên Roroko Holic Glossy Lip là một dòng son của thương hiệu Roroko đang làm say đắm bao cô gái. Roroko là thương hiệu nổi tiếng Hàn Quốc với các dòng mỹ phẩm đang được phái đẹp ưa chuộng."
+    },
+    {
+      "id": "glam-1",
+      "manufacturer": "glam",
+      "name": "Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml",
+      "discount": 40,
+      "price": 290000,
+      "category": "mascara",
+      "status": "inStock",
+      "img": "makeup/mascara/glam/glam1.jpg",
+      "imgDetail": [
+        "makeup/mascara/glam/glam1.jpg",
+        "makeup/mascara/glam/glam2.jpg",
+        "makeup/mascara/glam/glam3.jpg",
+        "makeup/mascara/glam/glam4.jpg"
+      ],
+      "info": "Với Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml thì từ giờ bạn sẽ không phải đi nối mi nữa, vừa tốn kém, vừa hư hại mi. Sản phẩm áp dụng công thức đặc biệt chứa thành phần dồi dào chất xơ giúp làm dày mi một cách tự nhiên nhất, làm cho hàng mi cong, dài thanh thoát tự nhiên giống như việc bạn nối mi."
+    },
+    {
+      "id": "lash-1",
+      "manufacturer": "lash",
+      "name": "Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml",
+      "discount": 33,
+      "price": 290000,
+      "category": "mascara",
+      "status": "inStock",
+      "img": "makeup/mascara/lash/lash1.jpg",
+      "imgDetail": [
+        "makeup/mascara/lash/lash1.jpg",
+        "makeup/mascara/lash/lash2.jpg",
+        "makeup/mascara/lash/lash3.jpg",
+        "makeup/mascara/lash/lash4.jpg"
+      ],
+      "info": "Với Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml thì từ giờ bạn sẽ không phải đi nối mi nữa, vừa tốn kém, vừa hư hại mi. Sản phẩm áp dụng công thức đặc biệt chứa thành phần dồi dào chất xơ giúp làm dày mi một cách tự nhiên nhất, làm cho hàng mi cong, dài thanh thoát tự nhiên giống như việc bạn nối mi."
+    },
+    {
+      "id": "skinny-1",
+      "manufacturer": "skinny",
+      "name": "Mascara Chuốt Lông Mày Innisfree Skinny Brow Mascara",
+      "discount": 63,
+      "price": 372000,
+      "category": "mascara",
+      "status": "inStock",
+      "img": "makeup/mascara/skinny/skinny1.jpg",
+      "imgDetail": [
+        "makeup/mascara/skinny/skinny1.jpg",
+        "makeup/mascara/skinny/skinny2.jpg",
+        "makeup/mascara/skinny/skinny3.jpg",
+        "makeup/mascara/skinny/skinny4.jpg"
+      ],
+      "info": "Với Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml thì từ giờ bạn sẽ không phải đi nối mi nữa, vừa tốn kém, vừa hư hại mi. Sản phẩm áp dụng công thức đặc biệt chứa thành phần dồi dào chất xơ giúp làm dày mi một cách tự nhiên nhất, làm cho hàng mi cong, dài thanh thoát tự nhiên giống như việc bạn nối mi."
+    },
+    {
+      "id": "peripera-1",
+      "manufacturer": "peripera",
+      "name": "Mascara Làm Dày Và Cong Mi Peripera Ink Color Cara",
+      "discount": 50,
+      "price": 350000,
+      "category": "mascara",
+      "status": "inStock",
+      "img": "makeup/mascara/peripera/peripera1.jpg",
+      "imgDetail": [
+        "makeup/mascara/peripera/peripera1.jpg",
+        "makeup/mascara/peripera/peripera2.jpg",
+        "makeup/mascara/peripera/peripera3.jpg",
+        "makeup/mascara/peripera/peripera4.jpg"
+      ],
+      "info": "Với Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml thì từ giờ bạn sẽ không phải đi nối mi nữa, vừa tốn kém, vừa hư hại mi. Sản phẩm áp dụng công thức đặc biệt chứa thành phần dồi dào chất xơ giúp làm dày mi một cách tự nhiên nhất, làm cho hàng mi cong, dài thanh thoát tự nhiên giống như việc bạn nối mi."
+    },
+    {
+      "id": "curling-1",
+      "manufacturer": "curling",
+      "name": "Mascara Làm Cong Và Dày Mi Hai Đầu Cọ The Face Shop Fmgt 2 In 1 Curling Mascara",
+      "discount": 25,
+      "price": 350000,
+      "category": "mascara",
+      "status": "inStock",
+      "img": "makeup/mascara/curling/curling1.jpg",
+      "imgDetail": [
+        "makeup/mascara/curling/curling1.jpg",
+        "makeup/mascara/curling/curling2.jpg",
+        "makeup/mascara/curling/curling3.jpg",
+        "makeup/mascara/curling/curling4.jpg"
+      ],
+      "info": "Với Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml thì từ giờ bạn sẽ không phải đi nối mi nữa, vừa tốn kém, vừa hư hại mi. Sản phẩm áp dụng công thức đặc biệt chứa thành phần dồi dào chất xơ giúp làm dày mi một cách tự nhiên nhất, làm cho hàng mi cong, dài thanh thoát tự nhiên giống như việc bạn nối mi."
+    },
+    {
+      "id": "volume-1",
+      "manufacturer": "volume",
+      "name": "Mascara Làm Dày Và Cong Mi The Face Shop Gold Collagen Volume Mascara",
+      "discount": 36,
+      "price": 439000,
+      "category": "mascara",
+      "status": "inStock",
+      "img": "makeup/mascara/volume/volume1.jpg",
+      "imgDetail": [
+        "makeup/mascara/volume/volume1.jpg",
+        "makeup/mascara/volume/volume2.jpg",
+        "makeup/mascara/volume/volume3.jpg",
+        "makeup/mascara/volume/volume4.jpg"
+      ],
+      "info": "Với Mascara Chống Lem Trôi, Làm Dài Mi Tự Nhiên Lime Glam Fit Lashes 7ml thì từ giờ bạn sẽ không phải đi nối mi nữa, vừa tốn kém, vừa hư hại mi. Sản phẩm áp dụng công thức đặc biệt chứa thành phần dồi dào chất xơ giúp làm dày mi một cách tự nhiên nhất, làm cho hàng mi cong, dài thanh thoát tự nhiên giống như việc bạn nối mi."
+    },
+    {
+      "id": "limeBlusher-1",
+      "manufacturer": "limeBlusher",
+      "name": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g",
+      "discount": 52,
+      "price": 250000,
+      "category": "blusher",
+      "status": "inStock",
+      "img": "makeup/blusher/limeBlusher/limeBlusher1.jpg",
+      "imgDetail": [
+        "makeup/blusher/limeBlusher/limeBlusher1.jpg",
+        "makeup/blusher/limeBlusher/limeBlusher2.jpg",
+        "makeup/blusher/limeBlusher/limeBlusher3.jpg",
+        "makeup/blusher/limeBlusher/limeBlusher4.jpg"
+      ],
+      "info": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g là sản phẩm phấn má từ từ hãng mỹ phẩm Hàn Quốc Lime Cosmetic. LIME COSMETIC – Tự hào là hãng makeup skincare chức năng cao với thành phần chiết xuất hoàn toàn từ thiên nhiên đến từ Hàn Quốc. "
+    },
+    {
+      "id": "rorokoBlusher-1",
+      "manufacturer": "rorokoBlusher",
+      "name": "Phấn Má Hồng Phiên Bản Màu Cam Tươi Tự Nhiên Roroko Lovely Blusher Wonder Fresh Orange (Tông Màu #01)",
+      "discount": 36,
+      "price": 200000,
+      "category": "blusher",
+      "status": "inStock",
+      "img": "makeup/blusher/rorokoBlusher/rorokoBlusher1.jpg",
+      "imgDetail": [
+        "makeup/blusher/rorokoBlusher/rorokoBlusher1.jpg",
+        "makeup/blusher/rorokoBlusher/rorokoBlusher2.jpg",
+        "makeup/blusher/rorokoBlusher/rorokoBlusher3.jpg",
+        "makeup/blusher/rorokoBlusher/rorokoBlusher4.jpg"
+      ],
+      "info": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g là sản phẩm phấn má từ từ hãng mỹ phẩm Hàn Quốc Lime Cosmetic. LIME COSMETIC – Tự hào là hãng makeup skincare chức năng cao với thành phần chiết xuất hoàn toàn từ thiên nhiên đến từ Hàn Quốc. "
+    },
+    {
+      "id": "rorokoBlusher-2",
+      "manufacturer": "rorokoBlusher",
+      "name": "Phấn Má Hồng Phiên Bản Màu Hồng Baby Tự Nhiên Roroko Lovely Blusher Lovely Pink (Tông Màu #02)",
+      "discount": 36,
+      "price": 200000,
+      "category": "blusher",
+      "status": "inStock",
+      "img": "makeup/blusher/rorokoBlusher2/rorokoBlusher1.jpg",
+      "imgDetail": [
+        "makeup/blusher/rorokoBlusher2/rorokoBlusher1.jpg",
+        "makeup/blusher/rorokoBlusher2/rorokoBlusher2.jpg",
+        "makeup/blusher/rorokoBlusher2/rorokoBlusher3.jpg",
+        "makeup/blusher/rorokoBlusher2/rorokoBlusher4.jpg"
+      ],
+      "info": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g là sản phẩm phấn má từ từ hãng mỹ phẩm Hàn Quốc Lime Cosmetic. LIME COSMETIC – Tự hào là hãng makeup skincare chức năng cao với thành phần chiết xuất hoàn toàn từ thiên nhiên đến từ Hàn Quốc. "
+    },
+    {
+      "id": "rorokoBlusher-3",
+      "manufacturer": "rorokoBlusher",
+      "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
+      "discount": 36,
+      "price": 1410000,
+      "category": "blusher",
+      "status": "inStock",
+      "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+      "imgDetail": [
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher2.jpg",
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher3.jpg",
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher4.jpg"
+      ],
+      "info": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g là sản phẩm phấn má từ từ hãng mỹ phẩm Hàn Quốc Lime Cosmetic. LIME COSMETIC – Tự hào là hãng makeup skincare chức năng cao với thành phần chiết xuất hoàn toàn từ thiên nhiên đến từ Hàn Quốc. "
+    },
+    {
+      "id": "etude-1",
+      "manufacturer": "etude",
+      "name": "Má hồng dạng kem Etude House Colorful Drawing Water Color Blusher",
+      "discount": 67,
+      "price": 240000,
+      "category": "blusher",
+      "status": "inStock",
+      "img": "makeup/blusher/etude/etude1.jpg",
+      "imgDetail": [
+        "makeup/blusher/etude/etude1.jpg",
+        "makeup/blusher/etude/etude2.jpg",
+        "makeup/blusher/etude/etude3.jpg",
+        "makeup/blusher/etude/etude4.jpg"
+      ],
+      "info": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g là sản phẩm phấn má từ từ hãng mỹ phẩm Hàn Quốc Lime Cosmetic. LIME COSMETIC – Tự hào là hãng makeup skincare chức năng cao với thành phần chiết xuất hoàn toàn từ thiên nhiên đến từ Hàn Quốc. "
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fisrtName": "nguyen",
+      "lastName": "anh vu",
+      "usersName": "anhvu",
+      "password": "vu1234",
+      "phone": "0123456789",
+      "role": "menber",
+      "gmail": "anhvu@abc.com"
+    }
+  ],
+  "comments": [],
+  "cart": []
+}

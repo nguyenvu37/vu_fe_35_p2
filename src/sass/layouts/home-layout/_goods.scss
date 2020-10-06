@@ -1,3 +1,5 @@
+@import "../../base/variables";
+@import "../../base/mixins";
 .goods {
     width: 100%;
     height: 1292px;
@@ -40,7 +42,7 @@
 
             .goods__perfume__content--bg {
                 @include content-goods($grey);
-            } 
+            }
 
             .goods__perfume__content--arrow-right {
                 border-left: 20px solid $grey;
@@ -88,7 +90,7 @@
 
         &__content {
             height: 100%;
-            background-image: url('../../../../assets/img/home/img13.jpg');
+            background-image: url("../../../assets/img/home/img13.jpg");
             background-size: cover;
             background-position: center;
 
@@ -143,7 +145,7 @@
                 p {
                     @include font-a(inherit, 18px, 300);
                     text-transform: uppercase;
-                    letter-spacing: .2rem;
+                    letter-spacing: 0.2rem;
                     position: relative;
                     top: 25px;
                 }
@@ -194,7 +196,7 @@
         display: flex;
         grid-column: 2/3;
         grid-row: 4/5;
-        
+
         &__img {
             img {
                 width: 295px;
@@ -214,7 +216,7 @@
             .goods__daisy__content--arrow-left {
                 border-right: 20px solid $pink;
             }
-            
+
             img {
                 position: absolute;
                 top: 10%;
@@ -257,7 +259,6 @@
         }
 
         &__shower-gel {
-
             &__content {
                 width: 172.5px;
                 height: 185px;
@@ -286,12 +287,12 @@
 
                 &__content {
                     top: 5%;
-                    
+
                     p {
                         font-weight: 700;
                         width: 50%;
                     }
-                    
+
                     span {
                         font-size: 50px;
 
@@ -366,7 +367,7 @@
 
                 &__title {
                     left: 10%;
-                    
+
                     p {
                         font-size: 25px;
                         font-weight: 700;
@@ -431,7 +432,7 @@
             grid-column: 1/2;
             grid-row: 3/5;
             margin-top: 10px;
-            
+
             &__content {
                 width: 450px !important;
                 height: 500px !important;
@@ -498,7 +499,7 @@
         }
 
         .goods__daisy__content__title p {
-            font-size: 30px; 
+            font-size: 30px;
         }
 
         .goods__daisy__content__title span {
@@ -521,7 +522,7 @@
             height: 170px !important;
         }
 
-        .title-right p, 
+        .title-right p,
         .title-left p {
             font-size: 18px !important;
         }

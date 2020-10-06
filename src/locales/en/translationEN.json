@@ -1,0 +1,41 @@
+{
+  "navigations": {
+    "home": "HOME",
+    "products": "PRODUCTS",
+    "contact": "CONTACT",
+    "login": "LOGIN",
+    "register": "REGISTER"
+  },
+  "dropdown": {
+    "cosmetic": "COSMETIC",
+    "perfume": "PERFUME",
+    "makeup": "MAKE UP"
+  },
+  "lang": {
+    "en": "English",
+    "vn": "Vietnamese"
+  },
+  "footer": {
+    "title": "CONTACT US",
+    "location": "4th Floor, Hanoi Group Building, 442 Doi Can, Cong Vi Ward, Ba Dinh District, Hanoi",
+    "title1": "SHIPPING",
+    "title2": "SUPPORT",
+    "title3": "INFORMATION",
+    "title4": "MY ACCOUNT",
+    "onlineShopping": "Oneline Shipping",
+    "weShip": "We Ship",
+    "shippingPolicy": "Shipping Policy",
+    "shippingInfo": "Shipping Information",
+    "ourStory": "Our Story",
+    "safePayment": "Safe Payment",
+    "shippingOption": "Shipping Options",
+    "aboutUs": "About Us",
+    "termCondition": "Terms & Condition",
+    "privacyPolicy": "Privacy Policy",
+    "orderReturn": "Orders & Returns",
+    "viewCart": "View Cart",
+    "favoriteProduct": "Favorite Product",
+    "checking": "Checking",
+    "trackOrder": "Track Order"
+  }
+}

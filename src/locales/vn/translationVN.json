@@ -1,0 +1,41 @@
+{
+  "navigations": {
+    "home": "TRANG CHỦ",
+    "products": "SẢN PHẨM",
+    "contact": "LIÊN HỆ",
+    "login": "ĐĂNG NHẬP",
+    "register": "ĐĂNG KÝ"
+  },
+  "dropdown": {
+    "cosmetic": "MỸ PHẨM",
+    "perfume": "NƯỚC HOA",
+    "makeup": "TRANG ĐIỂM"
+  },
+  "lang": {
+    "en": "Tiếng Anh",
+    "vn": "Tiếng Việt"
+  },
+  "footer": {
+    "title": "LIÊN HỆ VỚI CHÚNG TÔI",
+    "location": "Tầng 4,Tòa nhà Hanoi Group số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội",
+    "title1": "CHUYỂN HÀNG",
+    "title2": "HỖ TRỢ",
+    "title3": "THÔNG TIN",
+    "title4": "TÀI KHOẢN",
+    "onlineShopping": "Mua sắm trực tuyến",
+    "weShip": "Gửi đến",
+    "shippingPolicy": "Chính sách vận chuyển",
+    "shippingInfo": "Vận chuyển thông tin",
+    "ourStory": "Câu chuyện của chúng ta",
+    "safePayment": "Thanh toán an toàn",
+    "shippingOption": "Tùy chọn vận chuyển",
+    "aboutUs": "Về chúng tôi",
+    "termCondition": "Điều khoản & Điều kiện",
+    "privacyPolicy": "Chính sách riêng tư",
+    "orderReturn": "Đơn đặt hàng & Returns",
+    "viewCart": "Xem giỏ hàng",
+    "favoriteProduct": "Sản phẩm yêu thích",
+    "checking": "Kiểm tra",
+    "trackOrder": "Theo giỏi đơn hàng của tôi"
+  }
+}

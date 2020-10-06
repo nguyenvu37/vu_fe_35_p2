@@ -1,3 +1,6 @@
+@import "../base/variables";
+@import "../base/mixins";
+
 footer {
     background: #050505;
 
@@ -36,7 +39,8 @@ footer {
                     display: flex;
                 }
 
-                img, p {
+                img,
+                p {
                     margin-right: 10px;
                 }
             }
@@ -71,7 +75,7 @@ footer {
         }
 
         &__info {
-            flex:1;
+            flex: 1;
         }
 
         &__acc {
@@ -86,12 +90,12 @@ footer {
                 margin: 10px 0;
 
                 a {
-                    @include font-a($gray,14px,400);
+                    @include font-a($gray, 14px, 400);
                 }
 
                 &:hover {
                     &:before {
-                        content: '';
+                        content: "";
                         position: absolute;
                         top: 40%;
                         width: 5px;
@@ -101,7 +105,7 @@ footer {
 
                     a {
                         padding-left: 10px;
-                        @include font-a($green,13px,400)
+                        @include font-a($green, 13px, 400);
                     }
                 }
             }
@@ -117,7 +121,7 @@ footer {
         p {
             color: $gray;
             font-size: 12px;
-            font-family: 'Roboto Slab', sans-serif;
+            font-family: "Roboto Slab", sans-serif;
         }
     }
 

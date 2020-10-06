@@ -1,13 +1,12 @@
-@import '../../base/variables';
-@import './layouts/home-layout/newsletter';
+@import "../../base/variables";
 
-.background { 
+.background {
     position: relative;
 
     &__img {
         width: 100%;
         height: 857px;
-        background-image: url('../../../assets/img/home/background.jpg');
+        background-image: url("../../../assets/img/home/background.jpg");
         background-size: cover;
         background-position: center;
 
@@ -41,8 +40,8 @@
             &__btn {
                 input {
                     display: none;
-                    
-                    &:checked~.background__img__content__btn__overlay {
+
+                    &:checked ~ .background__img__content__btn__overlay {
                         opacity: 1;
                         visibility: visible;
                         transition: all 1s;
@@ -67,8 +66,6 @@
                     opacity: 0;
                     visibility: hidden;
                 }
-
-
             }
 
             .background__img__content--green {
@@ -115,7 +112,7 @@
 
                 &__btn {
                     margin-top: 20px;
-                    
+
                     label {
                         font-size: 16px;
                     }

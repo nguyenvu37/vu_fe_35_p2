@@ -1,3 +1,5 @@
+@import "../../base/variables";
+@import "../../base/mixins";
 .detail {
     margin: 50px 0;
     display: flex;
@@ -61,7 +63,7 @@
             margin-top: 20px;
             margin-bottom: 10px;
         }
-        
+
         &__btn {
             justify-content: flex-start;
 
@@ -97,11 +99,11 @@
                 &__item {
                     display: flex;
                     margin-right: 10px;
-    
+
                     a {
                         text-decoration: none;
                     }
-    
+
                     .quantity {
                         border: 1px solid #000;
                         padding: 0 5px;
@@ -113,56 +115,56 @@
                             font-size: 11px;
                         }
                     }
-    
+
                     a {
                         display: flex;
                         align-items: center;
                     }
-    
+
                     .facebook {
-                        @include button($facebook, 11px, 2px 5px,#fff);
-    
+                        @include button($facebook, 11px, 2px 5px, #fff);
+
                         i {
                             margin-right: 5px;
                         }
                     }
-    
+
                     .twiter {
-                        @include button($tweet, 11px, 2px 5px,#000000);
+                        @include button($tweet, 11px, 2px 5px, #000000);
                         border: 1px solid $gray;
-    
+
                         i {
                             margin-right: 5px;
                             color: $twitter;
                         }
                     }
-    
+
                     .google {
-                        @include button(#fff, 11px, 2px 5px,red);
+                        @include button(#fff, 11px, 2px 5px, red);
                         border: 1px solid $gray;
-    
+
                         i {
                             margin-right: 5px;
                             color: red;
                         }
                     }
-    
+
                     .linkedin {
-                        @include button($linkedin, 11px, 2px 5px,#fff);
+                        @include button($linkedin, 11px, 2px 5px, #fff);
                         margin-left: 5px;
-    
+
                         i {
                             margin-right: 5px;
                             font-size: 16px;
                             border-right: 1px solid #000;
                         }
                     }
-    
+
                     .pinterest {
-                        @include button($pinterest, 12px, 2px 5px,$pin);
+                        @include button($pinterest, 12px, 2px 5px, $pin);
                         border: 1px solid $gray;
                         margin-left: 5px;
-    
+
                         i {
                             margin-right: 1px;
                             font-size: 15px;

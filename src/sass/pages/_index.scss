@@ -1,6 +1,7 @@
-@import '../layouts/home-layout/background';
-@import '../layouts/home-layout/goods';
-@import '../layouts/home-layout/product-layout';
+@import "../layouts/home-layout/background";
+@import "../layouts/home-layout/goods";
+@import "../layouts/home-layout/product-layout";
+@import "../base/placeholders";
 
 main {
     width: 100%;
@@ -30,7 +31,7 @@ main {
         &__bg {
             width: 100%;
             height: 348px;
-            background-image: url('../../../assets/img/home/bg-slider.jpg');
+            background-image: url("../../assets/img/home/bg-slider.jpg");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -51,11 +52,21 @@ main {
                 }
 
                 @keyframes slider {
-                    0% {left: 0}
-                    40% {left: 0}
-                    50% {left: -100%}
-                    90% {left: -100%}
-                    100% {left: -200%}
+                    0% {
+                        left: 0;
+                    }
+                    40% {
+                        left: 0;
+                    }
+                    50% {
+                        left: -100%;
+                    }
+                    90% {
+                        left: -100%;
+                    }
+                    100% {
+                        left: -200%;
+                    }
                 }
 
                 &__img {
@@ -63,7 +74,8 @@ main {
                     width: 33.33%;
 
                     &__item {
-                        span, i {
+                        span,
+                        i {
                             display: none;
                         }
                     }
@@ -231,7 +243,7 @@ main {
                     margin-top: 30px;
 
                     button {
-                        @include button(#fff, 12px, 5px 10px, #000); 
+                        @include button(#fff, 12px, 5px 10px, #000);
                         border: 1px solid #e6e6e6;
                         margin: 0 5px 5px 0;
 
@@ -359,7 +371,8 @@ main {
                 margin-right: 10px;
             }
 
-            span,i {
+            span,
+            i {
                 display: block !important;
             }
         }
@@ -395,13 +408,13 @@ main {
         .social {
             width: 450px !important;
             justify-content: center !important;
-    
+
             &__twitter {
                 .bar {
                     display: none;
                 }
             }
-    
+
             &__instagram,
             &__google,
             &__pinterest,
