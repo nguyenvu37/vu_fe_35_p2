@@ -3,7 +3,9 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import Slider from "react-slick";
 import { actFetchDataHotTrendRequest } from "../../../actions/actions";
+import { withRouter } from "react-router-dom";
 import AddToCart from "../../../common/addToCart";
+import callApi from "../../../common/callApi";
 
 const Hottrend = (props) => {
   const { t } = useTranslation("translation");
@@ -41,6 +43,19 @@ const Hottrend = (props) => {
     ],
   };
 
+  const handleCallDetailPage = (id) => {
+    const fetData = async () => {
+      const index = dataHot.findIndex((item) => item.id === id);
+      await callApi(`products/${id}`, "put", {
+        ...dataHot[index],
+        view: dataHot[index].view + 1,
+      });
+    };
+    fetData();
+
+    props.history.push(`/detail/${id}`);
+  };
+
   return (
     <div className="hot-trend">
       <div className="product">
@@ -64,9 +79,21 @@ const Hottrend = (props) => {
                     <h4 style={{ textTransform: "uppercase" }}>
                       {item.manufacturer}
                     </h4>
-                    <a href="detail.html">
-                      <p>{item.name}</p>
-                    </a>
+
+                    <button
+                      onClick={() => handleCallDetailPage(item.id)}
+                      style={{
+                        border: "0",
+                        backgroundColor: "#fff",
+                        cursor: "pointer",
+                        fontSize: "14px",
+                        outline: "none",
+                        height: "70px",
+                        padding: "0 5px",
+                      }}
+                    >
+                      {item.name}
+                    </button>
                     <span className="price">
                       {Math.floor(item.price * ((100 - item.discount) / 100))
                         .toString()
@@ -116,4 +143,4 @@ const Hottrend = (props) => {
   );
 };
 
-export default Hottrend;
+export default withRouter(Hottrend);

@@ -37,3 +37,20 @@ export const actFetchDataNew = (data) => {
     payload: data,
   };
 };
+
+export const actFetchDataDetailRequest = (id) => {
+  return (dispatch) => {
+    return callApi(`products?id=${id}`, "get", null).then((res) => {
+      if (res && res.data && res.status === 200) {
+        dispatch(actFetchDataDetail([...res.data]));
+      } else dispatch(actFetchDataDetail([]));
+    });
+  };
+};
+
+export const actFetchDataDetail = (data) => {
+  return {
+    type: Types.FETCH_DATADETAIL,
+    payload: data,
+  };
+};

@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import Slider from "react-slick";
 import { actFetchDataNewRequest } from "../../../actions/actions";
 import AddToCart from "../../../common/addToCart";
+import callApi from "../../../common/callApi";
+import { withRouter } from "react-router-dom";
 
 const NewProducts = (props) => {
   const { t } = useTranslation("translation");
@@ -21,8 +23,8 @@ const NewProducts = (props) => {
   const settings = {
     dots: true,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     slidesToShow: 4,
     slidesToScroll: 2,
     responsive: [
@@ -39,6 +41,18 @@ const NewProducts = (props) => {
         },
       },
     ],
+  };
+
+  const handleCallDetail = (id) => {
+    const fetData = async () => {
+      const index = dataNewProducts.findIndex((item) => item.id === id);
+      await callApi(`products/${id}`, "put", {
+        ...dataNewProducts[index],
+        view: dataNewProducts[index].view + 1,
+      });
+    };
+    fetData();
+    props.history.push(`/detail/${id}`);
   };
 
   return (
@@ -64,9 +78,20 @@ const NewProducts = (props) => {
                     <h4 style={{ textTransform: "uppercase" }}>
                       {item.manufacturer}
                     </h4>
-                    <a href="detail.html">
-                      <p>{item.name}</p>
-                    </a>
+                    <button
+                      onClick={() => handleCallDetail(item.id)}
+                      style={{
+                        border: "0",
+                        backgroundColor: "#fff",
+                        cursor: "pointer",
+                        fontSize: "14px",
+                        outline: "none",
+                        padding: "0 5px",
+                        height: "70px",
+                      }}
+                    >
+                      {item.name}
+                    </button>
                     <span className="price">
                       {Math.floor(item.price * ((100 - item.discount) / 100))
                         .toString()
@@ -115,4 +140,4 @@ const NewProducts = (props) => {
   );
 };
 
-export default NewProducts;
+export default withRouter(NewProducts);

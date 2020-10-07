@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import background5 from "../../assets/img/home/background5.jpg";
+import background5 from "../../../assets/img/home/background5.jpg";
 
 const VisitUs = () => {
   const { t } = useTranslation("translation");

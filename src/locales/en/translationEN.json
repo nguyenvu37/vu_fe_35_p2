@@ -72,5 +72,8 @@
     "policy1": "Free shipping",
     "policy2": "Get instant gifts priced at VND 250,000",
     "policy3": "Discount 30% for orders over 5,000,000 VND"
+  },
+  "recently": {
+    "title": "RECENTLY VIEWED PRODUCTS"
   }
 }

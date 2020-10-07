@@ -5,7 +5,7 @@ import CurrentOffers from "../../../components/homepage/current-offer/currentOff
 import Hottrend from "../../../components/homepage/hot-trend/hottrend";
 import NewProducts from "../../../components/homepage/new-product/newProduct";
 import Sliders from "../../../components/homepage/slider/slider";
-import VisitUs from "../../../components/visit-us/visitUs";
+import VisitUs from "../../../components/homepage/visit-us/visitUs";
 
 function HomePage(props) {
   const { t } = useTranslation();
