@@ -1,140 +1,140 @@
 @import "../../base/variables";
 
 .background {
-    position: relative;
+  position: relative;
 
-    &__img {
-        width: 100%;
-        height: 857px;
-        background-image: url("../../../assets/img/home/background.jpg");
-        background-size: cover;
-        background-position: center;
+  &__img {
+    width: 100%;
+    height: 857px;
+    &__content {
+      position: absolute;
+      top: 65%;
+      text-align: center;
 
-        &__content {
-            position: absolute;
-            top: 65%;
-            text-align: center;
+      h2 {
+        font-family: "UTM ViceroyJF";
+        font-size: 141px;
+        font-weight: 500;
+      }
 
-            h2 {
-                font-family: "UTM ViceroyJF";
-                font-size: 141px;
-                font-weight: 500;
-            }
+      p {
+        font-size: 19.23px;
+        margin-top: -25px;
+      }
 
-            p {
-                font-size: 19.23px;
-                margin-top: -25px;
-            }
+      span {
+        font-size: 45.24px;
+        font-weight: 300;
+        font-family: $font;
 
-            span {
-                font-size: 45.24px;
-                font-weight: 300;
-                font-family: $font;
-
-                small {
-                    font-size: 30px;
-                    top: 10%;
-                }
-            }
-
-            &__btn {
-                input {
-                    display: none;
-
-                    &:checked ~ .background__img__content__btn__overlay {
-                        opacity: 1;
-                        visibility: visible;
-                        transition: all 1s;
-                    }
-                }
-
-                label {
-                    color: #353535;
-                    text-transform: uppercase;
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-
-                &__overlay {
-                    width: 100%;
-                    height: 100%;
-                    position: fixed;
-                    left: 0;
-                    top: 0;
-                    z-index: 1500;
-                    background-color: #1c1c1c75;
-                    opacity: 0;
-                    visibility: hidden;
-                }
-            }
-
-            .background__img__content--green {
-                color: $green;
-            }
-
-            .background__img__content--grown {
-                color: $grown;
-            }
+        small {
+          font-size: 30px;
+          top: 10%;
         }
+      }
+
+      &__btn {
+        input {
+          display: none;
+
+          &:checked ~ .background__img__content__btn__overlay {
+            opacity: 1;
+            visibility: visible;
+            transition: all 1s;
+          }
+        }
+
+        label {
+          color: #353535;
+          text-transform: uppercase;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        &__overlay {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 1500;
+          background-color: #1c1c1c75;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      .background__img__content--green {
+        color: $green;
+      }
+
+      .background__img__content--grown {
+        color: $grown;
+      }
     }
+  }
 }
 
 //Responsive
 @media screen and (max-width: 1300px) {
-    .background {
-        &__img {
-            height: 600px;
+  .background {
+    &__img {
+      height: 600px;
 
-            &__content {
-                width: 300px;
-                top: 60%;
+      &__content {
+        width: 300px;
+        top: 60%;
 
-                h2 {
-                    font-size: 85px !important;
-                    text-align: left !important;
-                    letter-spacing: 0.1rem;
-                }
-
-                p {
-                    margin: 0 auto;
-                    font-size: 14px;
-                    width: 80%;
-                }
-
-                span {
-                    font-size: 32px;
-
-                    small {
-                        font-size: 24px;
-                        top: 0;
-                    }
-                }
-
-                &__btn {
-                    margin-top: 20px;
-
-                    label {
-                        font-size: 16px;
-                    }
-                }
-            }
+        h2 {
+          font-size: 85px !important;
+          text-align: left !important;
+          letter-spacing: 0.1rem;
         }
+
+        p {
+          margin: 0 auto;
+          font-size: 14px;
+          width: 80%;
+        }
+
+        span {
+          font-size: 32px;
+
+          small {
+            font-size: 24px;
+            top: 0;
+          }
+        }
+
+        &__btn {
+          margin-top: 20px;
+
+          label {
+            font-size: 16px;
+          }
+        }
+      }
     }
+  }
+
+  .center {
+    height: 550px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .background__img {
-        background-position-x: -185px;
-    }
+  .background__img {
+    background-position-x: -185px;
+  }
 }
 
 @media screen and (max-width: 460px) {
-    .background__img {
-        background-position-x: -250px;
-    }
+  .background__img {
+    background-position-x: -250px;
+  }
 
-    .newsletter__content {
-        width: 400px !important;
-        height: 400px !important;
-    }
+  .newsletter__content {
+    width: 400px !important;
+    height: 400px !important;
+  }
 }

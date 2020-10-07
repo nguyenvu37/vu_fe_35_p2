@@ -11,10 +11,6 @@
     "perfume": "NƯỚC HOA",
     "makeup": "TRANG ĐIỂM"
   },
-  "lang": {
-    "en": "Tiếng Anh",
-    "vn": "Tiếng Việt"
-  },
   "footer": {
     "title": "LIÊN HỆ VỚI CHÚNG TÔI",
     "location": "Tầng 4,Tòa nhà Hanoi Group số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội",
@@ -37,5 +33,44 @@
     "favoriteProduct": "Sản phẩm yêu thích",
     "checking": "Kiểm tra",
     "trackOrder": "Theo giỏi đơn hàng của tôi"
+  },
+  "banner": {
+    "shopNow": "Mua Ngay",
+    "titleBanner1": "Green Vera",
+    "titleBanner2": "Mỹ Phẩm",
+    "titleBanner3": "Laneige"
+  },
+  "hotTrend": {
+    "title": "SẢN PHẨM BÁN CHẠY",
+    "viewAll": "XEM TẤT CẢ"
+  },
+  "addToCart": "MUA HÀNG",
+  "offers": {
+    "title": "GIẢM GIÁ HIỆN TẠI",
+    "discount1": "10% GIẢM GIÁ",
+    "discount2": "Lên đến 70% GIẢM GIÁ",
+    "discount3": "10% GIẢM GIÁ",
+    "content1": "Khi bạn để lại cho chúng tôi một Đánh giá Sản phẩm",
+    "content2": "Khi chọn các sản phẩm",
+    "content3": "Mã sử dụng mua hàng đầu tiên của bạn: ENESTI100"
+  },
+  "newProduct": {
+    "title": "SẢN PHẨM MỚI",
+    "viewAll": "XEM TẤT CẢ"
+  },
+  "visit": {
+    "title": "GHÉ ĐẾN SHOP",
+    "h3": "Cửa hàng Mandala",
+    "mon": "Th2",
+    "tue": "Th3",
+    "wed": "Th4",
+    "thu": "Th5",
+    "fri": "Th6",
+    "sat": "Th7"
+  },
+  "policy": {
+    "policy1": "Miễn phí vận chuyển",
+    "policy2": "Nhận ngay quà tặng trí giá 250.000",
+    "policy3": "Giảm 30% cho đơn hàng trên 5.000.000đ"
   }
 }

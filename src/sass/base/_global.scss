@@ -82,49 +82,13 @@ a {
 .emty {
   height: 20px;
   width: 1px;
+  margin-top: 5px;
   background: #000;
 }
 
-.access {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 200px;
-
-  .access-btn {
-    display: flex;
-    margin: 10px 0;
-  }
-
-  a {
-    font-weight: 600;
-    font-size: 13px;
-    width: 100px;
-    text-align: center;
-  }
-}
-
-.btn-translate {
-  display: flex;
-  button {
-    border: 0;
-    width: 30px;
-    cursor: pointer;
-    outline: none;
-    padding: 5px;
-    width: 100px;
-  }
-
-  .active {
-    background-color: $green;
-    color: #fff;
-  }
-}
-
-main {
-  height: 900px !important;
-}
+// main {
+//   height: 900px !important;
+// }
 
 .sk-chase {
   width: 40px;

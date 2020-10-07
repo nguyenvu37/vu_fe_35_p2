@@ -11,10 +11,6 @@
     "perfume": "PERFUME",
     "makeup": "MAKE UP"
   },
-  "lang": {
-    "en": "English",
-    "vn": "Vietnamese"
-  },
   "footer": {
     "title": "CONTACT US",
     "location": "4th Floor, Hanoi Group Building, 442 Doi Can, Cong Vi Ward, Ba Dinh District, Hanoi",
@@ -37,5 +33,44 @@
     "favoriteProduct": "Favorite Product",
     "checking": "Checking",
     "trackOrder": "Track Order"
+  },
+  "banner": {
+    "shopNow": "Shop Now",
+    "titleBanner1": "Green Vera",
+    "titleBanner2": "Cosmetic",
+    "titleBanner3": "Laneige"
+  },
+  "hotTrend": {
+    "title": "HOT TREND",
+    "viewAll": "VIEW ALL"
+  },
+  "addToCart": "ADD TO CART",
+  "offers": {
+    "title": "CURRENT OFFERS",
+    "discount1": "10% OFF",
+    "discount2": "Up To 70% OFF",
+    "discount3": "10% OFF",
+    "content1": "When you leave us a Product Review",
+    "content2": "Selected Items",
+    "content3": "Your 1st purchase use code: ENESTI100"
+  },
+  "newProduct": {
+    "title": "NEW ARRIVALS",
+    "viewAll": "VIEW ALL"
+  },
+  "visit": {
+    "title": "VISIT US",
+    "h3": "Mandala Shop",
+    "mon": "MON",
+    "tue": "TUE",
+    "wed": "WED",
+    "thu": "THU",
+    "fri": "FRI",
+    "sat": "SAT"
+  },
+  "policy": {
+    "policy1": "Free shipping",
+    "policy2": "Get instant gifts priced at VND 250,000",
+    "policy3": "Discount 30% for orders over 5,000,000 VND"
   }
 }

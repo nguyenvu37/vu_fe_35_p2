@@ -3,6 +3,7 @@ import routes from "./routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Waiting from "./common/waiting";
 import "./sass/styles.scss";
+import "react-animated-slider/build/horizontal.css";
 
 function App() {
   return (

@@ -9,6 +9,7 @@
       "category": "lotions",
       "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
       "status": "inStock",
+      "hot": "hot",
       "imgDetail": [
         "cosmetic/ahc1/AHC-Ageless1.jpg",
         "cosmetic/ahc1/AHC-Ageless2.jpg",
@@ -25,7 +26,9 @@
       "price": 234000,
       "category": "lotions",
       "status": "inStock",
-      "img": "cosmetic/jmSolution1/jmSolution-marine-luminous-pearl-sun-spray-spf-50-pa-1-500x500.jpg",
+      "hot": "hot",
+      "new": "new",
+      "img": "cosmetic/jmSolution1/jmSolution1.jpg",
       "imgDetail": [
         "cosmetic/jmSolution1/jmSolution1.jpg",
         "cosmetic/jmSolution1/jmSolution2.jpg",
@@ -42,7 +45,8 @@
       "price": 350000,
       "category": "mask",
       "status": "inStock",
-      "img": "cosmetic/collagen/collagen5.jpg",
+      "new": "new",
+      "img": "cosmetic/collagen/collagen1.jpg",
       "imgDetail": [
         "cosmetic/collagen/collagen1.jpg",
         "cosmetic/collagen/collagen2.jpg",
@@ -52,19 +56,20 @@
       "info": " Mặt Nạ Collagen Chống Lão Hóa Da Enesti Collagen Multi Care Mask 27g được làm bằng vải Rayon, được dệt từ sợi Cellulose chiết xuất từ cây Eucalyptus, co giãn và mềm mại giúp ôm sát và nâng niu da mặt nhẹ nhàng."
     },
     {
-      "id": "enesti-1",
+      "id": "enesti-3",
       "manufacturer": "enesti",
       "name": "Sữa Rửa Mặt Loại Bỏ Bã Nhờn Chiết Xuất Chanh Và Trà Xanh Enesti Lemon And Green Tea Cleansing 160ml",
       "discount": 47,
       "price": 234000,
       "category": "cleanser",
       "status": "inStock",
-      "img": "cosmetic/enesti1/sua-rua-mat-loai-bo-ba-nhon-chiet-xuat-chanh-va-tra-xanh-enesti-daytoday-lemon-and-green-tea-cleansing-foam-160ml-31-500x500.jpg",
+      "hot": "hot",
+      "img": "cosmetic/enesti3/sua-rua-mat-loai-bo-ba-nhon-chiet-xuat-chanh-va-tra-xanh-enesti-daytoday-lemon-and-green-tea-cleansing-foam-160ml-31-500x500.jpg",
       "imgDetail": [
-        "cosmetic/enesti1/daytoday1.jpg",
-        "cosmetic/enesti1/daytoday2.jpg",
-        "cosmetic/enesti1/daytoday3.jpg",
-        "cosmetic/enesti1/daytoday4.jpg"
+        "cosmetic/enesti3/daytoday1.jpg",
+        "cosmetic/enesti3/daytoday2.jpg",
+        "cosmetic/enesti3/daytoday3.jpg",
+        "cosmetic/enesti3/daytoday4.jpg"
       ],
       "info": "Enesti là thương hiệu mỹ phẩm được nghiên cứu và sản xuất cùng với xác nhận của Bộ Y Tế Hàn Quốc. Enesti mang sứ mệnh đem đến cho khách hàng những sản phẩm hoàn hảo nhất qua đội ngũ chuyên gia nghiên cứu và sản xuất."
     },
@@ -76,6 +81,8 @@
       "price": 680000,
       "status": "inStock",
       "category": "perfume",
+      "hot": "hot",
+      "new": "new",
       "img": "perfume/seed/seed1.jpg",
       "imgDetail": [
         "perfume/seed/seed1.jpg",
@@ -93,6 +100,7 @@
       "price": 430000,
       "status": "inStock",
       "category": "perfume",
+      "new": "new",
       "img": "perfume/charme4/charme1.jpg",
       "imgDetail": [
         "perfume/charme4/charme1.jpg",
@@ -110,6 +118,7 @@
       "price": 50000,
       "status": "inStock",
       "category": "mask",
+      "new": "new",
       "img": "cosmetic/secret/secret1.jpg",
       "imgDetail": [
         "cosmetic/secret/secret1.jpg",
@@ -128,6 +137,7 @@
       "category": "perfume",
       "img": "perfume/secret/secret1.jpg",
       "status": "inStock",
+      "hot": "hot",
       "imgDetail": [
         "perfume/secret/secret1.jpg",
         "perfume/secret/secret2.jpg",
@@ -143,6 +153,8 @@
       "discount": 35,
       "price": 330000,
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "category": "perfume",
       "img": "perfume/charme2/charme1.jpg",
       "imgDetail": [
@@ -161,6 +173,8 @@
       "price": 489000,
       "status": "inStock",
       "category": "cleanser",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/laneige1/laneige4.jpg",
       "imgDetail": [
         "cosmetic/laneige1/laneige4.jpg",
@@ -178,6 +192,8 @@
       "price": 259000,
       "status": "inStock",
       "category": "lotions",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/enesti2/xit-khoang-duong-am-chiet-xuat-lo-hoi-enesti-suansu-aloe-vera-skin-mist-150ml-10-500x500.jpg",
       "imgDetail": [
         "cosmetic/enesti2/enesti1.jpg",
@@ -195,6 +211,8 @@
       "price": 310000,
       "category": "mask",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/enesti5/enesti5.jpg",
       "imgDetail": [
         "cosmetic/enesti5/enesti1.jpg",
@@ -212,6 +230,8 @@
       "price": 240000,
       "category": "cleanser",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/volcanic2/volcanic1.jpg",
       "imgDetail": [
         "cosmetic/volcanic2/volcanic1.jpg",
@@ -222,19 +242,21 @@
       "info": "Gel Cấp Ẩm Chiết Xuất Nước Hoa Hồng Mamonde Rose Water Soothing Gel là một dòng sản phẩm dưỡng ẩm đa năng với hơn 90% thành phần từ nước hoa hồng Damask nên rất lành tính cho tất cả các loại da. Sản phẩm chính là liệu pháp cứu cánh một cách nhanh chóng cho những vùng da đang thiếu ẩm trầm trọng dẫn đến khô ráp và đối mặt với các dấu hiệu lão hóa."
     },
     {
-      "id": "enesti-3",
+      "id": "enesti-1",
       "manufacturer": "Enesti",
       "name": "Kem Chống Nắng Enesti UV Cut Sun Block SPF 50+ PA+++ 40ml",
       "discount": 52,
       "price": 259000,
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "category": "lotions",
-      "img": "cosmetic/enesti3/kem-chong-nang-enesti-uv-cut-sun-block-spf-50-PA-40ml-tang-mat-na-1-500x500.jpg",
+      "img": "cosmetic/enesti1/kem-chong-nang-enesti-uv-cut-sun-block-spf-50-PA-40ml-tang-mat-na-1-500x500.jpg",
       "imgDetail": [
-        "cosmetic/enesti3/enesti1.jpg",
-        "cosmetic/enesti3/enesti2.jpg",
-        "cosmetic/enesti3/enesti3.jpg",
-        "cosmetic/enesti3/enesti4.jpg"
+        "cosmetic/enesti1/enesti1.jpg",
+        "cosmetic/enesti1/enesti2.jpg",
+        "cosmetic/enesti1/enesti3.jpg",
+        "cosmetic/enesti1/enesti4.jpg"
       ],
       "info": "Ánh nắng mặt trời được coi là tác nhân có hại số một của làn da, gây ra hiện tượng nám, sạm da. Các hắc tố hình thành mạnh khi có tín hiệu tiết kích thích từ tia UV, màu sắc của da là do quá trình tổng hợp Melanin trong tế bào biểu bì, chính các melanin này hình thành lên các hắc tố và hiển thị màu da."
     },
@@ -246,6 +268,8 @@
       "price": 362000,
       "status": "inStock",
       "category": "lotions",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/enesti4/sap-chong-nang-dang-thoi-enesti-sun-stick-uv-cut-perfect-spf-50-pa-23g-tang-kem-mat-na-1-500x500.jpg",
       "imgDetail": [
         "cosmetic/enesti4/enesti1.jpg",
@@ -263,6 +287,8 @@
       "price": 720000,
       "status": "inStock",
       "category": "lotions",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/lime1/Lime-Giga-White-Tone-Up-Cream-36-500x500.jpg",
       "imgDetail": [
         "cosmetic/lime1/lime1.jpg",
@@ -279,6 +305,8 @@
       "discount": 50,
       "price": 949000,
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "category": "lotions",
       "img": "cosmetic/yehwadam1/Yehwadam-Tone-U-Sun-Cream-14-500x500.jpg",
       "imgDetail": [
@@ -297,6 +325,8 @@
       "price": 279000,
       "status": "inStock",
       "category": "cleanser",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/bivybes/bivybes1.jpg",
       "imgDetail": [
         "cosmetic/bivybes/bivybes1.jpg",
@@ -314,6 +344,8 @@
       "status": "inStock",
       "price": 269000,
       "category": "lotions",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/roman1/kem-duong-am-sang-da-gao-romand-back-me-tone-up-cream.html9-500x500.jpg",
       "imgDetail": [
         "cosmetic/roman1/roman1.jpg",
@@ -331,6 +363,8 @@
       "price": 450000,
       "status": "inStock",
       "category": "lotions",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/iope1/iope-live-lift-special-gift-1-500x500.jpg",
       "imgDetail": [
         "cosmetic/iope1/iope1.jpg",
@@ -348,6 +382,8 @@
       "price": 850000,
       "category": "lotions",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/yehwadam2/yehwadam-revitalizing-moisturizing-cream-special-gift-set-1-500x500.jpg",
       "imgDetail": [
         "cosmetic/yehwadam2/yehwadam1.jpg",
@@ -365,6 +401,8 @@
       "price": 680000,
       "status": "inStock",
       "category": "perfume",
+      "hot": "hot",
+      "new": "new",
       "img": "perfume/charme5/charme1.jpg",
       "imgDetail": [
         "perfume/charme5/charme1.jpg",
@@ -377,17 +415,19 @@
     {
       "id": "yehwadam-3",
       "manufacturer": "yehwadam",
-      "name": "Bộ Sữa Rửa Mặt Chống Lão Hóa Da Yehwadam Hwansaenggo Rejuvenating Cleansing Special Kit (4 sản phẩm)",
+      "name": "Bộ Sữa Rửa Mặt Chống Lão Hóa Da Yehwadam Cleansing Special Kit (4 sản phẩm)",
       "discount": 29,
       "price": 420000,
       "status": "inStock",
       "category": "cleanser",
-      "img": "cosmetic/yahwadam3/bo-sua-rua-mat-chong-lao-hoa-da-yehwadam-hwansaenggo-rejuvenating-cleansing-special-kit-4-items-11-500x500.jpg",
+      "hot": "hot",
+      "new": "new",
+      "img": "cosmetic/yehwadam3/yehwadam1.jpg",
       "imgDetail": [
-        "cosmetic/yahwadam3/yehwadam1.jpg",
-        "cosmetic/yahwadam3/yehwadam2.jpg",
-        "cosmetic/yahwadam3/yehwadam3.jpg",
-        "cosmetic/yahwadam3/yehwadam4.jpg"
+        "cosmetic/yehwadam3/yehwadam1.jpg",
+        "cosmetic/yehwadam3/yehwadam2.jpg",
+        "cosmetic/yehwadam3/yehwadam3.jpg",
+        "cosmetic/yehwadam3/yehwadam4.jpg"
       ],
       "info": "Bộ Sữa Rửa Mặt Chống Lão Hóa Da Yehwadam Hwansaenggo Rejuvenating Cleansing Special Kit (4 Items) sử dụng công thức dưỡng da từ tinh chất vàng và 12 loại thảo dược truyền thống cao cấp như nhân sâm thiên nhiên, nấm thiên nhiên, nấm linh chi, v.v. Giúp phục hồi sự sáng khỏe cho làn da, chăm sóc tối ưu làn da bị lão hóa, giúp da tươi trẻ, săn chắc."
     },
@@ -399,6 +439,8 @@
       "price": 279000,
       "category": "lotions",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/mamonde1/AVA-500x500.jpg",
       "imgDetail": [
         "cosmetic/mamonde1/mamonde1.jpg",
@@ -416,6 +458,8 @@
       "price": 279000,
       "category": "cleanser",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/volcanic1/volcanic4.jpg",
       "imgDetail": [
         "cosmetic/volcanic1/volcanic1.jpg",
@@ -433,6 +477,8 @@
       "price": 624000,
       "status": "inStock",
       "category": "mask",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/innisfree1/innisfree1.jpg",
       "imgDetail": [
         "cosmetic/innisfree1/innisfree1.jpg",
@@ -450,6 +496,8 @@
       "price": 240000,
       "status": "inStock",
       "category": "cleanser",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/volcanic2/volcanic1.jpg",
       "imgDetail": [
         "cosmetic/volcanic2/volcanic1.jpg",
@@ -467,12 +515,14 @@
       "price": 780000,
       "category": "mask",
       "status": "inStock",
-      "img": "cosmetic/lanegie1/lanegie1.jpg",
+      "hot": "hot",
+      "new": "new",
+      "img": "cosmetic/laneige1/laneige1.jpg",
       "imgDetail": [
-        "cosmetic/lanegie1/lanegie1.jpg",
-        "cosmetic/lanegie1/lanegie2.jpg",
-        "cosmetic/lanegie1/lanegie3.jpg",
-        "cosmetic/lanegie1/lanegie4.jpg"
+        "cosmetic/laneige1/laneige1.jpg",
+        "cosmetic/laneige1/laneige2.jpg",
+        "cosmetic/laneige1/laneige3.jpg",
+        "cosmetic/laneige1/laneige4.jpg"
       ],
       "info": "Các chuyên gia luôn khuyên dùng nên chăm sóc cho làn da kể cả khi đi ngủ để sở hữu được một làn da sáng mịn và tươi mới. Một trong những lựa chọn tốt nhất chính là sản phẩm Mặt Nạ Ngủ Dưỡng Da Laneige Water Sleeping Mask hương lavender đến từ thương hiệu nổi tiếng Laneige. Sản phẩm sẽ giúp quá trình chăm sóc da vào ban đêm được thực hiện tốt hơn với hương thơm dễ chịu từ Lavender."
     },
@@ -484,6 +534,8 @@
       "price": 145000,
       "category": "cleanser",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/tonymoly/tonymoly1.jpg",
       "imgDetail": [
         "cosmetic/tonymoly/tonymoly1.jpg",
@@ -502,6 +554,8 @@
       "category": "cleanser",
       "img": "cosmetic/hokkaido/hokkaido1.jpg",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "imgDetail": [
         "cosmetic/hokkaido/hokkaido1.jpg",
         "cosmetic/hokkaido/hokkaido2.jpg",
@@ -518,6 +572,8 @@
       "price": 475000,
       "category": "cleanser",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/cetaphil/cetaphil5.jpg",
       "imgDetail": [
         "cosmetic/cetaphil/cetaphil1.jpg",
@@ -534,6 +590,8 @@
       "discount": 19,
       "price": 475000,
       "category": "mask",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/lebelage/lebelage1.jpg",
       "status": "inStock",
       "imgDetail": [
@@ -551,6 +609,8 @@
       "discount": 41,
       "price": 299000,
       "category": "mask",
+      "hot": "hot",
+      "new": "new",
       "img": "cosmetic/innisfree2/innisfree1.jpg",
       "status": "inStock",
       "imgDetail": [
@@ -568,6 +628,8 @@
       "discount": 37,
       "price": 455000,
       "category": "perfume",
+      "hot": "hot",
+      "new": "new",
       "status": "inStock",
       "img": "perfume/queen/queen1.jpg",
       "imgDetail": [
@@ -587,6 +649,7 @@
       "price": 550000,
       "status": "inStock",
       "category": "perfume",
+      "hot": "hot",
       "img": "perfume/charme3/charme1.jpg",
       "imgDetail": [
         "perfume/charme3/charme1.jpg",
@@ -604,6 +667,7 @@
       "price": 1395000,
       "category": "perfume",
       "status": "outStock",
+      "new": "new",
       "img": "perfume/ck1/ck1.jpg",
       "imgDetail": [
         "perfume/ck1/ck1.jpg",
@@ -620,6 +684,7 @@
       "discount": 60,
       "price": 390000,
       "category": "lipstick",
+      "hot": "hot",
       "status": "inStock",
       "img": "makeup/lipstick/fmgt/fmgt1.jpg",
       "imgDetail": [
@@ -637,6 +702,7 @@
       "discount": 49,
       "price": 350000,
       "category": "lipstick",
+      "tag": [],
       "status": "inStock",
       "img": "makeup/lipstick/roroko/roroko1.jpg",
       "imgDetail": [
@@ -654,6 +720,7 @@
       "discount": 48,
       "price": 190000,
       "category": "lipstick",
+      "tag": [],
       "status": "inStock",
       "img": "makeup/lipstick/matte/matte1.jpg",
       "imgDetail": [
@@ -672,6 +739,8 @@
       "price": 180000,
       "category": "lipstick",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/lipstick/apieu/apieu1.jpg",
       "imgDetail": [
         "makeup/lipstick/apieu/apieu1.jpg",
@@ -689,6 +758,8 @@
       "price": 230000,
       "category": "lipstick",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/lipstick/3ce/3ce1.jpg",
       "imgDetail": [
         "makeup/lipstick/3ce/3ce1.jpg",
@@ -706,6 +777,8 @@
       "price": 260000,
       "category": "lipstick",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/lipstick/velvet/velvet1.jpg",
       "imgDetail": [
         "makeup/lipstick/velvet/velvet1.jpg",
@@ -723,6 +796,8 @@
       "price": 500000,
       "category": "lipstick",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/lipstick/3ce2/3ce1.jpg",
       "imgDetail": [
         "makeup/lipstick/3ce2/3ce1.jpg",
@@ -740,6 +815,8 @@
       "price": 260000,
       "category": "lipstick",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/lipstick/taste/taste1.jpg",
       "imgDetail": [
         "makeup/lipstick/taste/taste1.jpg",
@@ -757,6 +834,8 @@
       "price": 260000,
       "category": "lipstick",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/lipstick/3ce3/3ce1.jpg",
       "imgDetail": [
         "makeup/lipstick/3ce3/3ce1.jpg",
@@ -774,6 +853,8 @@
       "price": 290000,
       "category": "mascara",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/mascara/glam/glam1.jpg",
       "imgDetail": [
         "makeup/mascara/glam/glam1.jpg",
@@ -791,6 +872,8 @@
       "price": 290000,
       "category": "mascara",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/mascara/lash/lash1.jpg",
       "imgDetail": [
         "makeup/mascara/lash/lash1.jpg",
@@ -808,6 +891,8 @@
       "price": 372000,
       "category": "mascara",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/mascara/skinny/skinny1.jpg",
       "imgDetail": [
         "makeup/mascara/skinny/skinny1.jpg",
@@ -824,6 +909,8 @@
       "discount": 50,
       "price": 350000,
       "category": "mascara",
+      "hot": "hot",
+      "new": "new",
       "status": "inStock",
       "img": "makeup/mascara/peripera/peripera1.jpg",
       "imgDetail": [
@@ -841,6 +928,7 @@
       "discount": 25,
       "price": 350000,
       "category": "mascara",
+      "new": "new",
       "status": "inStock",
       "img": "makeup/mascara/curling/curling1.jpg",
       "imgDetail": [
@@ -858,6 +946,7 @@
       "discount": 36,
       "price": 439000,
       "category": "mascara",
+      "tag": [],
       "status": "inStock",
       "img": "makeup/mascara/volume/volume1.jpg",
       "imgDetail": [
@@ -876,6 +965,7 @@
       "price": 250000,
       "category": "blusher",
       "status": "inStock",
+      "hot": "hot",
       "img": "makeup/blusher/limeBlusher/limeBlusher1.jpg",
       "imgDetail": [
         "makeup/blusher/limeBlusher/limeBlusher1.jpg",
@@ -893,6 +983,7 @@
       "price": 200000,
       "category": "blusher",
       "status": "inStock",
+      "hot": "hot",
       "img": "makeup/blusher/rorokoBlusher/rorokoBlusher1.jpg",
       "imgDetail": [
         "makeup/blusher/rorokoBlusher/rorokoBlusher1.jpg",
@@ -910,6 +1001,7 @@
       "price": 200000,
       "category": "blusher",
       "status": "inStock",
+      "hot": "hot",
       "img": "makeup/blusher/rorokoBlusher2/rorokoBlusher1.jpg",
       "imgDetail": [
         "makeup/blusher/rorokoBlusher2/rorokoBlusher1.jpg",
@@ -927,6 +1019,8 @@
       "price": 1410000,
       "category": "blusher",
       "status": "inStock",
+      "hot": "hot",
+      "new": "new",
       "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
       "imgDetail": [
         "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
@@ -944,6 +1038,7 @@
       "price": 240000,
       "category": "blusher",
       "status": "inStock",
+      "hot": "hot",
       "img": "makeup/blusher/etude/etude1.jpg",
       "imgDetail": [
         "makeup/blusher/etude/etude1.jpg",

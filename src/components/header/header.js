@@ -22,6 +22,7 @@ const Header = () => {
 
   return (
     <header>
+      <div className="box"></div>
       <div className="box">
         <div className="nav">
           <div className="nav__logo logo">
@@ -76,34 +77,42 @@ const Header = () => {
           </div>
           <div className="nav__cart">
             <div className="nav__cart__item">
-              <i className="fas fa-search search"></i>
               <Link className="link" to="/cart">
                 <i className="fas fa-shopping-cart cart"></i>
               </Link>
-            </div>
-            <div className="access">
-              <div className="btn-translate">
-                <button
-                  className={`${classEn}`}
-                  onClick={() => handleChangeLanguage("en")}
-                >
-                  {t("lang.en")}
-                </button>
-                <button
-                  className={`${classVn}`}
-                  onClick={() => handleChangeLanguage("vn")}
-                >
-                  {t("lang.vn")}
-                </button>
+              <div className="nav__cart__item__search">
+                <input
+                  className="input-search"
+                  type="text"
+                  name="search"
+                  placeholder="Search.."
+                />
+                <i className="fas fa-search search"></i>
               </div>
-              <div className="access-btn">
-                <Link className="link" to="/login">
-                  {t("navigations.login")}
-                </Link>
-                <div className="emty"></div>
-                <Link className="link" to="/register">
-                  {t("navigations.register")}
-                </Link>
+              <div className="access">
+                <div className="access-btn">
+                  <Link className="link" to="/login">
+                    {t("navigations.login")}
+                  </Link>
+                  <div className="emty"></div>
+                  <Link className="link" to="/register">
+                    {t("navigations.register")}
+                  </Link>
+                  <div className="btn-translate">
+                    <button
+                      className={`${classEn}`}
+                      onClick={() => handleChangeLanguage("en")}
+                    >
+                      En
+                    </button>
+                    <button
+                      className={`${classVn}`}
+                      onClick={() => handleChangeLanguage("vn")}
+                    >
+                      Vn
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
