@@ -2,10 +2,11 @@
     margin-top: 50px;
     margin-bottom: 80px;
     display: flex;
+    width: 100%;
 
     &__content {
         margin-left: 15px;
-        
+
         &__product {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;

@@ -6,6 +6,7 @@ import { actFetchDataHotTrendRequest } from "../../../actions/actions";
 import { withRouter } from "react-router-dom";
 import AddToCart from "../../../common/addToCart";
 import callApi from "../../../common/callApi";
+import Waiting from "../../../common/waiting";
 
 const Hottrend = (props) => {
   const { t } = useTranslation("translation");
@@ -58,87 +59,98 @@ const Hottrend = (props) => {
 
   return (
     <div className="hot-trend">
-      <div className="product">
-        <div className="product__title">
-          <div className="product__title__name">{t("hotTrend.title")}</div>
-        </div>
-        <div className="product__items">
-          <Slider {...settings}>
-            {dataHot.map((item, index) => {
-              return (
-                <div
-                  className="product__items__detail"
-                  key={index + 1}
-                  style={{ position: "relative" }}
-                >
-                  <img
-                    src={require(`../../../assets/img/${item.img}`)}
-                    alt=""
-                  />
-                  <div className="product__items__detail__content detail-content">
-                    <h4 style={{ textTransform: "uppercase" }}>
-                      {item.manufacturer}
-                    </h4>
+      {dataHot.length !== 0 ? (
+        <div className="product">
+          <div className="product__title">
+            <div className="product__title__name">{t("hotTrend.title")}</div>
+          </div>
 
-                    <button
-                      onClick={() => handleCallDetailPage(item.id)}
+          <div className="product__items">
+            <Slider {...settings}>
+              {dataHot.map((item, index) => {
+                return (
+                  <div
+                    className="product__items__detail"
+                    key={index + 1}
+                    style={{ position: "relative" }}
+                  >
+                    <img
+                      src={require(`../../../assets/img/${item.img}`)}
+                      alt=""
+                    />
+                    <div className="product__items__detail__content detail-content">
+                      <h4 style={{ textTransform: "uppercase" }}>
+                        {item.manufacturer}
+                      </h4>
+
+                      <button
+                        onClick={() => handleCallDetailPage(item.id)}
+                        style={{
+                          border: "0",
+                          backgroundColor: "#fff",
+                          cursor: "pointer",
+                          fontSize: "14px",
+                          outline: "none",
+                          height: "70px",
+                          padding: "0 5px",
+                        }}
+                      >
+                        {item.name}
+                      </button>
+                      <span className="price">
+                        {Math.floor(item.price * ((100 - item.discount) / 100))
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                        <small>đ</small>
+                      </span>
+                      <span
+                        className="price old"
+                        style={{ textDecoration: "line-through" }}
+                      >
+                        {item.price
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                        <small>đ</small>
+                      </span>
+                    </div>
+                    <div
+                      className="discount-item"
                       style={{
-                        border: "0",
-                        backgroundColor: "#fff",
-                        cursor: "pointer",
-                        fontSize: "14px",
-                        outline: "none",
-                        height: "70px",
-                        padding: "0 5px",
+                        position: "absolute",
+                        top: "5px",
+                        right: "0",
+                        fontFamily: "Timenewroman",
+                        fontSize: "13px",
+                        fontWeight: "700",
+                        background: "red",
+                        padding: "5px 20px",
+                        color: "#fff",
+                        boxShadow: "3px 3px 5px 0px rgba(0,0,0,0.75)",
                       }}
                     >
-                      {item.name}
-                    </button>
-                    <span className="price">
-                      {Math.floor(item.price * ((100 - item.discount) / 100))
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
-                      <small>đ</small>
-                    </span>
-                    <span
-                      className="price old"
-                      style={{ textDecoration: "line-through" }}
-                    >
-                      {item.price
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
-                      <small>đ</small>
-                    </span>
+                      {item.discount}%
+                    </div>
+                    <div className="product__items__detail__icon">
+                      <AddToCart />
+                    </div>
                   </div>
-                  <div
-                    className="discount-item"
-                    style={{
-                      position: "absolute",
-                      top: "5px",
-                      right: "0",
-                      fontFamily: "Timenewroman",
-                      fontSize: "13px",
-                      fontWeight: "700",
-                      background: "red",
-                      padding: "5px 20px",
-                      color: "#fff",
-                      boxShadow: "3px 3px 5px 0px rgba(0,0,0,0.75)",
-                    }}
-                  >
-                    {item.discount}%
-                  </div>
-                  <div className="product__items__detail__icon">
-                    <AddToCart />
-                  </div>
-                </div>
-              );
-            })}
-          </Slider>
+                );
+              })}
+            </Slider>
+          </div>
+
+          <div className="product__view-all">
+            <button>{t("hotTrend.viewAll")}</button>
+          </div>
         </div>
-        <div className="product__view-all">
-          <button>{t("hotTrend.viewAll")}</button>
+      ) : (
+        <div className="product" style={{ width: "100%" }}>
+          <div className="product__title">
+            <div className="product__title__name">{t("hotTrend.title")}</div>
+          </div>
+          <Waiting custom={{ position: "absolute", left: "50%" }} />
         </div>
-      </div>
+      )}
     </div>
   );
 };

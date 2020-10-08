@@ -320,8 +320,6 @@ article {
       margin-top: 10px;
 
       h2 {
-        color: $green;
-
         i {
           color: #000;
           font-size: 18px;
@@ -344,6 +342,16 @@ article {
     p {
       margin-top: 20px;
       font-size: 13px;
+    }
+  }
+
+  .border-dotted.active {
+    h2 {
+      color: $green;
+    }
+
+    ul li.active {
+      color: $green;
     }
   }
 
@@ -406,6 +414,51 @@ article {
   }
 }
 
+.paginations {
+  line-height: 1.5em;
+  text-align: center;
+
+  button {
+    background-color: #fff;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin: 0 10px;
+      font-size: medium;
+
+      span {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #0063c3;
+      }
+    }
+  }
+
+  .paginations__item__link {
+    border: 0;
+    outline: none;
+    padding: 5px;
+
+    i {
+      margin: 0 5px;
+    }
+  }
+
+  .paginations__item__link.active {
+    color: #fff;
+    background-color: $green;
+  }
+}
+
 .pagination {
   display: flex;
   justify-content: space-between;
@@ -417,6 +470,8 @@ article {
   }
 
   &__num {
+    display: flex;
+    justify-content: flex-end;
     i.fa-caret-left {
       margin-right: 5px;
     }

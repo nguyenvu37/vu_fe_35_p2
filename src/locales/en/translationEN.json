@@ -2,7 +2,7 @@
   "navigations": {
     "home": "HOME",
     "products": "PRODUCTS",
-    "contact": "CONTACT",
+    "contact": "ABOUT",
     "login": "LOGIN",
     "register": "REGISTER"
   },
@@ -75,5 +75,32 @@
   },
   "recently": {
     "title": "RECENTLY VIEWED PRODUCTS"
+  },
+  "grid": {
+    "title": "CATEGORIES",
+    "category1": "COSMETIC",
+    "category2": "MAKE UP",
+    "category3": "PERFUME",
+    "menu1_1": "Lotions",
+    "menu1_2": "Mask",
+    "menu1_3": "Cleanser",
+    "menu2_1": "Lip stick",
+    "menu2_2": "Mascara",
+    "menu2_3": "Blusher",
+    "tagTitle": "PRODUCT TAG",
+    "tag1": "Lotions",
+    "tag2": "Mask",
+    "tag3": "Cleanser",
+    "tag4": "Lip Stick",
+    "tag5": "Mascara",
+    "tag6": "Blusher",
+    "tag7": "Perfume"
+  },
+  "prev": "Prevpage",
+  "next": "Nextpage",
+  "about": {
+    "name": "ABOUT US",
+    "title": "GENERAL INTRODUCTION TO HANDMADE MANDALA COSMETICS",
+    "content": "Hey, hi ladies ... after a lot of good promises, today I'm back to warm up this blog on a hot, hot summer day, when people rush to take a Free shower to cool off. Hi, hi ladies ... after a lot of good promises, today I'm back to warm up this blog on a hot, hot summer day, when people rush to take a Free shower to cool off. After a lot of good promises, today I go back to reheat this blog on a hot, hot summer day, when people rush to take a Free shower to cool off."
   }
 }

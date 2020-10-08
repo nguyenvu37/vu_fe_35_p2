@@ -6,6 +6,7 @@ import { actFetchDataNewRequest } from "../../../actions/actions";
 import AddToCart from "../../../common/addToCart";
 import callApi from "../../../common/callApi";
 import { withRouter } from "react-router-dom";
+import Waiting from "../../../common/waiting";
 
 const NewProducts = (props) => {
   const { t } = useTranslation("translation");
@@ -55,7 +56,7 @@ const NewProducts = (props) => {
     props.history.push(`/detail/${id}`);
   };
 
-  return (
+  return dataNewProducts.length !== 0 ? (
     <div className="product">
       <div className="product__title">
         <div className="product__title__name">{t("newProduct.title")}</div>
@@ -136,6 +137,13 @@ const NewProducts = (props) => {
       <div className="product__view-all">
         <button>{t("newProduct.viewAll")}</button>
       </div>
+    </div>
+  ) : (
+    <div className="product" style={{ width: "100%" }}>
+      <div className="product__title">
+        <div className="product__title__name">{t("newProduct.title")}</div>
+      </div>
+      <Waiting custom={{ position: "absolute", left: "50%" }} />
     </div>
   );
 };

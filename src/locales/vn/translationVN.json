@@ -2,7 +2,7 @@
   "navigations": {
     "home": "TRANG CHỦ",
     "products": "SẢN PHẨM",
-    "contact": "LIÊN HỆ",
+    "contact": "VỀ CHÚNG TÔI",
     "login": "ĐĂNG NHẬP",
     "register": "ĐĂNG KÝ"
   },
@@ -75,5 +75,32 @@
   },
   "recently": {
     "title": "SẢN PHẨM ĐƯỢC XEM NHIỀU NHẤT"
+  },
+  "grid": {
+    "title": "DANH MỤC SẢN PHẨM",
+    "category1": "MỸ PHẨM",
+    "category2": "TRANG ĐIỂM",
+    "category3": "NƯỚC HOA",
+    "menu1_1": "Kem dưỡng da",
+    "menu1_2": "Khẩu trang",
+    "menu1_3": "Sửa rửa mặt",
+    "menu2_1": "Son môi",
+    "menu2_2": "Mascara",
+    "menu2_3": "Phấn má",
+    "tagTitle": "TAG SẢN PHẨM",
+    "tag1": "Kem dưỡng da",
+    "tag2": "Khẩu trang",
+    "tag3": "Sửa rửa mặt",
+    "tag4": "Son môi",
+    "tag5": "Mascara",
+    "tag6": "Phấn má",
+    "tag7": "Nước hoa"
+  },
+  "prev": "Quay lại",
+  "next": "Tiếp theo",
+  "about": {
+    "name": "VỀ CHÚNG TÔI",
+    "title": "GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA",
+    "content": "Hi, chào các nàng... sau khá nhiều lời hứa hảo thì hôm nay tớ quay lại hâm nóng Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng... sau khá nhiều lời hứa hảo thì hôm nay tớ quay lại hâm nóng Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. sau khá nhiều lời hứa hảo thì hôm nay tớ quay lại hâm nóng Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt."
   }
 }

@@ -7,7 +7,7 @@ import NewProducts from "../../../components/homepage/new-product/newProduct";
 import Sliders from "../../../components/homepage/slider/slider";
 import VisitUs from "../../../components/homepage/visit-us/visitUs";
 
-function HomePage(props) {
+function HomePage() {
   const { t } = useTranslation();
   const dataHotTrend = useSelector((state) => state.products.hotTrend);
   const dataNewProduct = useSelector((state) => state.products.newProduct);
@@ -18,6 +18,7 @@ function HomePage(props) {
     if (dataHotTrend.length !== 0) setDataHot([...dataHotTrend]);
     if (dataNewProduct.length !== 0) setDataNewProducts([...dataNewProduct]);
   }, [dataHotTrend, dataNewProduct]);
+
   return (
     <main>
       <div className="background">

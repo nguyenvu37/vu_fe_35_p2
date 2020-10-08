@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import {
+  actFetchProductRequest,
+  actFetchTotalRowsRequest,
+} from "../../actions/actions";
 
 const Header = () => {
   const { t, i18n } = useTranslation("translation");
   const [en, setEn] = useState(true);
   const [vn, setVn] = useState(false);
+  const dispatch = useDispatch();
+  const dispatchToTalRow = useDispatch();
 
   const handleChangeLanguage = (ln) => {
     i18n.changeLanguage(ln);
@@ -45,23 +52,75 @@ const Header = () => {
               </li>
               <li className="dropdown">
                 <div className="arrow-up"></div>
-                <Link className="link" to="/grid">
+                <Link
+                  className="link"
+                  to="/grid"
+                  onClick={() => {
+                    dispatch(actFetchProductRequest({ _limit: 6, _page: 1 }));
+                    dispatchToTalRow(actFetchTotalRowsRequest({}));
+                  }}
+                >
                   {t("navigations.products")}
                 </Link>
                 <div className="dropdown-list">
                   <ul>
                     <li>
-                      <Link className="link" to="/list">
+                      <Link
+                        className="link"
+                        to="/list"
+                        onClick={() => {
+                          dispatch(
+                            actFetchProductRequest({
+                              _limit: 6,
+                              _page: 1,
+                              species: "cosmetic",
+                            })
+                          );
+                          dispatchToTalRow(
+                            actFetchTotalRowsRequest({ species: "cosmetic" })
+                          );
+                        }}
+                      >
                         {t("dropdown.cosmetic")}
                       </Link>
                     </li>
                     <li>
-                      <Link className="link" to="/list">
+                      <Link
+                        className="link"
+                        to="/list"
+                        onClick={() => {
+                          dispatch(
+                            actFetchProductRequest({
+                              _limit: 6,
+                              _page: 1,
+                              species: "perfume",
+                            })
+                          );
+                          dispatchToTalRow(
+                            actFetchTotalRowsRequest({ species: "perfume" })
+                          );
+                        }}
+                      >
                         {t("dropdown.perfume")}
                       </Link>
                     </li>
                     <li>
-                      <Link className="link" to="/list">
+                      <Link
+                        className="link"
+                        to="/list"
+                        onClick={() => {
+                          dispatch(
+                            actFetchProductRequest({
+                              _limit: 6,
+                              _page: 1,
+                              species: "makeup",
+                            })
+                          );
+                          dispatchToTalRow(
+                            actFetchTotalRowsRequest({ species: "makeup" })
+                          );
+                        }}
+                      >
                         {t("dropdown.makeup")}
                       </Link>
                     </li>
@@ -69,7 +128,7 @@ const Header = () => {
                 </div>
               </li>
               <li>
-                <Link className="link" to="/">
+                <Link className="link" to="/about">
                   {t("navigations.contact")}
                 </Link>
               </li>

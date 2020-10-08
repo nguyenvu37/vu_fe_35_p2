@@ -42,6 +42,12 @@ export default [
     isProtected: false,
   },
   {
+    title: "About Page | Mandala",
+    component: "./about-page/about",
+    path: "/about",
+    isProtected: false,
+  },
+  {
     title: "Not Found Page | Mandala",
     component: "./not-found/notFound",
     path: "*",

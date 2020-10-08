@@ -8,7 +8,7 @@ export const actFetchDataHotTrendRequest = (filters) => {
     return callApi(`products?${paramQuery}`, "get", null).then((res) => {
       if (res && res.data && res.status === 200) {
         dispatch(actFetchDataHotTrend([...res.data]));
-      }
+      } else dispatch(actFetchDataHotTrend([]));
     });
   };
 };
@@ -26,7 +26,7 @@ export const actFetchDataNewRequest = (filters) => {
     return callApi(`products?${paramNewProduct}`, "get", null).then((res) => {
       if (res && res.data && res.status === 200) {
         dispatch(actFetchDataNew([...res.data]));
-      }
+      } else dispatch(actFetchDataNew([]));
     });
   };
 };
@@ -52,5 +52,62 @@ export const actFetchDataDetail = (data) => {
   return {
     type: Types.FETCH_DATADETAIL,
     payload: data,
+  };
+};
+
+export const actFetchProductRequest = (filters) => {
+  const paramString = queryString.stringify(filters);
+  return (dispatch) => {
+    return callApi(`products?${paramString}`, "get", null).then((res) => {
+      if (res && res.data && res.status === 200) {
+        dispatch(actFetchProduct([...res.data]));
+        dispatch(actFetchFilters(filters));
+      } else {
+        dispatch(actFetchProduct([]));
+      }
+    });
+  };
+};
+
+export const actFetchProduct = (data) => {
+  return {
+    type: Types.FETCH_PRODUCT,
+    payload: data,
+  };
+};
+
+export const actFetchTotalRowsRequest = (filterTotalRows) => {
+  const paramTotalRows = queryString.stringify(filterTotalRows);
+  return (dispatch) => {
+    return callApi(`products?${paramTotalRows}`, "get", null).then((res) => {
+      if (res && res.data && res.status === 200) {
+        dispatch(actFetchTotalRows([...res.data]));
+        dispatch(actFetchFilterTotalRow(filterTotalRows));
+      } else {
+        dispatch(actFetchTotalRows([]));
+        dispatch(actFetchFilterTotalRow({}));
+      }
+    });
+  };
+};
+
+export const actFetchTotalRows = (data) => {
+  return {
+    type: Types.FETCH_TOTALROW,
+    payload: data,
+  };
+};
+
+export const actFetchFilters = (filters) => {
+  return {
+    type: Types.FETCH_FILTERS,
+    payload: filters,
+  };
+};
+
+export const actFetchFilterTotalRow = (filterTotalRows) => {
+  return {
+    type: Types.FETCH_FILTERTOTALROW,
+    payload: filterTotalRows,
   };
 };

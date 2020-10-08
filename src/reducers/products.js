@@ -3,6 +3,7 @@ import * as Types from "../constants/constants";
 let initialState = {
   hotTrend: [],
   newProduct: [],
+  products: [],
 };
 
 const products = (state = initialState, action) => {
@@ -12,6 +13,9 @@ const products = (state = initialState, action) => {
       return { ...state };
     case Types.FETCH_DATANEW:
       state.newProduct = [...action.payload];
+      return { ...state };
+    case Types.FETCH_PRODUCT:
+      state.products = [...action.payload];
       return { ...state };
     default:
       return { ...state };

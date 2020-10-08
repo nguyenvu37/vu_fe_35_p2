@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { actFetchDataDetailRequest } from "../../actions/actions";
 import AddToCart from "../../common/addToCart";
 import callApi from "../../common/callApi";
+import { withRouter } from "react-router-dom";
 
 const RecentlyProduct = (props) => {
   const { t } = useTranslation("translation");
@@ -44,6 +45,7 @@ const RecentlyProduct = (props) => {
     fetData();
 
     dispatch(actFetchDataDetailRequest(id));
+    window.scrollTo(0, 0);
 
     props.history.push(`/detail/${id}`);
   };
@@ -135,4 +137,4 @@ const RecentlyProduct = (props) => {
   );
 };
 
-export default RecentlyProduct;
+export default withRouter(RecentlyProduct);
