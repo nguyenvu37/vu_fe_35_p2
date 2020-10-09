@@ -193,13 +193,28 @@
   }
 }
 
+.btn-grid-list {
+  border: 0;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.star-container {
+  svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
 .item-buying {
   padding: 20px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 
-  button {
+  button.add-cart {
     @extend %button-hover;
 
     &:hover {
@@ -208,7 +223,7 @@
     }
   }
 
-  a {
+  button.link-btn {
     @extend %button-hover;
 
     i {
@@ -225,6 +240,18 @@
       color: #fff;
       transform: rotate(360deg);
     }
+  }
+
+  .rating {
+    position: absolute;
+    width: 180px;
+    margin-top: 5px;
+    top: 50px;
+    left: 40px;
+    border: 2px solid $green;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #fff;
   }
 }
 
@@ -533,6 +560,14 @@ article {
   span.red {
     color: red;
   }
+}
+
+.block {
+  display: block;
+}
+
+.disable {
+  display: none;
 }
 
 .total {

@@ -4,11 +4,20 @@ import { withRouter } from "react-router-dom";
 import off1 from "../../../assets/img/home/off.jpg";
 import off2 from "../../../assets/img/home/off50.jpg";
 import off3 from "../../../assets/img/home/off10.jpg";
+import { useDispatch } from "react-redux";
+import {
+  actFetchProductRequest,
+  actFetchTotalRowsRequest,
+} from "../../../actions/actions";
 
 const CurrentOffers = (props) => {
   const { t } = useTranslation("translation");
+  const dispatch = useDispatch();
+  const dipatchTotalRow = useDispatch();
 
   const handleChangePage = () => {
+    dispatch(actFetchProductRequest({ _limit: 6, _page: 1 }));
+    dipatchTotalRow(actFetchTotalRowsRequest({}));
     props.history.push("/grid");
   };
   return (

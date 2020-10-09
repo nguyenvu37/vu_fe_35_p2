@@ -4,7 +4,8 @@ import AddToCart from "../../common/addToCart";
 import callApi from "../../common/callApi";
 import Pagination from "../../common/pagination";
 import Waiting from "../../common/waiting";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import BtnGridList from "../../common/list-grid";
 
 const ShowProductList = (props) => {
   const { data } = props;
@@ -27,14 +28,7 @@ const ShowProductList = (props) => {
       <div className="list__content">
         <div className="list__content__pagination">
           <div className="pagination">
-            <div className="pagination__list">
-              <Link className="link" to="/grid">
-                <i className="fas fa-th-large"></i>
-              </Link>
-              <Link className="link" to="/list">
-                <i className="fas fa-list"></i>
-              </Link>
-            </div>
+            <BtnGridList />
           </div>
         </div>
         <div className="list__content__product">
@@ -73,7 +67,6 @@ const ShowProductList = (props) => {
                       border: "0",
                       backgroundColor: "#fff",
                       cursor: "pointer",
-                      fontSize: "14px",
                       outline: "none",
                       height: "70px",
                       padding: "0 5px",
@@ -113,7 +106,7 @@ const ShowProductList = (props) => {
                     </span>
                   </div>
                   <div className="list__content__product__item__icon">
-                    <AddToCart />
+                    <AddToCart rate={item.rating} data={item} />
                   </div>
                 </div>
               </div>
@@ -122,14 +115,7 @@ const ShowProductList = (props) => {
         </div>
         <div className="list__content__pagination">
           <div className="pagination">
-            <div className="pagination__list">
-              <Link className="link" to="/grid">
-                <i className="fas fa-th-large"></i>
-              </Link>
-              <Link className="link" to="/list">
-                <i className="fas fa-list"></i>
-              </Link>
-            </div>
+            <BtnGridList />
             <div
               className="pagination__num"
               style={{ flex: 3, display: "flex" }}

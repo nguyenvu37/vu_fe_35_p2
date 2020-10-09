@@ -57,6 +57,8 @@ export const actFetchDataDetail = (data) => {
 
 export const actFetchProductRequest = (filters) => {
   const paramString = queryString.stringify(filters);
+  console.log("paramString", paramString);
+
   return (dispatch) => {
     return callApi(`products?${paramString}`, "get", null).then((res) => {
       if (res && res.data && res.status === 200) {
@@ -78,6 +80,7 @@ export const actFetchProduct = (data) => {
 
 export const actFetchTotalRowsRequest = (filterTotalRows) => {
   const paramTotalRows = queryString.stringify(filterTotalRows);
+  console.log("paramTotalRows", paramTotalRows);
   return (dispatch) => {
     return callApi(`products?${paramTotalRows}`, "get", null).then((res) => {
       if (res && res.data && res.status === 200) {

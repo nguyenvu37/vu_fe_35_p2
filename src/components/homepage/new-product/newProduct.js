@@ -7,6 +7,7 @@ import AddToCart from "../../../common/addToCart";
 import callApi from "../../../common/callApi";
 import { withRouter } from "react-router-dom";
 import Waiting from "../../../common/waiting";
+import ViewAll from "../../../common/viewAll";
 
 const NewProducts = (props) => {
   const { t } = useTranslation("translation");
@@ -127,16 +128,14 @@ const NewProducts = (props) => {
                     {item.discount}%
                   </div>
                   <div className="product__items__detail__icon">
-                    <AddToCart />
+                    <AddToCart rate={item.rating} data={item} />
                   </div>
                 </div>
               );
             })}
         </Slider>
       </div>
-      <div className="product__view-all">
-        <button>{t("newProduct.viewAll")}</button>
-      </div>
+      <ViewAll filter={"new"} />
     </div>
   ) : (
     <div className="product" style={{ width: "100%" }}>

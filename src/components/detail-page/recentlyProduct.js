@@ -119,7 +119,7 @@ const RecentlyProduct = (props) => {
                       {item.discount}%
                     </div>
                     <div className="product__items__detail__icon">
-                      <AddToCart />
+                      <AddToCart rate={item.rating} data={item} />
                     </div>
                   </div>
                 );

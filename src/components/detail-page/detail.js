@@ -82,23 +82,23 @@ const DetailProduct = (props) => {
               </small>
             </div>
             <p style={{ marginBottom: "20px" }}>{data[0].info}</p>
-            <form id="formDataProduct">
-              <div className="detail__info__quantity item-input">
-                <label
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "18px",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  số lượng
-                </label>
-                <input type="number" style={{ margin: "10px 0" }} />
-              </div>
-              <div style={{ float: "left" }}>
-                <AddToCart />
-              </div>
-            </form>
+            {/* <form id="formDataProduct"> */}
+            <div className="detail__info__quantity item-input">
+              <label
+                style={{
+                  fontWeight: "600",
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                }}
+              >
+                số lượng
+              </label>
+              <input type="number" style={{ margin: "10px 0" }} />
+            </div>
+            <div style={{ float: "left" }}>
+              <AddToCart rate={data[0].rating} data={data[0]} />
+            </div>
+            {/* </form> */}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { withRouter } from "react-router-dom";
 import AddToCart from "../../../common/addToCart";
 import callApi from "../../../common/callApi";
 import Waiting from "../../../common/waiting";
+import ViewAll from "../../../common/viewAll";
 
 const Hottrend = (props) => {
   const { t } = useTranslation("translation");
@@ -131,7 +132,7 @@ const Hottrend = (props) => {
                       {item.discount}%
                     </div>
                     <div className="product__items__detail__icon">
-                      <AddToCart />
+                      <AddToCart rate={item.rating} data={item} />
                     </div>
                   </div>
                 );
@@ -139,9 +140,7 @@ const Hottrend = (props) => {
             </Slider>
           </div>
 
-          <div className="product__view-all">
-            <button>{t("hotTrend.viewAll")}</button>
-          </div>
+          <ViewAll filter={"hot"} />
         </div>
       ) : (
         <div className="product" style={{ width: "100%" }}>

@@ -21,6 +21,7 @@ function Pagination(props) {
   const { t } = useTranslation();
 
   function handlePageChange(newPage) {
+    window.scrollTo(0, 100);
     setPagination({
       ...pagination,
       _page: newPage,

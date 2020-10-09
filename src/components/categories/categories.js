@@ -5,6 +5,8 @@ import {
   actFetchProductRequest,
   actFetchTotalRowsRequest,
 } from "../../actions/actions";
+import FilterPrice from "./filterPrice";
+import Rating from "./rating";
 
 const Categories = () => {
   const { t } = useTranslation("translation");
@@ -284,6 +286,8 @@ const Categories = () => {
           </button>
         </div>
       </div>
+      <FilterPrice />
+      <Rating />
       <div className="categories__img">
         <img src={require("../../assets/img/grid/mandala-store.jpg")} alt="" />
       </div>

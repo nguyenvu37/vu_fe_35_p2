@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import AddToCart from "../../common/addToCart";
 import callApi from "../../common/callApi";
 import Waiting from "../../common/waiting";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import Pagination from "../../common/pagination";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { actFetchProductRequest } from "../../actions/actions";
+import BtnGridList from "../../common/list-grid";
 
 const ShowProduct = (props) => {
   const { data } = props;
   const totalRows = useSelector((state) => state.totalRow);
+  const filters = useSelector((state) => state.filters.filters);
+  const optionRef = useRef("");
+  const dispatchProduct = useDispatch();
 
   const handleCallDetailPage = (id) => {
     const fetData = async () => {
@@ -22,18 +27,47 @@ const ShowProduct = (props) => {
 
     props.history.push(`/detail/${id}`);
   };
+
+  const handleSelect = () => {
+    let option = "";
+    let sort = "";
+    switch (optionRef.current.value) {
+      case "price asc":
+        option = "asc";
+        break;
+      case "price desc":
+        option = "desc";
+        break;
+      default:
+        option = "";
+    }
+    if (option !== "") {
+      sort = "price";
+    } else sort = "";
+
+    dispatchProduct(
+      actFetchProductRequest({ ...filters, _sort: sort, _order: option })
+    );
+  };
+
   return data.length !== 0 ? (
     <article>
       <div className="grid__content">
         <div className="grid__content__pagination">
           <div className="pagination">
-            <div className="pagination__list" style={{ flex: 1 }}>
-              <Link className="link" to="/grid">
-                <i className="fas fa-th-large"></i>
-              </Link>
-              <Link className="link" to="/list">
-                <i className="fas fa-list"></i>
-              </Link>
+            <BtnGridList />
+            <div className="results__topbar__sort">
+              <div className="results__topbar__sort__selector">
+                <select
+                  className="sort__by__selector"
+                  ref={optionRef}
+                  onChange={() => handleSelect()}
+                >
+                  <option value="featured">Featured</option>
+                  <option value="price asc">Price asc.</option>
+                  <option value="price desc">Price desc.</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -97,7 +131,7 @@ const ShowProduct = (props) => {
                   {item.discount}%
                 </div>
                 <div className="grid__content__product__item__icon">
-                  <AddToCart />
+                  <AddToCart rate={item.rating} data={item} />
                 </div>
               </div>
             );
@@ -105,14 +139,7 @@ const ShowProduct = (props) => {
         </div>
         <div className="grid__content__pagination">
           <div className="pagination">
-            <div className="pagination__list" style={{ flex: 1 }}>
-              <Link className="link" to="/grid">
-                <i className="fas fa-th-large"></i>
-              </Link>
-              <Link className="link" to="/list">
-                <i className="fas fa-list"></i>
-              </Link>
-            </div>
+            <BtnGridList />
             <div
               className="pagination__num"
               style={{ flex: 3, display: "flex" }}
