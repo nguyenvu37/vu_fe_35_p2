@@ -5,9 +5,18 @@ import background from "../../../assets/img/home/background.jpg";
 import background2 from "../../../assets/img/home/background2.jpg";
 import background3 from "../../../assets/img/home/background3.jpeg";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import {
+  actFetchProductRequest,
+  actFetchTotalRowsRequest,
+} from "../../../actions/actions";
+import { withRouter } from "react-router-dom";
 
-const Sliders = () => {
+const Sliders = (props) => {
   const { t } = useTranslation("translation");
+  const dipatchProduct = useDispatch();
+  const dispatchTotalRow = useDispatch();
+
   const content = [
     {
       title: t("banner.titleBanner1"),
@@ -15,6 +24,7 @@ const Sliders = () => {
       image: background,
       color: "#789629",
       ml: "150px",
+      manufacturer: "green",
     },
     {
       title: t("banner.titleBanner2"),
@@ -23,6 +33,7 @@ const Sliders = () => {
       color: "#fff",
       left: "15%",
       top: "-15%",
+      manufacturer: "enesti",
     },
     {
       title: t("banner.titleBanner3"),
@@ -31,8 +42,26 @@ const Sliders = () => {
       color: "#be0c21",
       left: "27%",
       top: "-30%",
+      manufacturer: "laneige",
     },
   ];
+
+  const handleCallListPage = (filter) => {
+    dipatchProduct(
+      actFetchProductRequest({
+        _limit: 6,
+        _page: 1,
+        manufacturer: filter,
+      })
+    );
+
+    dispatchTotalRow(
+      actFetchTotalRowsRequest({
+        manufacturer: filter,
+      })
+    );
+    props.history.push("/list");
+  };
   return (
     <Slider autoplay={4000}>
       {content.map((item, index) => (
@@ -51,7 +80,10 @@ const Sliders = () => {
               }}
             >
               <h1 style={{ color: `${item.color}` }}>{item.title}</h1>
-              <button style={{ marginLeft: `${item.ml}` }}>
+              <button
+                style={{ marginLeft: `${item.ml}` }}
+                onClick={() => handleCallListPage(item.manufacturer)}
+              >
                 {item.button}
               </button>
             </div>
@@ -62,4 +94,4 @@ const Sliders = () => {
   );
 };
 
-export default Sliders;
+export default withRouter(Sliders);

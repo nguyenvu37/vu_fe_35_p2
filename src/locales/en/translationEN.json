@@ -107,5 +107,55 @@
     "price": "PRICE",
     "back": "Back",
     "rate": "RATING"
+  },
+  "login": {
+    "h1": "LOGIN",
+    "btn-register": "Register",
+    "h3": "CUSTOMERS REGISTER",
+    "p": "If you have an account, please login",
+    "email": "Email",
+    "password": "Password",
+    "forgot-pass": "Forgot password?",
+    "btn-login": "Login",
+    "success": "Logged in successfully",
+    "format": "Incorrect Format",
+    "err": "Email or password is wrong"
+  },
+  "register": {
+    "h1": "REGISTER",
+    "h3": "personal information",
+    "first-name": "First name",
+    "last-name": "Last name",
+    "email": "Email",
+    "password": "Password",
+    "info-login": "login information",
+    "phone": "Phone number",
+    "confirm": "Confirm password",
+    "btn-register": "Register",
+    "btn-back": "Back",
+    "err": "Account Creation Failure",
+    "sucess": "Create Account Success",
+    "email-exist": "Email already exists",
+    "require": "Must Enter Full Information",
+    "pass-again": "Invalid Password Again"
+  },
+  "validate": {
+    "firstname": "Learning consists of only letters and no special characters",
+    "lastname": "The name is only letters and has no special characters",
+    "email": "The email should be Ex: abc@abc.com",
+    "phone": "Phone number consists of only 10 numeric characters",
+    "password": "Password is at least 6 characters, have numeric characters, no special characters",
+    "confirm": "Re-enter the mismatched password",
+    "require": "Must enter information"
+  },
+  "logout": {
+    "success": "Logout in successfully",
+    "title": "Log out"
+  },
+  "query-logout": "Want to Sign Out?",
+  "edit-profile": "Edit profile",
+  "history": "history",
+  "inCart": {
+    "success": "Added product to cart"
   }
 }

@@ -114,3 +114,15 @@ export const actFetchFilterTotalRow = (filterTotalRows) => {
     payload: filterTotalRows,
   };
 };
+
+export const actLogin = () => {
+  return {
+    type: Types.LOGIN,
+  };
+};
+
+export const actLogout = () => {
+  return {
+    type: Types.LOGOUT,
+  };
+};

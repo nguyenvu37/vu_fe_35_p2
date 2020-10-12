@@ -11,7 +11,7 @@
       "species": "cosmetic",
       "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
       "status": "inStock",
-      "view": 10,
+      "view": 11,
       "hot": "hot",
       "imgDetail": [
         "cosmetic/ahc1/AHC-Ageless1.jpg",
@@ -31,7 +31,7 @@
       "category": "blusher",
       "species": "makeup",
       "status": "inStock",
-      "view": 4,
+      "view": 7,
       "hot": "hot",
       "new": "new",
       "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
@@ -160,7 +160,7 @@
       "hot": "hot",
       "new": "new",
       "status": "inStock",
-      "view": 2,
+      "view": 3,
       "img": "perfume/queen/queen1.jpg",
       "imgDetail": [
         "perfume/queen/queen1.jpg",
@@ -286,7 +286,7 @@
       "rating": 3,
       "price": 489000,
       "status": "inStock",
-      "view": 1,
+      "view": 2,
       "category": "cleanser",
       "species": "cosmetic",
       "hot": "hot",
@@ -302,8 +302,8 @@
     },
     {
       "id": "enesti-2",
-      "manufacturer": "Enesti",
-      "name": "Xịt Khoáng Dưỡng Ẩm Chiết Xuất Lô Hội Enesti Suansu Aloe Vera Skin Mist 150ml",
+      "manufacturer": "enesti",
+      "name": "Xịt Khoáng Dưỡng Ẩm Chiết Xuất Lô Hội e Suansu Aloe Vera Skin Mist 150ml",
       "discount": 63,
       "rating": 3,
       "price": 259000,
@@ -368,7 +368,7 @@
     },
     {
       "id": "enesti-1",
-      "manufacturer": "Enesti",
+      "manufacturer": "enesti",
       "name": "Kem Chống Nắng Enesti UV Cut Sun Block SPF 50+ PA+++ 40ml",
       "discount": 52,
       "rating": 3,
@@ -390,7 +390,7 @@
     },
     {
       "id": "enesti-4",
-      "manufacturer": "Enesti",
+      "manufacturer": "enesti",
       "name": "Sáp Chống Nắng Dạng Thỏi Enesti Sun Stick UV Cut Perfect SPF 50+ PA+++ 23g",
       "discount": 63,
       "rating": 3,
@@ -481,7 +481,7 @@
       "manufacturer": "roman",
       "name": "Kem Dưỡng Ẩm Sáng Da Gạo Romand Back Me Tone Up Cream 50ml",
       "discount": 33,
-      "rating": 3,
+      "rating": 4,
       "status": "inStock",
       "view": 1,
       "price": 269000,
@@ -596,7 +596,7 @@
       "category": "lotions",
       "species": "cosmetic",
       "status": "inStock",
-      "view": 1,
+      "view": 2,
       "hot": "hot",
       "new": "new",
       "img": "cosmetic/mamonde1/AVA-500x500.jpg",
@@ -735,6 +735,28 @@
         "cosmetic/laneige1/laneige2.jpg",
         "cosmetic/laneige1/laneige3.jpg",
         "cosmetic/laneige1/laneige4.jpg"
+      ],
+      "info": "Các chuyên gia luôn khuyên dùng nên chăm sóc cho làn da kể cả khi đi ngủ để sở hữu được một làn da sáng mịn và tươi mới. Một trong những lựa chọn tốt nhất chính là sản phẩm Mặt Nạ Ngủ Dưỡng Da Laneige Water Sleeping Mask hương lavender đến từ thương hiệu nổi tiếng Laneige. Sản phẩm sẽ giúp quá trình chăm sóc da vào ban đêm được thực hiện tốt hơn với hương thơm dễ chịu từ Lavender."
+    },
+    {
+      "id": "green-1",
+      "manufacturer": "green",
+      "name": "Mỹ phẩm châu Âu Green Vera 75ml",
+      "discount": 34,
+      "rating": 3,
+      "price": 780000,
+      "category": "lotions",
+      "species": "cosmetic",
+      "status": "inStock",
+      "view": 2,
+      "hot": "hot",
+      "new": "new",
+      "img": "detail/sarvon2.jpg",
+      "imgDetail": [
+        "detail/sarvon1.jpg",
+        "detail/sarvon2.jpg",
+        "detail/sarvon3.jpg",
+        "detail/sarvon4.jpg"
       ],
       "info": "Các chuyên gia luôn khuyên dùng nên chăm sóc cho làn da kể cả khi đi ngủ để sở hữu được một làn da sáng mịn và tươi mới. Một trong những lựa chọn tốt nhất chính là sản phẩm Mặt Nạ Ngủ Dưỡng Da Laneige Water Sleeping Mask hương lavender đến từ thương hiệu nổi tiếng Laneige. Sản phẩm sẽ giúp quá trình chăm sóc da vào ban đêm được thực hiện tốt hơn với hương thơm dễ chịu từ Lavender."
     },
@@ -1215,16 +1237,46 @@
   ],
   "users": [
     {
-      "id": 1,
-      "fisrtName": "nguyen",
-      "lastName": "anh vu",
-      "usersName": "anhvu",
-      "password": "vu1234",
-      "phone": "0123456789",
-      "role": "menber",
-      "gmail": "anhvu@abc.com"
+      "id": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "email": "abc@abc.com",
+      "firstName": "nguyễn",
+      "lastName": "anh vũ",
+      "password": "anhvu123",
+      "phone": "0935972894",
+      "role": "menber"
     }
   ],
   "comments": [],
-  "cart": []
+  "carts": [
+    {
+      "id": "9ed1e3e3-e816-4bd4-b536-82c0ad847d39",
+      "code": "rorokoBlusher-3",
+      "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
+      "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+      "price": 1410000,
+      "discount": 36,
+      "quantity": 2,
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0"
+    },
+    {
+      "id": "9d493c31-47ab-4072-9de0-84796cbb332d",
+      "code": "etude-1",
+      "name": "Má hồng dạng kem Etude House Colorful Drawing Water Color Blusher",
+      "img": "makeup/blusher/etude/etude1.jpg",
+      "price": 240000,
+      "discount": 67,
+      "quantity": 1,
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0"
+    },
+    {
+      "id": "efca5d8a-16ab-48a8-8e69-478aaa753753",
+      "code": "jmSolution-1",
+      "name": "Xịt Chống Nắng Chiết Xuất Ngọc Trai Jm Solution Marine Luminous Pearl Sun Spray SPF 50+/PA",
+      "img": "cosmetic/jmSolution1/jmSolution1.jpg",
+      "price": 234000,
+      "discount": 30,
+      "quantity": 3,
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0"
+    }
+  ]
 }

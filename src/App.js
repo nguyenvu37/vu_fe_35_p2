@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Waiting from "./common/waiting";
 import "./sass/styles.scss";
 import "react-animated-slider/build/horizontal.css";
+import { NotificationContainer } from "react-notifications";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           })}
         </Switch>
       </Router>
+      <NotificationContainer />
     </Suspense>
   );
 }

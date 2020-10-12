@@ -107,5 +107,55 @@
     "price": "LỌC THEO GIÁ",
     "back": "Quay lại",
     "rate": "ĐÁNH GIÁ"
+  },
+  "login": {
+    "h1": "ĐĂNG NHẬP",
+    "btn-register": "Đăng Ký",
+    "h3": "KHÁCH HÀNG ĐĂNG KÝ",
+    "p": "Nếu bạn có một tài khoản, xin vui lòng đăng nhập",
+    "email": "Địa chỉ email",
+    "password": "Mật Khẩu",
+    "forgot-pass": "Quên mật khẩu?",
+    "btn-login": "Đăng nhập",
+    "success": "Đăng nhập thành công",
+    "format": "Không đúng định dạng",
+    "err": "Email hoặc mật khẩu bị sai"
+  },
+  "register": {
+    "h1": "ĐĂNG KÝ",
+    "h3": "THÔNG TIN CÁ NHÂN",
+    "first-name": "Tên",
+    "last-name": "Họ",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "info-login": "thông tin đăng nhập",
+    "phone": "Số điện thoại",
+    "confirm": "Xác nhận mật khẩu",
+    "btn-register": "Đăng ký",
+    "btn-back": "Quay lại",
+    "err": "Tạo tài khoản thât bại",
+    "sucess": "Tạo tài khoản thành công",
+    "email-exist": "Email đã tồn tại",
+    "require": "Phải nhập đầy đủ thông tin",
+    "pass-again": "Nhập lại mật khẩu chưa đúng"
+  },
+  "validate": {
+    "firstname": "Họ chỉ gồm chữ cái và không có ký tự đặc biệt",
+    "lastname": "Tên chỉ gồm chữ cái và không có ký tự đặc biệt",
+    "email": "Email phải là Ex: abc@abc.com",
+    "phone": "Số điện thoại chỉ gồm 10 ký tự số",
+    "password": "Mật khẩu ít nhất 6 ký tự, phải có ký tự số và không chứa ký tự đặc biệt",
+    "confirm": "Nhập lại mật khẩu chưa đúng",
+    "require": "Phải nhập thông tin"
+  },
+  "logout": {
+    "success": "Đăng xuất thành công",
+    "title": "Đăng xuất"
+  },
+  "query-logout": "Bạn muốn đăng xuất?",
+  "edit-profile": "Chỉnh sửa trang cá nhân",
+  "history": "Lịch sử giao dịch",
+  "inCart": {
+    "success": "Đã thêm sản phẩm vào giỏ hàng"
   }
 }

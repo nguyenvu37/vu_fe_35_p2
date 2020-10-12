@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   actFetchProductRequest,
   actFetchTotalRowsRequest,
 } from "../../actions/actions";
+import NotificationManager from "react-notifications/lib/NotificationManager";
+import { actLogout } from '../../actions/actions';
 
-const Header = () => {
+const Header = (props) => {
   const { t, i18n } = useTranslation("translation");
   const [en, setEn] = useState(true);
   const [vn, setVn] = useState(false);
   const dispatch = useDispatch();
   const dispatchToTalRow = useDispatch();
+  const dispatchLogout = useDispatch();
+  const loggedIn = useSelector((state) => state.users.loggedIn);
 
   const handleChangeLanguage = (ln) => {
     i18n.changeLanguage(ln);
@@ -26,6 +30,14 @@ const Header = () => {
   if (en) classEn = "active";
 
   if (vn) classVn = "active";
+
+  const handleLogout = () => {
+    if (window.confirm(t('query-logout'))) {
+      dispatchLogout(actLogout());
+      props.history.push('/');
+      NotificationManager.success('Success message', t('logout.success'));
+    }
+  };
 
   return (
     <header>
@@ -136,8 +148,9 @@ const Header = () => {
           </div>
           <div className="nav__cart">
             <div className="nav__cart__item">
-              <Link className="link" to="/cart">
+              <Link className="link cart-item" to="/cart">
                 <i className="fas fa-shopping-cart cart"></i>
+                <span>1</span>
               </Link>
               <div className="nav__cart__item__search">
                 <input
@@ -150,13 +163,55 @@ const Header = () => {
               </div>
               <div className="access">
                 <div className="access-btn">
-                  <Link className="link" to="/login">
-                    {t("navigations.login")}
-                  </Link>
-                  <div className="emty"></div>
-                  <Link className="link" to="/register">
-                    {t("navigations.register")}
-                  </Link>
+                  {loggedIn || localStorage.getItem("Token") !== null ? (
+                    <div className="dropdown login" style={{ zIndex: 1000, position: 'relative', width: '150px', textAlign: 'center' }}>
+                      <Link to="/">
+                        <i
+                          className="far fa-user"
+                          style={{
+                            fontSize: "20px",
+                            margin: "0 10px",
+                          }}
+                        ></i> {' '} | {' '}
+                        {`${(JSON.parse(localStorage.getItem("Token")).lastName).substring(0,6)}`} 
+                      </Link>
+                      <div className="dropdown-user">
+                        <Link to="/editInformation" className="dropdown-item">
+                          <i className="fas fa-cog"></i>
+                          {t('edit-profile')}
+                        </Link>
+                        <Link to="/history-booking" className="dropdown-item">
+                          <i className="fas fa-list-alt"></i>
+                          {t('history')}
+                        </Link>
+                        <span
+                          className="dropdown-item"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <i className="fas fa-user"></i>
+                          {`${JSON.parse(localStorage.getItem("Token")).firstName} ${JSON.parse(localStorage.getItem("Token")).lastName}`}
+                        </span>
+                        <button
+                          onClick={handleLogout}
+                          className="dropdown-item"
+                          href="#LogOut"
+                        >
+                          <i className="fas fa-sign-out-alt"></i>
+                          {t("logout.title")}
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div style={{ display: "flex" }}>
+                      <Link className="link" to="/login">
+                        {t("navigations.login")}
+                      </Link>
+                      <div className="emty"></div>
+                      <Link className="link" to="/register">
+                        {t("navigations.register")}
+                      </Link>
+                    </div>
+                  )}
                   <div className="btn-translate">
                     <button
                       className={`${classEn}`}
@@ -181,4 +236,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);
