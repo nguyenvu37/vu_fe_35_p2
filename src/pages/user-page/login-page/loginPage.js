@@ -87,10 +87,7 @@ function LoginPage(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (await !handleValidationSubmit()) {
-      return NotificationManager.warning(
-        "Warning message",
-        t('login.format')
-      );
+      return NotificationManager.warning("Warning message", t("login.format"));
     } else {
       callApi(`users?email=${inputEmail.current.value}`, "Get", null).then(
         (res) => {
@@ -99,11 +96,15 @@ function LoginPage(props) {
             res.data[0].password === inputPassword.current.value &&
             res.data[0].role === "menber"
           ) {
-            localStorage.setItem("Token", JSON.stringify(res.data[0]));
-            NotificationManager.success(
-              "Success message",
-              t("login.success")
+            localStorage.setItem(
+              "Token",
+              JSON.stringify({
+                ...res.data[0],
+                password: "******",
+                role: "***",
+              })
             );
+            NotificationManager.success("Success message", t("login.success"));
             dispatchLogin(actLogin());
           } else {
             NotificationManager.error("Error message", t("login.err"));

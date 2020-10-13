@@ -3,14 +3,17 @@ import { useTranslation } from "react-i18next";
 import StarRatings from "react-star-ratings";
 import callApi from "./callApi";
 import { v4 as uuidv4 } from "uuid";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NotificationManager from "react-notifications/lib/NotificationManager";
+import { actDelCart, actNumCart } from "../actions/actions";
 
 const AddToCart = (props) => {
   const { t } = useTranslation("translation");
   const [rating, setRating] = useState(props.rate);
   const [classRating, setClassRating] = useState(false);
   const loggedIn = useSelector((state) => state.users.loggedIn);
+
+  const dispatchNumCart = useDispatch();
 
   const handleCallRating = () => {
     setClassRating(!classRating);
@@ -33,62 +36,124 @@ const AddToCart = (props) => {
     NotificationManager.success("Success message", t("inCart.success"));
 
     if (loggedIn || localStorage.getItem("Token") !== null) {
-      console.log("test");
-
-      await callApi(`carts`, "get", null).then((res) => {
+      await callApi(
+        `carts?userId=${JSON.parse(localStorage.getItem("Token")).id}`,
+        "get",
+        null
+      ).then((res) => {
         if (res && res.status === 200) {
-          const carts = [...res.data];
-          if (carts.length !== 0) {
-            let index = carts.findIndex((item) => item.code === data.id);
-            if (index !== -1) {
-              let cart = {
-                ...carts[index],
-                quantity: carts[index].quantity + 1,
-              };
+          const dataCarts = [...res.data];
+          if (dataCarts.length > 0) {
+            const carts = dataCarts[0].data;
+            if (carts.length > 0) {
+              let index = carts.findIndex((item) => item.code === data.id);
+              if (index !== -1) {
+                carts[index] = {
+                  ...carts[index],
+                  quantity: carts[index].quantity + 1,
+                };
 
-              callApi(`carts/${carts[index].id}`, "put", { ...cart });
+                let cart = {
+                  ...dataCarts[0],
+                  data: [...carts],
+                };
+                callApi(
+                  `carts/${JSON.parse(localStorage.getItem("Token")).id}`,
+                  "put",
+                  { ...cart }
+                ).then(() => {
+                  dispatchNumCart(actNumCart(carts[index].quantity));
+                });
+              } else {
+                let cart = {
+                  ...dataCarts[0],
+                  data: [
+                    {
+                      id: uuidv4(),
+                      code: data.id,
+                      name: data.name,
+                      img: data.img,
+                      price: data.price,
+                      discount: data.discount,
+                      quantity: 1,
+                      status: "unpaid",
+                    },
+                    ...carts,
+                  ],
+                };
+
+                callApi(
+                  `carts/${JSON.parse(localStorage.getItem("Token")).id}`,
+                  "put",
+                  { ...cart }
+                );
+                dispatchNumCart(actDelCart(carts[0].id));
+              }
             } else {
               let cart = {
-                id: uuidv4(),
-                code: data.id,
-                name: data.name,
-                img: data.img,
-                price: data.price,
-                discount: data.discount,
-                quantity: 1,
-                userId: JSON.parse(localStorage.getItem("Token")).id,
+                ...dataCarts[0],
+                data: [
+                  {
+                    id: uuidv4(),
+                    code: data.id,
+                    name: data.name,
+                    img: data.img,
+                    price: data.price,
+                    discount: data.discount,
+                    quantity: 1,
+                    status: "unpaid",
+                  },
+                ],
               };
 
-              callApi("carts", "post", { ...cart });
+              callApi(
+                `carts/${JSON.parse(localStorage.getItem("Token")).id}`,
+                "put",
+                { ...cart }
+              ).then((res) => {
+                dispatchNumCart(actNumCart(cart.data[0].quantity));
+              });
             }
           } else {
-             let cart = {
-                id: uuidv4(),
-                code: data.id,
-                name: data.name,
-                img: data.img,
-                price: data.price,
-                discount: data.discount,
-                quantity: 1,
-                userId: JSON.parse(localStorage.getItem("Token")).id,
-              };
+            let cart = {
+              id: JSON.parse(localStorage.getItem("Token")).id,
+              userId: JSON.parse(localStorage.getItem("Token")).id,
+              data: [
+                {
+                  id: uuidv4(),
+                  code: data.id,
+                  name: data.name,
+                  img: data.img,
+                  price: data.price,
+                  discount: data.discount,
+                  quantity: 1,
+                  status: "unpaid",
+                },
+              ],
+            };
 
-              callApi("carts", "post", { ...cart });
+            callApi(`carts`, "post", { ...cart }).then((res) => {
+              dispatchNumCart(actNumCart(cart.data.quantity));
+            });
           }
         }
       });
-
     } else {
-      console.log("test1");
-      if (inCart.length !== 0) {
-        const index = inCart.findIndex((item) => item.code === data.id);
+      if (inCart.length > 0) {
+        let index = inCart.findIndex((item) => item.code === data.id);
         if (index !== -1) {
-          let cart = {
-            ...inCart,
+          inCart[index] = {
+            ...inCart[index],
             quantity: inCart[index].quantity + 1,
           };
-          inCart.unshift({ ...cart });
           localStorage.setItem("inCart", JSON.stringify([...inCart]));
+          dispatchNumCart(
+            actNumCart(
+              [...inCart]
+                .map((item) => item.quantity)
+                .reduce((a, b) => a + b, 0)
+            )
+          );
         } else {
           let cart = {
             id: uuidv4(),
@@ -98,9 +163,17 @@ const AddToCart = (props) => {
             price: data.price,
             discount: data.discount,
             quantity: 1,
+            status: "unpaid",
           };
           inCart.unshift({ ...cart });
           localStorage.setItem("inCart", JSON.stringify([...inCart]));
+          dispatchNumCart(
+            actNumCart(
+              [...inCart]
+                .map((item) => item.quantity)
+                .reduce((a, b) => a + b, 0)
+            )
+          );
         }
       } else {
         let cart = {
@@ -111,9 +184,12 @@ const AddToCart = (props) => {
           price: data.price,
           discount: data.discount,
           quantity: 1,
+          status: "unpaid",
         };
-        inCart.unshift({ ...cart });
+
+        inCart.push({ ...cart });
         localStorage.setItem("inCart", JSON.stringify([...inCart]));
+        dispatchNumCart(actNumCart(1));
       }
     }
   };

@@ -160,7 +160,7 @@
       "hot": "hot",
       "new": "new",
       "status": "inStock",
-      "view": 3,
+      "view": 4,
       "img": "perfume/queen/queen1.jpg",
       "imgDetail": [
         "perfume/queen/queen1.jpg",
@@ -1239,44 +1239,184 @@
     {
       "id": "43cd5a9e-2476-4d84-9838-470377621df0",
       "email": "abc@abc.com",
-      "firstName": "nguyễn",
-      "lastName": "anh vũ",
+      "firstName": "nguyen",
+      "lastName": "anh vu",
       "password": "anhvu123",
       "phone": "0935972894",
+      "role": "menber"
+    },
+    {
+      "id": "5aa99957-4088-432e-8a45-34d47da737ba",
+      "email": "anhvu@gmail.com",
+      "firstName": "anh vu",
+      "lastName": "nguyen",
+      "password": "anhvu123",
+      "phone": "1234567890",
       "role": "menber"
     }
   ],
   "comments": [],
-  "carts": [
+  "carts": [],
+  "customers": [
     {
-      "id": "9ed1e3e3-e816-4bd4-b536-82c0ad847d39",
-      "code": "rorokoBlusher-3",
-      "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
-      "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
-      "price": 1410000,
-      "discount": 36,
-      "quantity": 2,
-      "userId": "43cd5a9e-2476-4d84-9838-470377621df0"
+      "id": "0aa9ba29-30bd-4b39-9785-406f7c06e8cd",
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "fullname": "nguyen anh vu",
+      "email": "abc@abc.com",
+      "address": "a",
+      "phone": "0935972894"
     },
     {
-      "id": "9d493c31-47ab-4072-9de0-84796cbb332d",
-      "code": "etude-1",
-      "name": "Má hồng dạng kem Etude House Colorful Drawing Water Color Blusher",
-      "img": "makeup/blusher/etude/etude1.jpg",
-      "price": 240000,
-      "discount": 67,
-      "quantity": 1,
-      "userId": "43cd5a9e-2476-4d84-9838-470377621df0"
+      "id": "d16e4a46-4ba1-47f9-a027-3d68fe1d4154",
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "fullname": "nguyen anh vu",
+      "email": "abc@abc.com",
+      "address": "a",
+      "phone": "0935972894"
     },
     {
-      "id": "efca5d8a-16ab-48a8-8e69-478aaa753753",
-      "code": "jmSolution-1",
-      "name": "Xịt Chống Nắng Chiết Xuất Ngọc Trai Jm Solution Marine Luminous Pearl Sun Spray SPF 50+/PA",
-      "img": "cosmetic/jmSolution1/jmSolution1.jpg",
-      "price": 234000,
-      "discount": 30,
-      "quantity": 3,
-      "userId": "43cd5a9e-2476-4d84-9838-470377621df0"
+      "id": "0af8c85e-c8fc-4b93-8bbb-51fb71b7f16f",
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "fullname": "nguyen anh vu",
+      "email": "abc@abc.com",
+      "address": "a",
+      "phone": "0935972894"
+    },
+    {
+      "id": "d6a76b4f-740b-4548-9fc0-0d5d86c66904",
+      "userId": "5aa99957-4088-432e-8a45-34d47da737ba",
+      "fullname": "anh vu nguyen",
+      "email": "anhvu@gmail.com",
+      "address": "a",
+      "phone": "1234567890"
+    },
+    {
+      "id": "3e3a0155-0c24-4cb5-bfe5-a3b9761fb4fb",
+      "userId": "5aa99957-4088-432e-8a45-34d47da737ba",
+      "fullname": "anh vu nguyen",
+      "email": "anhvu@gmail.com",
+      "address": "a",
+      "phone": "1234567890"
+    },
+    {
+      "id": "5345e16a-855b-4213-8cf8-1c5a5689f6b7",
+      "userId": "5aa99957-4088-432e-8a45-34d47da737ba",
+      "fullname": "anh vu nguyen",
+      "email": "anhvu@gmail.com",
+      "address": "a",
+      "phone": "1234567890"
+    },
+    {
+      "id": "e36421df-d792-4c25-889f-204a3f5a360e",
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "fullname": "nguyen anh vu",
+      "email": "abc@abc.com",
+      "address": "a",
+      "phone": "0935972894"
+    }
+  ],
+  "order": [
+    {
+      "id": "f1a12283-3ae3-419a-951b-11503b411064",
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "fullname": "nguyen anh vu",
+      "data": [
+        {
+          "id": "b20217cf-8c23-4b8d-bb5b-6f7909df4d78",
+          "code": "etude-1",
+          "name": "Má hồng dạng kem Etude House Colorful Drawing Water Color Blusher",
+          "img": "makeup/blusher/etude/etude1.jpg",
+          "price": 240000,
+          "discount": 67,
+          "quantity": 1,
+          "status": "paid",
+          "total": 79200
+        },
+        {
+          "id": "23d4da15-f1e2-4817-a9c6-e618ccf2cf83",
+          "code": "rorokoBlusher-3",
+          "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
+          "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+          "price": 1410000,
+          "discount": 36,
+          "quantity": 3,
+          "status": "paid",
+          "total": 902400
+        },
+        {
+          "id": "4b43e000-f6c4-43ac-82bd-3c603f4d0db5",
+          "code": "ahc-1",
+          "name": "Kem Dưỡng Mắt Cải Thiện Nếp Nhăn AHC Ageless Real Eye Cream For Face Season7 12ml",
+          "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
+          "price": 158000,
+          "discount": 30,
+          "quantity": 4,
+          "status": "paid",
+          "total": 110600
+        }
+      ]
+    },
+    {
+      "id": "a1920262-06e3-47e2-a9c1-511dd52f631a",
+      "userId": "5aa99957-4088-432e-8a45-34d47da737ba",
+      "fullname": "anh vu nguyen",
+      "data": [
+        {
+          "id": "de903500-87eb-491c-b984-3029ced66f23",
+          "code": "collagen-5",
+          "name": "Combo 10 Mặt Nạ Collagen Chống Lão Hóa Da Enesti Collagen Multi Care Mask 27g",
+          "img": "cosmetic/collagen/collagen1.jpg",
+          "price": 350000,
+          "discount": 64,
+          "quantity": 1,
+          "status": "paid",
+          "total": 126000
+        },
+        {
+          "id": "48276f66-15e2-4a08-83a6-45e2447f79c5",
+          "code": "charme-4",
+          "name": "Nước Hoa Nữ Charme Adore 50ml",
+          "img": "perfume/charme4/charme1.jpg",
+          "price": 430000,
+          "discount": 15,
+          "quantity": 1,
+          "status": "paid",
+          "total": 365500
+        },
+        {
+          "id": "8c18e985-8c2e-40bf-89d1-7873a947745b",
+          "code": "etude-1",
+          "name": "Má hồng dạng kem Etude House Colorful Drawing Water Color Blusher",
+          "img": "makeup/blusher/etude/etude1.jpg",
+          "price": 240000,
+          "discount": 67,
+          "quantity": 1,
+          "status": "paid",
+          "total": 79200
+        },
+        {
+          "id": "cb2faca6-fb37-45fd-b6b5-4e23f79574b9",
+          "code": "rorokoBlusher-3",
+          "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
+          "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+          "price": 1410000,
+          "discount": 36,
+          "quantity": 2,
+          "status": "paid",
+          "total": 902400
+        },
+        {
+          "id": "5843bbb7-0a5b-4db8-a6d0-0b7d025fb02f",
+          "code": "ahc-1",
+          "name": "Kem Dưỡng Mắt Cải Thiện Nếp Nhăn AHC Ageless Real Eye Cream For Face Season7 12ml",
+          "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
+          "price": 158000,
+          "discount": 30,
+          "quantity": 3,
+          "status": "paid",
+          "total": 110600
+        }
+      ]
     }
   ]
 }

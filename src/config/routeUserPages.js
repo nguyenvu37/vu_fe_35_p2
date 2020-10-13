@@ -30,10 +30,16 @@ export default [
     isProtected: false,
   },
   {
+    title: "Card Credit Page | Mandala",
+    component: "./card-payment/creditCard",
+    path: "/credit-card",
+    isProtected: false,
+  },
+  {
     title: "Cart Page | Mandala",
     component: "./cart-page/cartPage",
     path: "/cart",
-    isProtected: true,
+    isProtected: false,
   },
   {
     title: "Register Page | Mandala",
@@ -42,9 +48,27 @@ export default [
     isProtected: false,
   },
   {
+    title: "Profile Page | Mandala",
+    component: "./edit-profile/editProfile",
+    path: "/editinformation",
+    isProtected: true,
+  },
+  {
     title: "About Page | Mandala",
     component: "./about-page/about",
     path: "/about",
+    isProtected: false,
+  },
+  {
+    title: "Information Customer Page | Mandala",
+    component: "./information-customer/infoCustomer",
+    path: "/information-customer",
+    isProtected: false,
+  },
+  {
+    title: "Payment Page | Mandala",
+    component: "./payment/payment",
+    path: "/payment",
     isProtected: false,
   },
   {

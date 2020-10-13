@@ -3,13 +3,14 @@ import { useSelector } from "react-redux";
 import AddToCart from "../../common/addToCart";
 import callApi from "../../common/callApi";
 import Pagination from "../../common/pagination";
-import Waiting from "../../common/waiting";
 import { withRouter } from "react-router-dom";
 import BtnGridList from "../../common/list-grid";
+import { useTranslation } from "react-i18next";
 
 const ShowProductList = (props) => {
   const { data } = props;
   const totalRows = useSelector((state) => state.totalRow);
+  const { t } = useTranslation("translation");
 
   const handleCallDetailPage = (id) => {
     const fetData = async () => {
@@ -128,7 +129,19 @@ const ShowProductList = (props) => {
     </article>
   ) : (
     <article>
-      <Waiting custom={{ position: "absolute", left: "50%", top: "200px" }} />
+      <div
+        className="waiting"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
+        <h3 style={{ color: "#333", textTransform: "uppercase" }}>
+          {t("no-product")}
+        </h3>
+      </div>
     </article>
   );
 };

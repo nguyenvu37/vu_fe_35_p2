@@ -77,7 +77,7 @@ function RegisterPage(props) {
     }
 
     if (type === "firstname") {
-      const regexp = /^[a-zA-Zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ ]+$/;
+      const regexp = /^[a-zA-Z]+$/;
       const checkingResult = regexp.exec(checkingText);
       if (checkingResult !== null) {
         return { errorMessage: "" };
@@ -89,7 +89,7 @@ function RegisterPage(props) {
     }
 
     if (type === "lastname") {
-      const regexp = /^[a-zA-Zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ ]+$/;
+      const regexp = /^[a-zA-Z]+$/;
       const checkingResult = regexp.exec(checkingText);
       if (checkingResult !== null) {
         return { errorMessage: "" };
@@ -205,7 +205,11 @@ function RegisterPage(props) {
       if (res && res.status === 201) {
         localStorage.setItem(
           "Token",
-          JSON.stringify({ ...res.data, password: "******" })
+          JSON.stringify({
+            ...res.data,
+            password: "******",
+            role: "***",
+          })
         );
         NotificationManager.success("Success message", t("register.success"));
         dispatchLogin(actLogin());

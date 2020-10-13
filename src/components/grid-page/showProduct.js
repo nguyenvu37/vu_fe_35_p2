@@ -1,14 +1,15 @@
 import React, { useRef } from "react";
 import AddToCart from "../../common/addToCart";
 import callApi from "../../common/callApi";
-import Waiting from "../../common/waiting";
 import { withRouter } from "react-router-dom";
 import Pagination from "../../common/pagination";
 import { useDispatch, useSelector } from "react-redux";
 import { actFetchProductRequest } from "../../actions/actions";
 import BtnGridList from "../../common/list-grid";
+import { useTranslation } from "react-i18next";
 
 const ShowProduct = (props) => {
+  const { t } = useTranslation("translation");
   const { data } = props;
   const totalRows = useSelector((state) => state.totalRow);
   const filters = useSelector((state) => state.filters.filters);
@@ -152,7 +153,19 @@ const ShowProduct = (props) => {
     </article>
   ) : (
     <article>
-      <Waiting custom={{ position: "absolute", left: "50%", top: "200px" }} />
+      <div
+        className="waiting"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
+        <h3 style={{ color: "#333", textTransform: "uppercase" }}>
+          {t("no-product")}
+        </h3>
+      </div>
     </article>
   );
 };

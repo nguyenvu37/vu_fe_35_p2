@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Waiting from "./common/waiting";
 import "./sass/styles.scss";
 import "react-animated-slider/build/horizontal.css";
+import "react-credit-cards/es/styles-compiled.css";
 import { NotificationContainer } from "react-notifications";
 
 function App() {

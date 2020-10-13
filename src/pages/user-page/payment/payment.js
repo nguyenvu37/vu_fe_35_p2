@@ -1,23 +1,23 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import CartList from "../../../components/cart-page/cart-list";
+import PaymentList from "../../../components/payment/paymentList";
 
-const CartPage = () => {
+const Payment = () => {
   const { t } = useTranslation("translation");
   return (
     <main>
       <div className="box">
         <div className="process">
           <div className="progressbar">
-            <div className="page-cart">
-              <span>Step 1: {t("process.step1")}</span>
+            <div className="page-payment">
+              <span>Step 3: {t("process.step3")}</span>
             </div>
           </div>
         </div>
       </div>
-      <CartList />
+      <PaymentList />
     </main>
   );
 };
 
-export default CartPage;
+export default Payment;
