@@ -7,3 +7,5 @@ export const FETCH_FILTERS = "FETCH_FILTERS";
 export const FETCH_FILTERTOTALROW = "FETCH_FILTERTOTALROW";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
+export const NUM_CART = "NUM_CART";
+export const DEL_CART = "DEL_CART";

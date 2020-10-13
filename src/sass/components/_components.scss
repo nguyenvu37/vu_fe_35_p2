@@ -623,21 +623,55 @@ article {
 .form-group {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   label {
     @include font-a(#000, 12px, 600);
     margin-bottom: 5px;
-
-    span {
-      color: red;
-    }
   }
 
   input {
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin-bottom: 5px;
     border: none;
     outline: none;
+  }
+
+  span {
+    color: red;
+  }
+
+  .error-message {
+    margin-top: 2px;
+    font-style: italic;
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  i {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    visibility: hidden;
+  }
+
+  &.success input {
+    border: 2px solid #2ecc71 !important;
+  }
+
+  &.error input {
+    border: 2px solid #e74c3c !important;
+  }
+
+  &.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+  }
+
+  &.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
   }
 }
 
@@ -836,7 +870,7 @@ article {
   padding: 5px;
   background: #a5d1f136;
   border-radius: 25px;
-  height: 40px;
+  height: 35px;
 
   a {
     display: flex;
@@ -936,6 +970,187 @@ article {
   }
 }
 
+.process {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  .progressbar {
+    background-color: black;
+    border-radius: 35px;
+    padding: 10px;
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      span {
+        @include font-a(#fff, 14px, 600);
+        text-transform: uppercase;
+        position: absolute;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .progressbar > div {
+    background-color: $green;
+    height: 30px;
+    border-radius: 20px;
+  }
+
+  .progressbar > div.page-cart {
+    width: 33.33%;
+  }
+
+  .progressbar > div.page-information {
+    width: 66.66%;
+  }
+
+  .progressbar > div.page-payment {
+    width: 100%;
+  }
+}
+
+.information-checkout {
+  &__content {
+    width: 100%;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    &__form {
+      width: 100%;
+
+      button {
+        @include button(#000, 12px, 5px 10px, #fff);
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.payment-complete {
+  &__content {
+    width: 100%;
+    margin-bottom: 80px;
+
+    &__info {
+      display: flex;
+      &__customer {
+        width: 25%;
+        max-height: 183px;
+        background: #e6e6e6f2;
+        padding: 10px;
+        overflow: hidden;
+
+        h4 {
+          margin-top: 10px;
+          text-align: center;
+        }
+        .customer-item {
+          margin: 10px 0;
+          padding-left: 10px;
+
+          span {
+            font-weight: 600;
+            font-family: $robotoSlab;
+            margin-left: 15px;
+            color: $green;
+          }
+        }
+      }
+
+      &__product {
+        width: 75%;
+        padding-left: 20px;
+
+        table {
+          width: 100%;
+
+          th {
+            background-color: #e6e6e6f2;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 5px 0;
+          }
+
+          td {
+            font-size: 13px;
+            height: 150px;
+
+            img {
+              width: 20%;
+            }
+
+            i {
+              cursor: pointer;
+            }
+          }
+
+          .price {
+            color: #000;
+          }
+
+          .num {
+            input {
+              border: 1px solid #e8e8e8;
+              padding: 5px 10px;
+              width: 60px;
+            }
+          }
+        }
+
+        table,
+        th,
+        td {
+          border: 1px solid $gray;
+          border-collapse: collapse;
+          text-align: center;
+        }
+
+        &__total {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 20px;
+
+          h4 {
+            margin-right: 20px;
+          }
+
+          span {
+            font-size: 20px;
+            letter-spacing: 0.15rem;
+            margin-right: 10px;
+          }
+        }
+
+        &__btn {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 20px;
+
+          button {
+            @include button(#000, 12px, 5px 15px, #fff);
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-left: 10px;
+          }
+
+          .back-info {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Responsive
 @media screen and (max-width: 1300px) {
   .content {
@@ -988,6 +1203,33 @@ article {
     .btn-tag8,
     .btn-tag9 {
       display: none;
+    }
+  }
+
+  .payment-complete__content__info {
+    flex-direction: column;
+
+    &__customer {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__product {
+      width: 100%;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    table tr td {
+      min-width: 60px;
+
+      img {
+        width: 80px;
+      }
+
+      .price {
+        padding: 0 5px;
+      }
     }
   }
 }

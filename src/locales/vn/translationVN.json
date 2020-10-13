@@ -146,7 +146,9 @@
     "phone": "Số điện thoại chỉ gồm 10 ký tự số",
     "password": "Mật khẩu ít nhất 6 ký tự, phải có ký tự số và không chứa ký tự đặc biệt",
     "confirm": "Nhập lại mật khẩu chưa đúng",
-    "require": "Phải nhập thông tin"
+    "require": "Phải nhập thông tin",
+    "fullname": "Họ và tên gồm chữ cái và không có ký tự đặc biệt",
+    "address": "Địa chỉ gồm chữ cái và không có ký tự đặc biệt"
   },
   "logout": {
     "success": "Đăng xuất thành công",
@@ -157,5 +159,37 @@
   "history": "Lịch sử giao dịch",
   "inCart": {
     "success": "Đã thêm sản phẩm vào giỏ hàng"
+  },
+  "process": {
+    "step1": "Giỏ hàng",
+    "step2": "Thông tin khách hàng",
+    "step3": "Hoàn thành thanh toán"
+  },
+  "cart": {
+    "title": "Giỏ hàng",
+    "th1": "Mã SP",
+    "th2": "Tên SP",
+    "th3": "Giá",
+    "th4": "Số lượng",
+    "th5": "Tổng cộng",
+    "th6": "Hành động",
+    "h4": "TỔNG CỘNG",
+    "btn-goon": "Tiếp tục mua hàng",
+    "btn-del": "Xóa",
+    "btn-payment": "Thanh toán"
+  },
+  "no-product": "Chưa có sản phẩm nào được chọn",
+  "want-del": "Bạn có chắc muốn xóa sản phẩm này?",
+  "buy-now": "Mua ngay",
+  "nothing-cart": "Chưa có gì trong giỏ hàng",
+  "del-all": "Bạn có chắc muốn xóa hết tất cả sản phẩm?",
+  "information": {
+    "title": "THÔNG TIN THANH TOÁN",
+    "label1": "Họ và Tên",
+    "label2": "Địa chỉ",
+    "label3": "Email",
+    "label4": "Số điện thoại",
+    "btn-back": "Quay lại giỏ hàng",
+    "btn-goon": "Tiếp tục"
   }
 }

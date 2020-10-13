@@ -146,7 +146,9 @@
     "phone": "Phone number consists of only 10 numeric characters",
     "password": "Password is at least 6 characters, have numeric characters, no special characters",
     "confirm": "Re-enter the mismatched password",
-    "require": "Must enter information"
+    "require": "Must enter information",
+    "fullname": "Full name is only letters and has no special characters",
+    "address": "Address is only letters and has no special characters"
   },
   "logout": {
     "success": "Logout in successfully",
@@ -157,5 +159,37 @@
   "history": "history",
   "inCart": {
     "success": "Added product to cart"
+  },
+  "process": {
+    "step1": "Cart",
+    "step2": "Customer Information",
+    "step3": "Complete the payment"
+  },
+  "cart": {
+    "title": "Cart",
+    "th1": "Code",
+    "th2": "Name",
+    "th3": "Price",
+    "th4": "Quantity",
+    "th5": "Total",
+    "th6": "Action",
+    "h4": "SUMMARY",
+    "btn-goon": "Continue to buy",
+    "btn-del": "Delete",
+    "btn-payment": "Payment"
+  },
+  "no-product": "No products have been selected",
+  "want-del": "Do you want delete this product?",
+  "buy-now": "Buy now",
+  "nothing-cart": "Nothing in cart",
+  "del-all": "Do you want delete all product?",
+  "information": {
+    "title": "INFORMATION PAYMENT",
+    "label1": "Full name",
+    "label2": "Address",
+    "label3": "Email",
+    "label4": "Phone",
+    "btn-back": "Back to cart",
+    "btn-goon": "Continue"
   }
 }

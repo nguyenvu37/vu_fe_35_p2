@@ -77,7 +77,7 @@ function RegisterPage(props) {
     }
 
     if (type === "firstname") {
-      const regexp = /^[a-zA-Zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ ]+$/;
+      const regexp = /^[a-zA-Z]+$/;
       const checkingResult = regexp.exec(checkingText);
       if (checkingResult !== null) {
         return { errorMessage: "" };
@@ -89,7 +89,7 @@ function RegisterPage(props) {
     }
 
     if (type === "lastname") {
-      const regexp = /^[a-zA-Zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ ]+$/;
+      const regexp = /^[a-zA-Z]+$/;
       const checkingResult = regexp.exec(checkingText);
       if (checkingResult !== null) {
         return { errorMessage: "" };

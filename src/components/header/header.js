@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +7,8 @@ import {
   actFetchTotalRowsRequest,
 } from "../../actions/actions";
 import NotificationManager from "react-notifications/lib/NotificationManager";
-import { actLogout } from '../../actions/actions';
+import { actLogout } from "../../actions/actions";
+import callApi from "../../common/callApi";
 
 const Header = (props) => {
   const { t, i18n } = useTranslation("translation");
@@ -17,6 +18,35 @@ const Header = (props) => {
   const dispatchToTalRow = useDispatch();
   const dispatchLogout = useDispatch();
   const loggedIn = useSelector((state) => state.users.loggedIn);
+  const [quanProduct, setQuanProduct] = useState(0);
+  const numCart = useSelector((state) => state.numCart.num);
+  const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
+  const actionDelProduct = useSelector((state) => state.delCart.id);
+
+  useEffect(() => {
+    if (localStorage.getItem("Token") !== null) {
+      const fetchNumProduct = async () => {
+        await callApi(
+          `carts?userId=${JSON.parse(localStorage.getItem("Token")).id}`,
+          "get",
+          null
+        ).then((res) => {
+          if (res && res.status === 200) {
+            let numProduct = [...res.data]
+              .map((item) => parseInt(item.quantity))
+              .reduce((a, b) => a + b, 0);
+            setQuanProduct(numProduct);
+          }
+        });
+      };
+      fetchNumProduct();
+    } else {
+      let numProduct = inCart
+        .map((item) => parseInt(item.quantity))
+        .reduce((a, b) => a + b, 0);
+      setQuanProduct(numProduct);
+    }
+  }, [numCart, inCart, actionDelProduct]);
 
   const handleChangeLanguage = (ln) => {
     i18n.changeLanguage(ln);
@@ -32,10 +62,10 @@ const Header = (props) => {
   if (vn) classVn = "active";
 
   const handleLogout = () => {
-    if (window.confirm(t('query-logout'))) {
+    if (window.confirm(t("query-logout"))) {
       dispatchLogout(actLogout());
-      props.history.push('/');
-      NotificationManager.success('Success message', t('logout.success'));
+      props.history.push("/");
+      NotificationManager.success("Success message", t("logout.success"));
     }
   };
 
@@ -150,7 +180,7 @@ const Header = (props) => {
             <div className="nav__cart__item">
               <Link className="link cart-item" to="/cart">
                 <i className="fas fa-shopping-cart cart"></i>
-                <span>1</span>
+                <span>{quanProduct}</span>
               </Link>
               <div className="nav__cart__item__search">
                 <input
@@ -164,7 +194,15 @@ const Header = (props) => {
               <div className="access">
                 <div className="access-btn">
                   {loggedIn || localStorage.getItem("Token") !== null ? (
-                    <div className="dropdown login" style={{ zIndex: 1000, position: 'relative', width: '150px', textAlign: 'center' }}>
+                    <div
+                      className="dropdown login"
+                      style={{
+                        zIndex: 1000,
+                        position: "relative",
+                        width: "150px",
+                        textAlign: "center",
+                      }}
+                    >
                       <Link to="/">
                         <i
                           className="far fa-user"
@@ -172,24 +210,31 @@ const Header = (props) => {
                             fontSize: "20px",
                             margin: "0 10px",
                           }}
-                        ></i> {' '} | {' '}
-                        {`${(JSON.parse(localStorage.getItem("Token")).lastName).substring(0,6)}`} 
+                        ></i>{" "}
+                        |{" "}
+                        {`${JSON.parse(
+                          localStorage.getItem("Token")
+                        ).lastName.substring(0, 6)}`}
                       </Link>
                       <div className="dropdown-user">
                         <Link to="/editInformation" className="dropdown-item">
                           <i className="fas fa-cog"></i>
-                          {t('edit-profile')}
+                          {t("edit-profile")}
                         </Link>
                         <Link to="/history-booking" className="dropdown-item">
                           <i className="fas fa-list-alt"></i>
-                          {t('history')}
+                          {t("history")}
                         </Link>
                         <span
                           className="dropdown-item"
                           style={{ fontSize: "1.2rem" }}
                         >
                           <i className="fas fa-user"></i>
-                          {`${JSON.parse(localStorage.getItem("Token")).firstName} ${JSON.parse(localStorage.getItem("Token")).lastName}`}
+                          {`${
+                            JSON.parse(localStorage.getItem("Token")).firstName
+                          } ${
+                            JSON.parse(localStorage.getItem("Token")).lastName
+                          }`}
                         </span>
                         <button
                           onClick={handleLogout}

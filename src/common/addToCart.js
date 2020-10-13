@@ -3,14 +3,17 @@ import { useTranslation } from "react-i18next";
 import StarRatings from "react-star-ratings";
 import callApi from "./callApi";
 import { v4 as uuidv4 } from "uuid";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NotificationManager from "react-notifications/lib/NotificationManager";
+import { actNumCart } from "../actions/actions";
 
 const AddToCart = (props) => {
   const { t } = useTranslation("translation");
   const [rating, setRating] = useState(props.rate);
   const [classRating, setClassRating] = useState(false);
   const loggedIn = useSelector((state) => state.users.loggedIn);
+
+  const dispatchNumCart = useDispatch();
 
   const handleCallRating = () => {
     setClassRating(!classRating);
@@ -33,20 +36,33 @@ const AddToCart = (props) => {
     NotificationManager.success("Success message", t("inCart.success"));
 
     if (loggedIn || localStorage.getItem("Token") !== null) {
-      console.log("test");
-
-      await callApi(`carts`, "get", null).then((res) => {
+      await callApi(
+        `carts?userId=${JSON.parse(localStorage.getItem("Token")).id}`,
+        "get",
+        null
+      ).then((res) => {
         if (res && res.status === 200) {
           const carts = [...res.data];
-          if (carts.length !== 0) {
+          console.log("carts", carts);
+          if (carts.length > 0) {
             let index = carts.findIndex((item) => item.code === data.id);
+
             if (index !== -1) {
               let cart = {
                 ...carts[index],
                 quantity: carts[index].quantity + 1,
               };
 
-              callApi(`carts/${carts[index].id}`, "put", { ...cart });
+              callApi(`carts/${carts[index].id}`, "put", {
+                ...cart,
+              });
+              dispatchNumCart(
+                actNumCart(
+                  [...carts]
+                    .map((item) => item.quantity)
+                    .reduce((a, b) => a + b, 0)
+                )
+              );
             } else {
               let cart = {
                 id: uuidv4(),
@@ -59,36 +75,56 @@ const AddToCart = (props) => {
                 userId: JSON.parse(localStorage.getItem("Token")).id,
               };
 
-              callApi("carts", "post", { ...cart });
+              callApi(`carts`, "post", { ...cart });
+              dispatchNumCart(
+                actNumCart(
+                  [...carts]
+                    .map((item) => item.quantity)
+                    .reduce((a, b) => a + b, 0)
+                )
+              );
             }
           } else {
-             let cart = {
-                id: uuidv4(),
-                code: data.id,
-                name: data.name,
-                img: data.img,
-                price: data.price,
-                discount: data.discount,
-                quantity: 1,
-                userId: JSON.parse(localStorage.getItem("Token")).id,
-              };
+            let cart = {
+              id: uuidv4(),
+              code: data.id,
+              name: data.name,
+              img: data.img,
+              price: data.price,
+              discount: data.discount,
+              quantity: 1,
+              userId: JSON.parse(localStorage.getItem("Token")).id,
+            };
 
-              callApi("carts", "post", { ...cart });
+            callApi(`carts`, "post", { ...cart });
+            dispatchNumCart(
+              actNumCart(
+                [...carts]
+                  .map((item) => item.quantity)
+                  .reduce((a, b) => a + b, 0)
+              )
+            );
           }
         }
       });
-
     } else {
-      console.log("test1");
-      if (inCart.length !== 0) {
-        const index = inCart.findIndex((item) => item.code === data.id);
+      console.log("data", data);
+      if (inCart.length > 0) {
+        let index = inCart.findIndex((item) => item.code === data.id);
+        console.log("index", index);
         if (index !== -1) {
-          let cart = {
-            ...inCart,
+          inCart[index] = {
+            ...inCart[index],
             quantity: inCart[index].quantity + 1,
           };
-          inCart.unshift({ ...cart });
           localStorage.setItem("inCart", JSON.stringify([...inCart]));
+          dispatchNumCart(
+            actNumCart(
+              [...inCart]
+                .map((item) => item.quantity)
+                .reduce((a, b) => a + b, 0)
+            )
+          );
         } else {
           let cart = {
             id: uuidv4(),
@@ -101,6 +137,13 @@ const AddToCart = (props) => {
           };
           inCart.unshift({ ...cart });
           localStorage.setItem("inCart", JSON.stringify([...inCart]));
+          dispatchNumCart(
+            actNumCart(
+              [...inCart]
+                .map((item) => item.quantity)
+                .reduce((a, b) => a + b, 0)
+            )
+          );
         }
       } else {
         let cart = {
@@ -112,8 +155,10 @@ const AddToCart = (props) => {
           discount: data.discount,
           quantity: 1,
         };
-        inCart.unshift({ ...cart });
+
+        inCart.push({ ...cart });
         localStorage.setItem("inCart", JSON.stringify([...inCart]));
+        dispatchNumCart(actNumCart(1));
       }
     }
   };

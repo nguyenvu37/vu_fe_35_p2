@@ -126,3 +126,17 @@ export const actLogout = () => {
     type: Types.LOGOUT,
   };
 };
+
+export const actDelCart = (id) => {
+  return {
+    type: Types.DEL_CART,
+    payload: id,
+  };
+};
+
+export const actNumCart = (data) => {
+  return {
+    type: Types.NUM_CART,
+    payload: data,
+  };
+};
