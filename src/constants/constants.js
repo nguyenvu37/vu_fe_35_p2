@@ -9,3 +9,4 @@ export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const NUM_CART = "NUM_CART";
 export const DEL_CART = "DEL_CART";
+export const QUANTITY = "QUANTITY";

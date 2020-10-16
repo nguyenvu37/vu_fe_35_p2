@@ -5,6 +5,7 @@ import callApi from "../../common/callApi";
 import PaymentItem from "./paymentItem";
 import { v4 as uuidv4 } from "uuid";
 import { withRouter } from "react-router-dom";
+import { getSummary, getTotal } from "../../common/calculation";
 
 const PaymentList = (props) => {
   const { t } = useTranslation("translation");
@@ -18,7 +19,6 @@ const PaymentList = (props) => {
       if (localStorage.getItem("Token") !== null) {
         await callApi(`customers?id=${idCustomer}`, "get", null).then((res) => {
           if (res && res.status === 200 && res.data) {
-            console.log("res", res.data);
             setDataCustomer([...res.data]);
           } else setDataCustomer([]);
         });
@@ -38,13 +38,8 @@ const PaymentList = (props) => {
           if (res && res.status === 200 && res.data) {
             const carts = [...res.data];
             const dataCarts = carts[0].data;
-            const summary = carts[0].data
-              .map(
-                (item) =>
-                  parseInt(item.quantity) *
-                  Math.floor(item.price * ((100 - item.discount) / 100))
-              )
-              .reduce((a, b) => a + b, 0);
+            const summary = getSummary(carts[0].data);
+
             setDataProduct([...dataCarts]);
             setSum(summary);
           } else {
@@ -54,13 +49,7 @@ const PaymentList = (props) => {
         });
       } else {
         const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
-        const summary = inCart
-          .map(
-            (item) =>
-              parseInt(item.quantity) *
-              Math.floor(item.price * ((100 - item.discount) / 100))
-          )
-          .reduce((a, b) => a + b, 0);
+        const summary = getSummary(inCart);
         setDataProduct([...inCart]);
         setSum(summary);
       }
@@ -80,9 +69,7 @@ const PaymentList = (props) => {
       await dataProduct.forEach((item) => {
         let dataOrder = {
           ...item,
-          total: Math.floor(
-            item.price * ((100 - item.discount) / 100) * item.quantity
-          ),
+          total: getTotal(item, item.quantity),
         };
         products.push({ ...dataOrder });
       });
@@ -99,9 +86,7 @@ const PaymentList = (props) => {
       await inCart.forEach((item) => {
         let dataOrder = {
           ...item,
-          total: Math.floor(
-            item.price * ((100 - item.discount) / 100) * item.quantity
-          ),
+          total: getTotal(item, item.quantity),
         };
         products.push({ ...dataOrder });
       });

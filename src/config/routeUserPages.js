@@ -48,9 +48,27 @@ export default [
     isProtected: false,
   },
   {
-    title: "Profile Page | Mandala",
+    title: "Recover Page | Mandala",
+    component: "./recover/recover",
+    path: "/recover",
+    isProtected: false,
+  },
+  {
+    title: "Edit Profile Page | Mandala",
     component: "./edit-profile/editProfile",
     path: "/editinformation",
+    isProtected: true,
+  },
+  {
+    title: "History Order | Mandala",
+    component: "./history-order/historyOrder",
+    path: "/history-order",
+    isProtected: true,
+  },
+  {
+    title: "Profile Page | Mandala",
+    component: "./profile/profile",
+    path: "/profile/:name",
     isProtected: true,
   },
   {

@@ -6,6 +6,7 @@ import callApi from "../../common/callApi";
 import CartItem from "./cart-item";
 import { withRouter } from "react-router-dom";
 import { actDelCart, actNumCart } from "../../actions/actions";
+import { getSummary } from "../../common/calculation";
 
 const CartList = (props) => {
   const { t } = useTranslation("translation");
@@ -28,13 +29,7 @@ const CartList = (props) => {
           if (res && res.status === 200) {
             if (res.data.length > 0) {
               const carts = [...res.data][0].data;
-              let summary = carts
-                .map(
-                  (item) =>
-                    parseInt(item.quantity) *
-                    Math.floor(item.price * ((100 - item.discount) / 100))
-                )
-                .reduce((a, b) => a + b, 0);
+              let summary = getSummary(carts);
               setData([...carts]);
               setSum(summary);
               setDataCarts([...res.data]);
@@ -49,13 +44,7 @@ const CartList = (props) => {
 
       fetchData();
     } else {
-      let summary = inCart
-        .map(
-          (item) =>
-            parseInt(item.quantity) *
-            Math.floor(item.price * ((100 - item.discount) / 100))
-        )
-        .reduce((a, b) => a + b, 0);
+      let summary = getSummary(inCart);
       setSum(summary);
       setData([...inCart]);
     }

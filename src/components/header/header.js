@@ -224,13 +224,24 @@ const Header = (props) => {
                           <i className="fas fa-cog"></i>
                           {t("edit-profile")}
                         </Link>
-                        <Link to="/history-booking" className="dropdown-item">
+                        <Link to="/history-order" className="dropdown-item">
                           <i className="fas fa-list-alt"></i>
                           {t("history")}
                         </Link>
                         <span
                           className="dropdown-item"
                           style={{ fontSize: "1.2rem" }}
+                          onClick={() =>
+                            props.history.push(
+                              `/profile/${
+                                JSON.parse(localStorage.getItem("Token"))
+                                  .firstName +
+                                " " +
+                                JSON.parse(localStorage.getItem("Token"))
+                                  .lastName
+                              }`
+                            )
+                          }
                         >
                           <i className="fas fa-user"></i>
                           {`${

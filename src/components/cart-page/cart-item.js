@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { actDelCart, actNumCart } from "../../actions/actions";
 import { withRouter } from "react-router-dom";
+import { getPrice, getTotal } from "../../common/calculation";
 
 const CartItem = (props) => {
   const { t } = useTranslation("translation");
@@ -14,17 +15,12 @@ const CartItem = (props) => {
 
   useEffect(() => {
     inputQuan.current.value = parseInt(data.quantity);
-    setTotal(
-      Math.floor(data.price * ((100 - data.discount) / 100)) *
-        parseInt(data.quantity)
-    );
+    setTotal(getTotal(data, data.quantity));
   }, [data]);
 
   const handleChageQuantity = async (id) => {
     if (inputQuan.current.value > 0) {
-      let totalPrice =
-        Math.floor(data.price * ((100 - data.discount) / 100)) *
-        inputQuan.current.value;
+      let totalPrice = getTotal(data, inputQuan.current.value);
       if (localStorage.getItem("Token") !== null) {
         let dataProduct = {
           ...data,
@@ -43,8 +39,7 @@ const CartItem = (props) => {
       }
       setTotal(totalPrice);
     } else {
-      let totalPrice =
-        Math.floor(data.price * ((100 - data.discount) / 100)) * 1;
+      let totalPrice = getTotal(data, 1);
       inputQuan.current.value = 1;
       if (localStorage.getItem("Token") !== null) {
         let dataProduct = {
@@ -103,7 +98,7 @@ const CartItem = (props) => {
         </td>
         <td style={{ minWidtd: "65px" }}>
           <span className="price">
-            {Math.floor(data.price * ((100 - data.discount) / 100))
+            {getPrice(data)
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
             <small>đ</small>

@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { actQuantity } from "../../actions/actions";
 import AddToCart from "../../common/addToCart";
+import { getPrice } from "../../common/calculation";
 
 const DetailProduct = (props) => {
   const { data } = props;
   const [img, setImg] = useState(data[0].img);
+  const inputQuantity = useRef();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (data.length !== 0) setImg(data[0].img);
@@ -15,6 +20,13 @@ const DetailProduct = (props) => {
 
   const handleChangeImg = (item) => {
     setImg(item);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputQuantity.current.value !== "") {
+      dispatch(actQuantity(inputQuantity.current.value));
+    } else dispatch(actQuantity(1));
   };
   return (
     <section>
@@ -71,7 +83,7 @@ const DetailProduct = (props) => {
             <h3>{data[0].name}</h3>
             <div className="detail__info__price detail-price">
               <span>
-                {Math.floor(data[0].price * ((100 - data[0].discount) / 100))
+                {getPrice(data[0])
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                 đ
@@ -82,23 +94,27 @@ const DetailProduct = (props) => {
               </small>
             </div>
             <p style={{ marginBottom: "20px" }}>{data[0].info}</p>
-            {/* <form id="formDataProduct"> */}
-            <div className="detail__info__quantity item-input">
-              <label
-                style={{
-                  fontWeight: "600",
-                  fontSize: "18px",
-                  textTransform: "uppercase",
-                }}
-              >
-                số lượng
-              </label>
-              <input type="number" style={{ margin: "10px 0" }} />
-            </div>
-            <div style={{ float: "left" }}>
-              <AddToCart rate={data[0].rating} data={data[0]} />
-            </div>
-            {/* </form> */}
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <div className="detail__info__quantity item-input">
+                <label
+                  style={{
+                    fontWeight: "600",
+                    fontSize: "18px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  số lượng
+                </label>
+                <input
+                  type="number"
+                  style={{ margin: "10px 0" }}
+                  ref={inputQuantity}
+                />
+              </div>
+              <div style={{ float: "left" }}>
+                <AddToCart rate={data[0].rating} data={data[0]} />
+              </div>
+            </form>
           </div>
         </div>
       </div>

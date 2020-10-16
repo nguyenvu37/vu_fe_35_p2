@@ -31,7 +31,7 @@
       "category": "blusher",
       "species": "makeup",
       "status": "inStock",
-      "view": 7,
+      "view": 10,
       "hot": "hot",
       "new": "new",
       "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
@@ -178,7 +178,7 @@
       "rating": 3,
       "price": 50000,
       "status": "inStock",
-      "view": 2,
+      "view": 3,
       "category": "mask",
       "species": "cosmetic",
       "new": "new",
@@ -286,7 +286,7 @@
       "rating": 3,
       "price": 489000,
       "status": "inStock",
-      "view": 2,
+      "view": 3,
       "category": "cleanser",
       "species": "cosmetic",
       "hot": "hot",
@@ -483,7 +483,7 @@
       "discount": 33,
       "rating": 4,
       "status": "inStock",
-      "view": 1,
+      "view": 2,
       "price": 269000,
       "category": "lotions",
       "species": "cosmetic",
@@ -1313,6 +1313,14 @@
       "email": "abc@abc.com",
       "address": "a",
       "phone": "0935972894"
+    },
+    {
+      "id": "2b8d9767-bf48-484a-9fad-737233c429a6",
+      "userId": "43cd5a9e-2476-4d84-9838-470377621df0",
+      "fullname": "nguyen anh vu",
+      "email": "abc@abc.com",
+      "address": "quang nam",
+      "phone": "0935972894"
     }
   ],
   "order": [
@@ -1339,7 +1347,7 @@
           "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
           "price": 1410000,
           "discount": 36,
-          "quantity": 3,
+          "quantity": 5,
           "status": "paid",
           "total": 902400
         },
@@ -1350,7 +1358,7 @@
           "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
           "price": 158000,
           "discount": 30,
-          "quantity": 4,
+          "quantity": 6,
           "status": "paid",
           "total": 110600
         }

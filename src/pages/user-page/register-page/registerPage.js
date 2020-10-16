@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useDispatch, useSelector } from "react-redux";
 import { actLogin } from "../../../actions/actions";
 import { withRouter } from "react-router-dom";
+import { getValueInput, validateInput } from "../../../common/validate";
 
 function RegisterPage(props) {
   const { t } = useTranslation("translation");
@@ -40,105 +41,21 @@ function RegisterPage(props) {
   const inputPassword = useRef();
   const inputConfirmPass = useRef();
 
-  const getValueInput = (name) => {
-    switch (name) {
-      case "email":
-        return inputEmail.current.value;
-      case "firstname":
-        return inputFirstname.current.value;
-      case "lastname":
-        return inputLastname.current.value;
-      case "phone":
-        return inputPhone.current.value;
-      case "password":
-        return inputPassword.current.value;
-      case "confirmPass":
-        return inputConfirmPass.current.value;
-      default:
-        break;
-    }
-  };
-
-  const validateInput = (type, checkingText) => {
-    if (checkingText === "") {
-      return { errorMessage: t("validate.require") };
-    }
-
-    if (type === "email") {
-      const regexp = /\S+@\S+\.\S+/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.email"),
-        };
-      }
-    }
-
-    if (type === "firstname") {
-      const regexp = /^[a-zA-Z]+$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.firstname"),
-        };
-      }
-    }
-
-    if (type === "lastname") {
-      const regexp = /^[a-zA-Z]+$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.lastname"),
-        };
-      }
-    }
-
-    if (type === "phone") {
-      const regexp = /^\d{10}$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.phone"),
-        };
-      }
-    }
-
-    if (type === "password") {
-      const regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.password"),
-        };
-      }
-    }
-
-    if (type === "confirmPass") {
-      const regexPass = inputPassword.current.value;
-      if (checkingText === regexPass) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.confirm"),
-        };
-      }
-    }
-  };
-
   const handleInputValidate = (e) => {
     const { name } = e.target;
-    const { errorMessage } = validateInput(name, getValueInput(name));
+    const { errorMessage } = validateInput(
+      name,
+      getValueInput(
+        name,
+        inputEmail,
+        inputFirstname,
+        inputLastname,
+        inputPhone,
+        inputPassword,
+        inputConfirmPass
+      ),
+      inputPassword.current.value
+    );
     const newState = { ...stateInput[name] };
     newState.errorMessage = errorMessage;
     setStateInput({ ...stateInput, [name]: newState });
@@ -162,15 +79,11 @@ function RegisterPage(props) {
       confirmPassword !== ""
     ) {
       if (password !== confirmPassword) {
-        NotificationManager.warning(
-          "Warning message",
-          t("register.pass-again")
-        );
+        NotificationManager.warning(t("register.pass-again"));
         return false;
       }
       checkEmailDuplicate();
-    } else
-      NotificationManager.warning("Warning message", t("register.require"));
+    } else NotificationManager.warning(t("register.require"));
   };
 
   const checkEmailDuplicate = () => {
@@ -180,10 +93,7 @@ function RegisterPage(props) {
           handleLogin();
           return false;
         } else {
-          NotificationManager.warning(
-            "Warning message",
-            t("register.email-exist")
-          );
+          NotificationManager.warning(t("register.email-exist"));
           return true;
         }
       }
@@ -211,14 +121,13 @@ function RegisterPage(props) {
             role: "***",
           })
         );
-        NotificationManager.success("Success message", t("register.success"));
+        NotificationManager.success(t("register.success"));
         dispatchLogin(actLogin());
-      } else NotificationManager.error("Error message", t("resgiter.err"));
+      } else NotificationManager.error(t("resgiter.err"));
     });
   };
 
   if (loggedIn || localStorage.getItem("Token") !== null) {
-    window.console.log("props :", props);
     props.history.goBack();
     return null;
   }
@@ -333,7 +242,9 @@ function RegisterPage(props) {
                     {t("register.btn-register")}
                   </button>
                   <button
+                    type="button"
                     style={{ boxShadow: "3px 4px 5px 0px rgba(0,0,0,0.75)" }}
+                    onClick={() => props.history.goBack()}
                   >
                     <i className="fas fa-reply"></i>
                     {t("register.btn-back")}

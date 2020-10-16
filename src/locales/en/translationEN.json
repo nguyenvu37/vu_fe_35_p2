@@ -134,7 +134,7 @@
     "btn-register": "Register",
     "btn-back": "Back",
     "err": "Account Creation Failure",
-    "sucess": "Create Account Success",
+    "success": "Create Account Success",
     "email-exist": "Email already exists",
     "require": "Must Enter Full Information",
     "pass-again": "Invalid Password Again"
@@ -173,6 +173,7 @@
     "th4": "Quantity",
     "th5": "Total",
     "th6": "Action",
+    "th7": "Status",
     "h4": "SUMMARY",
     "btn-goon": "CONTINUE TO BUY",
     "btn-del": "DELETE",
@@ -212,5 +213,34 @@
   "cart-now": "Back to Cart",
   "pay-success": {
     "title": "Payment is successful"
+  },
+  "profile": {
+    "btn": "Edit",
+    "success": "Edit is successfully",
+    "err": "Failure editing",
+    "h4": "Profile",
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "th1": "Total Product",
+    "th2": "Paid",
+    "th3": "Unpaid",
+    "th4": "Summary",
+    "btn-edit": "Edit Profile",
+    "btn-order": "View Order"
+  },
+  "nothing-order": "No products purchased",
+  "order": {
+    "title": "order history"
+  },
+  "forget-pass": "Forgot password?",
+  "recover": {
+    "title": "Recover password",
+    "email": "Email",
+    "pass": "Password",
+    "btn-check": "Check email",
+    "btn-send": "Send",
+    "success1": "Correct email",
+    "success2": "Recover password successfully"
   }
 }

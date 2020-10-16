@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import callApi from "../../common/callApi";
 import FormError from "../../common/FormError";
+import { getValueInput, validateInput } from "../../common/validate";
 
 const InfoCustomerList = (props) => {
   const { t } = useTranslation("translation");
@@ -28,78 +29,22 @@ const InfoCustomerList = (props) => {
   const inputAddress = useRef();
   const inputPhone = useRef();
 
-  const getValueInput = (name) => {
-    switch (name) {
-      case "email":
-        return inputEmail.current.value;
-      case "fullname":
-        return inputFullname.current.value;
-      case "address":
-        return inputAddress.current.value;
-      case "phone":
-        return inputPhone.current.value;
-      default:
-        break;
-    }
-  };
-
-  const validateInput = (type, checkingText) => {
-    if (checkingText === "") {
-      return { errorMessage: t("validate.require") };
-    }
-
-    if (type === "email") {
-      const regexp = /\S+@\S+\.\S+/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.email"),
-        };
-      }
-    }
-
-    if (type === "fullname") {
-      const regexp = /^[a-zA-Z ]+$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.fullname"),
-        };
-      }
-    }
-
-    if (type === "address") {
-      const regexp = /^[a-zA-Z0-9\s,-]*$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.address"),
-        };
-      }
-    }
-
-    if (type === "phone") {
-      const regexp = /^\d{10}$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.phone"),
-        };
-      }
-    }
-  };
-
   const handleInputValidate = (e) => {
     const { name } = e.target;
-    const { errorMessage } = validateInput(name, getValueInput(name));
+    const { errorMessage } = validateInput(
+      name,
+      getValueInput(
+        name,
+        inputEmail,
+        "",
+        "",
+        inputPhone,
+        "",
+        "",
+        inputFullname,
+        inputAddress
+      )
+    );
     const newState = { ...stateInput[name] };
     newState.errorMessage = errorMessage;
     setStateInput({ ...stateInput, [name]: newState });

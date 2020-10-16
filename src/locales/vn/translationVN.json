@@ -134,7 +134,7 @@
     "btn-register": "Đăng ký",
     "btn-back": "Quay lại",
     "err": "Tạo tài khoản thât bại",
-    "sucess": "Tạo tài khoản thành công",
+    "success": "Tạo tài khoản thành công",
     "email-exist": "Email đã tồn tại",
     "require": "Phải nhập đầy đủ thông tin",
     "pass-again": "Nhập lại mật khẩu chưa đúng"
@@ -173,6 +173,7 @@
     "th4": "Số lượng",
     "th5": "Tổng cộng",
     "th6": "Hành động",
+    "th7": "Trạng thái",
     "h4": "TỔNG CỘNG",
     "btn-goon": "TIẾP TỤC MUA HÀNG",
     "btn-del": "XÓA",
@@ -212,5 +213,34 @@
   "cart-now": "Quay lại giỏ hàng",
   "pay-success": {
     "title": "Đã thanh toán thành công"
+  },
+  "profile": {
+    "btn": "Chỉnh sửa",
+    "success": "Chỉnh sửa thành công",
+    "err": "Chỉnh sửa thất bại",
+    "h4": "Thông tin cá nhân",
+    "name": "Tên đầy đủ",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "th1": "Tổng sản phẩm",
+    "th2": "Đã thanh toán",
+    "th3": "Chưa thanh toán",
+    "th4": "Tiền đã mua hàng",
+    "btn-edit": "Chỉnh sửa trang cá nhân",
+    "btn-order": "Xem sản phẩm đã mua"
+  },
+  "nothing-order": "Bạn chưa mua sản phẩm nào",
+  "order": {
+    "title": "lịch sử mua hàng"
+  },
+  "forget-pass": "Quên mật khẩu?",
+  "recover": {
+    "title": "Lấy lại mật khẩu",
+    "email": "Email",
+    "pass": "Mật khẩu",
+    "btn-check": "Kiểm tra",
+    "btn-send": "Gửi",
+    "success1": "Email đúng",
+    "success2": "Lấy lại mật khẩu thành công"
   }
 }

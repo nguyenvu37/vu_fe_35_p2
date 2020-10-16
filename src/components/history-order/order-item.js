@@ -1,11 +1,7 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import { getPrice, getTotal } from "../../common/calculation";
 
-const PaymentItem = (props) => {
-  const handleDetailPage = (id) => {
-    props.history.push(`/detail/${id}`);
-  };
+const OrderItem = (props) => {
   const { data } = props;
   return (
     <tr>
@@ -19,7 +15,7 @@ const PaymentItem = (props) => {
       </td>
       <td
         style={{ width: "200px", padding: "0 5px", cursor: "pointer" }}
-        onClick={() => handleDetailPage(data.code)}
+        onClick={() => props.history.push(`/detail/${data.id}`)}
       >
         {data.name}
       </td>
@@ -32,7 +28,8 @@ const PaymentItem = (props) => {
         </span>
       </td>
       <td style={{ width: "90px" }}>{data.quantity}</td>
-      <td style={{ width: "120px" }}>
+      <td style={{ width: "120px" }}>{data.status}</td>
+      <td>
         <span className="price">
           {getTotal(data, data.quantity)
             .toString()
@@ -44,4 +41,4 @@ const PaymentItem = (props) => {
   );
 };
 
-export default withRouter(PaymentItem);
+export default OrderItem;

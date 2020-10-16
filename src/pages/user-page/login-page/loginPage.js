@@ -5,7 +5,8 @@ import { NotificationManager } from "react-notifications";
 import callApi from "../../../common/callApi";
 import { useDispatch, useSelector } from "react-redux";
 import { actLogin } from "../../../actions/actions";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import { getValueInput, validateInput } from "../../../common/validate";
 
 function LoginPage(props) {
   const { t } = useTranslation("translation");
@@ -23,50 +24,12 @@ function LoginPage(props) {
   const inputEmail = useRef();
   const inputPassword = useRef();
 
-  const getValueInput = (name) => {
-    switch (name) {
-      case "email":
-        return inputEmail.current.value;
-      case "password":
-        return inputPassword.current.value;
-      default:
-        break;
-    }
-  };
-
-  const validateInput = (type, checkingText) => {
-    if (checkingText === "") {
-      return { errorMessage: t("validate.require") };
-    }
-
-    if (type === "email") {
-      const regexp = /\S+@\S+\.\S+/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.email"),
-        };
-      }
-    }
-
-    if (type === "password") {
-      const regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-      const checkingResult = regexp.exec(checkingText);
-      if (checkingResult !== null) {
-        return { errorMessage: "" };
-      } else {
-        return {
-          errorMessage: t("validate.password"),
-        };
-      }
-    }
-  };
-
   const handleInputValidate = (e) => {
     const { name } = e.target;
-    const { errorMessage } = validateInput(name, getValueInput(name));
+    const { errorMessage } = validateInput(
+      name,
+      getValueInput(name, inputEmail, "", "", "", inputPassword)
+    );
     const newState = { ...stateInput[name] };
     newState.errorMessage = errorMessage;
     setStateInput({ ...stateInput, [name]: newState });
@@ -87,7 +50,7 @@ function LoginPage(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (await !handleValidationSubmit()) {
-      return NotificationManager.warning("Warning message", t("login.format"));
+      return NotificationManager.warning(t("login.format"));
     } else {
       callApi(`users?email=${inputEmail.current.value}`, "Get", null).then(
         (res) => {
@@ -104,18 +67,21 @@ function LoginPage(props) {
                 role: "***",
               })
             );
-            NotificationManager.success("Success message", t("login.success"));
+            NotificationManager.success(t("login.success"));
             dispatchLogin(actLogin());
           } else {
-            NotificationManager.error("Error message", t("login.err"));
+            NotificationManager.error(t("login.err"));
           }
         }
       );
     }
   };
 
+  const handleRegisterPage = () => {
+    props.history.push("/register");
+  };
+
   if (loggedIn || localStorage.getItem("Token") !== null) {
-    console.log("props.history :>> ", props.history);
     props.history.length <= 2
       ? props.history.push("/")
       : props.history.goBack();
@@ -134,6 +100,7 @@ function LoginPage(props) {
               <div className="login__content__title__btn btn-form">
                 <button
                   style={{ boxShadow: "3px 4px 5px 0px rgba(0,0,0,0.75)" }}
+                  onClick={handleRegisterPage}
                 >
                   {t("login.btn-register")}
                 </button>
@@ -176,9 +143,12 @@ function LoginPage(props) {
                   <FormError errorMessage={stateInput.password.errorMessage} />
                 </div>
                 <div className="login__content__form__btn btn-form">
-                  <p>{t("login.forgot-pass")}</p>
+                  <Link to="/recover">{t("forget-pass")}</Link>
                   <button
-                    style={{ boxShadow: "3px 4px 5px 0px rgba(0,0,0,0.75)" }}
+                    style={{
+                      boxShadow: "3px 4px 5px 0px rgba(0,0,0,0.75)",
+                      marginLeft: "10px",
+                    }}
                   >
                     {t("login.btn-login")}
                   </button>

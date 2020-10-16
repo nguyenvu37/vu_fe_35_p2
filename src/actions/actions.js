@@ -140,3 +140,10 @@ export const actNumCart = (data) => {
     payload: data,
   };
 };
+
+export const actQuantity = (data) => {
+  return {
+    type: Types.QUANTITY,
+    payload: data,
+  };
+};
