@@ -58,7 +58,10 @@ function DetailPage(props) {
   return data.length !== 0 ? (
     <main>
       <DetailProduct data={data} />
-      <RecentlyProduct dataRecentlyProduct={dataRecentlyProduct} />
+      <RecentlyProduct
+        dataRecentlyProduct={dataRecentlyProduct}
+        numberRecently={numberRecently}
+      />
 
       <div
         className=""
@@ -70,7 +73,7 @@ function DetailPage(props) {
           margin: "20px 0 70px",
         }}
       >
-        <FacebookProvider appId="ZDnNMmzL">
+        <FacebookProvider appId="e0N1cAfk">
           <Comments href={`http://localhost:3000/detail/${idProduct}`} />
         </FacebookProvider>
       </div>

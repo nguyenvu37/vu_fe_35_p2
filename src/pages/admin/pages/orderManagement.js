@@ -4,12 +4,19 @@ import { getKeywordText, getKeywordId } from "../../../common/calculation";
 import callApi from "../../../common/callApi";
 import SearchAdmin from "../../../common/searchAdmin";
 import OrderItem from "../component/order-management/orderItem";
+import PaginationAdmin from "../component/pagination/paginationAdmin";
 
 const OrderManagement = () => {
   const { t } = useTranslation("translation");
   const [data, setData] = useState([]);
   const [orders, setOrders] = useState([]);
   const [dataSearch, setDataSearch] = useState([]);
+  const [dataOrder, setDataOrder] = useState([]);
+  const [indexPage, setIndexPage] = useState(0);
+  const [pagination, setPagination] = useState({
+    _limit: 6,
+    _page: 1,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +30,7 @@ const OrderManagement = () => {
                 username: item.fullname,
                 userId: item.userId,
               };
-              arr.push({ ...order });
+              arr.unshift({ ...order });
             })
           );
           setData([...arr]);
@@ -38,6 +45,22 @@ const OrderManagement = () => {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (data.length <= 0) setDataOrder([]);
+    let newData = [];
+    let end =
+      indexPage + pagination._limit >= data.length
+        ? data.length
+        : indexPage + pagination._limit;
+    if (data.length === 1) setDataOrder([...data]);
+
+    for (let i = indexPage; i < end; i++) {
+      newData.push(data[i]);
+    }
+
+    setDataOrder([...newData]);
+  }, [data, indexPage, pagination]);
 
   const handleSearch = async (keyword) => {
     if (keyword !== "") {
@@ -56,6 +79,8 @@ const OrderManagement = () => {
       });
 
       setData([...arr]);
+      setPagination({ _limit: 6, _page: 1 });
+      setIndexPage(0);
     } else {
       await callApi(`order`, "get", null).then((res) => {
         if (res && res.status === 200 && res.data) {
@@ -71,8 +96,12 @@ const OrderManagement = () => {
             })
           );
           setData([...arr]);
+          setPagination({ _limit: 6, _page: 1 });
+          setIndexPage(0);
         } else {
           setData([]);
+          setPagination({ _limit: 6, _page: 1 });
+          setIndexPage(0);
         }
       });
     }
@@ -101,6 +130,11 @@ const OrderManagement = () => {
     }
   };
 
+  const onChangePage = (newPage) => {
+    setPagination({ ...pagination, _page: newPage });
+    setIndexPage((newPage - 1) * pagination._limit);
+  };
+
   return (
     <div className="order-management">
       <div className="card text-center">
@@ -118,7 +152,7 @@ const OrderManagement = () => {
           >
             <SearchAdmin onSearch={handleSearch} />
           </div>
-          {data.length > 0 ? (
+          {dataOrder.length > 0 ? (
             <table className="table table-bordered table-striped">
               <thead>
                 <tr className="bg-light">
@@ -131,7 +165,7 @@ const OrderManagement = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.map((item, index) => (
+                {dataOrder.map((item, index) => (
                   <OrderItem
                     key={index + 1}
                     data={item}
@@ -146,6 +180,11 @@ const OrderManagement = () => {
             </div>
           )}
         </div>
+        <PaginationAdmin
+          totalRows={data}
+          pagination={pagination}
+          onChangePage={onChangePage}
+        />
       </div>
     </div>
   );

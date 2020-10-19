@@ -142,3 +142,28 @@ export const getValueInput = (
       break;
   }
 };
+
+export const getTranslationCategory = (category) => {
+  switch (category) {
+    case "cosmetic":
+      return i18next.t("grid.category1");
+    case "makeup":
+      return i18next.t("grid.category2");
+    case "perfume":
+      return i18next.t("grid.category3");
+    case "lotions":
+      return i18next.t("grid.menu1_1");
+    case "mask":
+      return i18next.t("grid.menu1_2");
+    case "cleanser":
+      return i18next.t("grid.menu1_3");
+    case "lipstick":
+      return i18next.t("grid.menu2_1");
+    case "mascara":
+      return i18next.t("grid.menu2_2");
+    case "blusher":
+      return i18next.t("grid.menu2_3");
+    default:
+      return category;
+  }
+};

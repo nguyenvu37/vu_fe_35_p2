@@ -11,7 +11,7 @@
       "species": "cosmetic",
       "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
       "status": "inStock",
-      "view": 21,
+      "view": 24,
       "hot": "hot",
       "imgDetail": [
         "cosmetic/ahc1/AHC-Ageless1.jpg",
@@ -26,16 +26,21 @@
       "manufacturer": "rorokoBlusher",
       "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
       "discount": 36,
-      "rating": 3,
+      "rating": 4,
       "price": 1410000,
       "category": "blusher",
       "species": "makeup",
       "status": "inStock",
-      "view": 22,
+      "view": 29,
       "hot": "hot",
       "new": "new",
       "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
-      "imgDetail": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg,makeup/blusher/rorokoBlusher3/rorokoBlusher2.jpg,makeup/blusher/rorokoBlusher3/rorokoBlusher3.jpg,makeup/blusher/rorokoBlusher3/rorokoBlusher4.jpg",
+      "imgDetail": [
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher2.jpg",
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher3.jpg",
+        "makeup/blusher/rorokoBlusher3/rorokoBlusher4.jpg"
+      ],
       "info": "Phấn Má Hồng Đa Năng Lime Color & Face Single Blusher 4.5g là sản phẩm phấn má từ từ hãng mỹ phẩm Hàn Quốc Lime Cosmetic. LIME COSMETIC – Tự hào là hãng makeup skincare chức năng cao với thành phần chiết xuất hoàn toàn từ thiên nhiên đến từ Hàn Quốc. "
     },
     {
@@ -48,7 +53,7 @@
       "category": "blusher",
       "species": "makeup",
       "status": "inStock",
-      "view": 8,
+      "view": 10,
       "hot": "hot",
       "img": "makeup/blusher/etude/etude1.jpg",
       "imgDetail": [
@@ -89,7 +94,7 @@
       "category": "mask",
       "species": "cosmetic",
       "status": "inStock",
-      "view": 6,
+      "view": 7,
       "new": "new",
       "img": "cosmetic/collagen/collagen1.jpg",
       "imgDetail": [
@@ -134,7 +139,7 @@
       "new": "new",
       "img": "cosmetic/innisfree2/innisfree1.jpg",
       "status": "inStock",
-      "view": 2,
+      "view": 4,
       "imgDetail": [
         "cosmetic/innisfree2/innisfree1.jpg",
         "cosmetic/innisfree2/innisfree2.jpg",
@@ -155,7 +160,7 @@
       "hot": "hot",
       "new": "new",
       "status": "inStock",
-      "view": 6,
+      "view": 7,
       "img": "perfume/queen/queen1.jpg",
       "imgDetail": [
         "perfume/queen/queen1.jpg",
@@ -281,7 +286,7 @@
       "rating": 3,
       "price": 489000,
       "status": "inStock",
-      "view": 7,
+      "view": 8,
       "category": "cleanser",
       "species": "cosmetic",
       "hot": "hot",
@@ -743,7 +748,7 @@
       "category": "lotions",
       "species": "cosmetic",
       "status": "inStock",
-      "view": 3,
+      "view": 4,
       "hot": "hot",
       "new": "new",
       "img": "detail/sarvon2.jpg",
@@ -1329,6 +1334,32 @@
           "status": "unpaid"
         }
       ]
+    },
+    {
+      "id": "5d3865ab-d69f-46f4-bd70-b8ca664e9a47",
+      "userId": "5d3865ab-d69f-46f4-bd70-b8ca664e9a47",
+      "data": [
+        {
+          "id": "948dcc3f-86bb-478b-9ce4-27a9dfc4ef88",
+          "code": "rorokoBlusher-3",
+          "name": "Bộ Trang Điểm 6 Món Phiên Bản Màu Hồng Baby Dễ Thương Roroko Pink Baby Doll Make Up Box Set",
+          "img": "makeup/blusher/rorokoBlusher3/rorokoBlusher1.jpg",
+          "price": 1410000,
+          "discount": 36,
+          "quantity": 1,
+          "status": "unpaid"
+        },
+        {
+          "id": "289ff828-7f98-4e44-b74e-28c9a6fe4897",
+          "code": "ahc-1",
+          "name": "Kem Dưỡng Mắt Cải Thiện Nếp Nhăn AHC Ageless Real Eye Cream For Face Season7 12ml",
+          "img": "cosmetic/ahc1/AHC-Ageless-Real-Eye-Cream-For-Face-Season7-12ml-2-500x500.jpg",
+          "price": 158000,
+          "discount": 30,
+          "quantity": 1,
+          "status": "unpaid"
+        }
+      ]
     }
   ],
   "customers": [
@@ -1441,6 +1472,22 @@
       "userId": "433943a2-209d-4140-8084-6315e76ba81d",
       "fullname": "baoloc nguyen",
       "email": "baoloc@abc.com",
+      "address": "dien ban",
+      "phone": "0123123123"
+    },
+    {
+      "id": "428c4dec-11be-44f2-be47-c2e3818a2cc8",
+      "userId": "75acbb9c-718e-4fba-9e04-519ec2cec870",
+      "fullname": "giabao nguyen",
+      "email": "giaobao@abc.com",
+      "address": "dien ban",
+      "phone": "0123123123"
+    },
+    {
+      "id": "e69d8c8c-9730-442c-8b62-99a4df981638",
+      "userId": "75acbb9c-718e-4fba-9e04-519ec2cec870",
+      "fullname": "giabao nguyen",
+      "email": "giaobao@abc.com",
       "address": "dien ban",
       "phone": "0123123123"
     }
@@ -1564,64 +1611,69 @@
       ]
     },
     {
-      "id": "ea95285a-d2ee-4fa4-8d8b-33a2691b3aa3",
-      "userId": "0c0addaf-b503-4f34-b30f-854457de9898",
-      "fullname": "vu nguyen",
+      "id": "c993cf69-b63a-4690-a6ff-b17abeb0e4ea",
+      "userId": "75acbb9c-718e-4fba-9e04-519ec2cec870",
+      "fullname": "giabao nguyen",
       "data": [
         {
-          "id": "9e9afb83-3638-4a74-b4c9-cc21f58f5b03",
-          "code": "bivybes-1",
-          "name": "Sữa Rửa Mặt Sủi Bọt Khí 3 in 1 Bivybes Wonder Bath Super Vegitoks Cleanser 300ml",
-          "img": "cosmetic/bivybes/bivybes1.jpg",
-          "price": 279000,
+          "id": "78d3c7b0-a3c6-44c9-bbd8-fee3fa3a6479",
+          "code": "apieu-1",
+          "name": "Son Tint Có Dưỡng Lâu Trôi Apieu Color Lip Stain Gel Tint",
+          "img": "makeup/lipstick/apieu/apieu1.jpg",
+          "price": 180000,
+          "discount": 56,
+          "quantity": 1,
+          "status": "paid",
+          "total": 79200,
+          "time": 1603096302745
+        },
+        {
+          "id": "855cae27-b228-4ce0-af81-460d718ac0e6",
+          "code": "3ce-1",
+          "name": "Son Tint Lì Mềm Mịn Môi 3CE Stimmung Red Contour Collection 3g",
+          "img": "makeup/lipstick/3ce/3ce1.jpg",
+          "price": 230000,
+          "discount": 24,
+          "quantity": 2,
+          "status": "paid",
+          "total": 349600,
+          "time": 1603096302745
+        },
+        {
+          "id": "0e4f6c38-5b20-4fb3-8947-b28d3b607305",
+          "code": "velvet-1",
+          "name": "Son Kem Lì Black Rouge Air Fit Velvet Tint 4.5g",
+          "img": "makeup/lipstick/velvet/velvet1.jpg",
+          "price": 260000,
           "discount": 43,
-          "quantity": 2,
-          "status": "paid",
-          "total": 318060,
-          "time": 1603071762564
-        },
-        {
-          "id": "78af3f50-b7f4-4ddd-adac-5e02c8aa95ee",
-          "code": "volcanic-2",
-          "name": "Sữa Rửa Mặt Innisfree Jeju Volcanic Pore Cleansing Foam 150ml",
-          "img": "cosmetic/volcanic2/volcanic1.jpg",
-          "price": 240000,
-          "discount": 21,
           "quantity": 1,
           "status": "paid",
-          "total": 189600,
-          "time": 1603071762564
-        }
-      ]
-    },
-    {
-      "id": "b5aa7977-7d44-4c04-8e9f-b2963b02ded9",
-      "userId": "40f085e3-df9f-400a-afc8-673991b449f4",
-      "fullname": "vu nguyen anh",
-      "data": [
-        {
-          "id": "f117e6e9-924f-427f-9ce6-9cefde58ac53",
-          "code": "secret-2",
-          "name": "Nước Hoa Dạng Xịt The Face Shop Soul Secret Blossom 30ml",
-          "img": "perfume/secret/secret1.jpg",
-          "price": 499000,
-          "discount": 37,
-          "quantity": 2,
-          "status": "paid",
-          "total": 628740,
-          "time": 1603072196790
+          "total": 148200,
+          "time": 1603096302745
         },
         {
-          "id": "541e31e2-ff77-4d32-aa6f-7b9d62e12fb8",
-          "code": "queen-1",
-          "name": "Nước Hoa Nữ Charme Queen Eau De Parfum 100ml",
-          "img": "perfume/queen/queen1.jpg",
-          "price": 455000,
-          "discount": 37,
-          "quantity": 1,
+          "id": "72213815-f93b-4ba9-8946-d5ead67f0fb2",
+          "code": "laneige-1",
+          "name": "Gel Rửa Mặt Làm Sạch Da Dịu Nhẹ Laneige Fresh Calming pH Balancing Cleanser 230ml",
+          "img": "cosmetic/laneige1/laneige4.jpg",
+          "price": 489000,
+          "discount": 39,
+          "quantity": 2,
           "status": "paid",
-          "total": 286650,
-          "time": 1603072196790
+          "total": 596580,
+          "time": 1603096158883
+        },
+        {
+          "id": "c43aea26-0572-4b6f-bb09-aca671f61821",
+          "code": "green-1",
+          "name": "Mỹ phẩm châu Âu Green Vera 75ml",
+          "img": "detail/sarvon2.jpg",
+          "price": 780000,
+          "discount": 34,
+          "quantity": 2,
+          "status": "paid",
+          "total": 1029600,
+          "time": 1603096158883
         }
       ]
     }
@@ -1630,12 +1682,20 @@
     {
       "id": 1,
       "species": "cosmetic",
-      "category": ["lotions", "mask", "cleanser"]
+      "category": [
+        "lotions",
+        "mask",
+        "cleanser"
+      ]
     },
     {
       "id": 2,
       "species": "makeup",
-      "category": ["lipstick", "mascara", "blusher"]
+      "category": [
+        "lipstick",
+        "mascara",
+        "blusher"
+      ]
     },
     {
       "id": 3,

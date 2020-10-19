@@ -7,7 +7,9 @@ function GridPage() {
   const [data, setData] = useState([]);
   const products = useSelector((state) => state.products.products);
   useEffect(() => {
-    if (products.length !== 0) setData([...products]);
+    if (products.length > 0) {
+      setData([...products]);
+    } else setData([]);
   }, [products]);
 
   return (

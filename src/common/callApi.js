@@ -7,7 +7,7 @@ export default function callApi(endPoint, method = "get", data) {
     url: `${config.host}/${endPoint}`,
     data: data,
   }).catch(function (error) {
-    alert("Error: ERR_CONNECTION_REFUSED Please: Reload Site");
+    alert("Error: ERR_CONNECTION_REFUSED Please: Reload Page");
     console.log(error.config);
   });
 }

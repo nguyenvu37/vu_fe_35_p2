@@ -4,10 +4,17 @@ import SearchAdmin from "../../../common/searchAdmin";
 import ItemUserMangement from "../component/user-management/userItemManagement";
 import callApi from "../../../common/callApi";
 import queryString from "query-string";
+import PaginationAdmin from "../component/pagination/paginationAdmin";
 
 const UserManagement = () => {
   const { t } = useTranslation("translation");
   const [data, setData] = useState([]);
+  const [dataUsers, setDataUsers] = useState([]);
+  const [indexPage, setIndexPage] = useState(0);
+  const [pagination, setPagination] = useState({
+    _limit: 6,
+    _page: 1,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +27,22 @@ const UserManagement = () => {
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (data.length <= 0) setDataUsers([]);
+    let newData = [];
+    let end =
+      indexPage + pagination._limit >= data.length
+        ? data.length
+        : indexPage + pagination._limit;
+    if (data.length === 1) setDataUsers([...data]);
+
+    for (let i = indexPage; i < end; i++) {
+      newData.push(data[i]);
+    }
+
+    setDataUsers([...newData]);
+  }, [data, indexPage, pagination]);
 
   const handleDelete = async (id) => {
     if (id) {
@@ -41,9 +64,16 @@ const UserManagement = () => {
       (res) => {
         if (res && res.status === 200 && res.data) {
           setData([...res.data]);
+          setPagination({ _limit: 6, _page: 1 });
+          setIndexPage(0);
         } else setData([]);
       }
     );
+  };
+
+  const onChangePage = (newPage) => {
+    setPagination({ ...pagination, _page: newPage });
+    setIndexPage((newPage - 1) * pagination._limit);
   };
 
   return (
@@ -63,7 +93,7 @@ const UserManagement = () => {
           >
             <SearchAdmin onSearch={handleSearch} />
           </div>
-          {data.length > 0 ? (
+          {dataUsers.length > 0 ? (
             <table className="table table-bordered table-striped">
               <thead>
                 <tr className="bg-light">
@@ -76,7 +106,7 @@ const UserManagement = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.map((item, index) => (
+                {dataUsers.map((item, index) => (
                   <ItemUserMangement
                     key={index + 1}
                     data={item}
@@ -91,6 +121,11 @@ const UserManagement = () => {
             </div>
           )}
         </div>
+        <PaginationAdmin
+          totalRows={data}
+          pagination={pagination}
+          onChangePage={onChangePage}
+        />
       </div>
     </div>
   );

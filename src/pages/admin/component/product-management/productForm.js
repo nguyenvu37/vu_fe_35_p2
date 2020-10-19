@@ -26,7 +26,6 @@ const ProductForm = () => {
   const history = useHistory();
 
   useEffect(() => {
-    console.log("params :>> ", params);
     if (params.id) {
       const fetchData = async () => {
         await callApi(`products?id=${params.id}`, "get", null).then((res) => {
@@ -86,7 +85,7 @@ const ProductForm = () => {
       hot: hot ? "hot" : "",
       new: newProduct ? "new" : "",
       img: img,
-      imgDetail: imgDetail,
+      imgDetail: imgDetail.split(","),
       info: info,
     };
 
@@ -105,7 +104,7 @@ const ProductForm = () => {
       info !== ""
     ) {
       if (params.id) {
-        await await callApi(`products/${params.id}`, "put", {
+        await callApi(`products/${params.id}`, "put", {
           ...dataProduct,
         }).then(() => {
           NotificationManager.success(t("admin.edit-success"));

@@ -15,16 +15,23 @@ const ViewAll = (props) => {
     window.scrollTo(0, 0);
     if (filter === "hot") {
       dispatchGridPage(
-        actFetchProductRequest({ _limit: 6, _page: 1, hot: filter }),
-        actFetchTotalRowsRequest({ hot: filter })
+        actFetchProductRequest({ _limit: 6, _page: 1, hot: filter })
       );
+      dispatchGridPage(actFetchTotalRowsRequest({ hot: filter }));
     }
 
     if (filter === "new") {
       dispatchGridPage(
-        actFetchProductRequest({ _limit: 6, _page: 1, hot: filter }),
-        actFetchTotalRowsRequest({ new: filter })
+        actFetchProductRequest({ _limit: 6, _page: 1, new: filter })
       );
+      dispatchGridPage(actFetchTotalRowsRequest({ new: filter }));
+    }
+
+    if (filter > 0) {
+      dispatchGridPage(
+        actFetchProductRequest({ _limit: 6, _page: 1, view_gte: filter })
+      );
+      dispatchGridPage(actFetchTotalRowsRequest({ view_gte: filter }));
     }
 
     props.history.push("/grid");

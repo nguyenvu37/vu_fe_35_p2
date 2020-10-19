@@ -398,6 +398,10 @@ article {
     }
   }
 
+  ul li.active {
+    color: $green;
+  }
+
   &__tag {
     margin-top: 40px;
 
@@ -1236,6 +1240,7 @@ article {
     &__content {
       margin: 20px 0;
       padding: 10px;
+      word-wrap: break-word;
 
       span {
         font-size: 20px;

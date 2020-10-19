@@ -6,10 +6,11 @@ import { actFetchDataDetailRequest } from "../../actions/actions";
 import AddToCart from "../../common/addToCart";
 import callApi from "../../common/callApi";
 import { withRouter } from "react-router-dom";
+import ViewAll from "../../common/viewAll";
 
 const RecentlyProduct = (props) => {
   const { t } = useTranslation("translation");
-  const { dataRecentlyProduct } = props;
+  const { dataRecentlyProduct, numberRecently } = props;
   const dispatch = useDispatch();
 
   const settings = {
@@ -129,9 +130,7 @@ const RecentlyProduct = (props) => {
         ) : (
           ""
         )}
-        <div className="product__view-all">
-          <button>{t("hotTrend.viewAll")}</button>
-        </div>
+        <ViewAll filter={numberRecently} />
       </div>
     </div>
   );

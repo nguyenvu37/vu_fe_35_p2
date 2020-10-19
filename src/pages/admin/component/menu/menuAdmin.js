@@ -94,11 +94,11 @@ const MenuAdmin = (props) => {
               className="bg-white"
             />
           </div>
-          {dataItemMenu.map((e, i) => (
+          {dataItemMenu.map((item, i) => (
             <ItemMenuAdmin
               id={"dataItemMenu" + i}
               key={"dataItemMenu" + i}
-              data={e}
+              data={item}
             />
           ))}
         </div>

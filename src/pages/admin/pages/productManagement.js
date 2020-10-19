@@ -3,48 +3,49 @@ import { useTranslation } from "react-i18next";
 import callApi from "../../../common/callApi";
 import SearchAdmin from "../../../common/searchAdmin";
 import ProductItem from "../component/product-management/productItem";
-import queryString from "query-string";
 import AddProduct from "../component/product-management/addProduct";
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  actFetchProductRequest,
+  actFetchTotalRowsRequest,
+} from "../../../actions/actions";
+import Pagination from "../../../common/pagination";
 
 const ProductManagement = () => {
   const { t } = useTranslation("translation");
   const [data, setData] = useState([]);
   const history = useHistory();
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.products);
+  const totalRows = useSelector((state) => state.totalRow);
+  const filters = useSelector((state) => state.filters.filters);
 
   useEffect(() => {
-    const fetchData = async () => {
-      await callApi(`products`, "get", null).then((res) => {
-        if (res && res.status === 200 && res.data) {
-          setData([...res.data]);
-        } else setData([]);
-      });
-    };
+    dispatch(actFetchProductRequest({ _limit: 6, _page: 1 }));
+    dispatch(actFetchTotalRowsRequest());
+  }, [dispatch]);
 
-    fetchData();
-  }, []);
+  useEffect(() => {
+    if (products.length > 0) {
+      setData([...products]);
+    } else setData([]);
+  }, [products]);
 
   const handleDelete = async (id) => {
     if (id) {
       if (window.confirm(t("admin.delete?"))) {
         await callApi(`products/${id}`, "delete", null).then(async () => {
-          await callApi(`products`, "get", null).then((res) => {
-            if (res && res.status === 200 && res.data) {
-              setData([...res.data]);
-            } else setData([]);
-          });
+          dispatch(actFetchProductRequest({ ...filters }));
+          dispatch(actFetchTotalRowsRequest());
         });
       }
     }
   };
 
-  const handleSearch = async (keyword) => {
-    const paramSearch = queryString.stringify({ q: keyword });
-    await callApi(`products?${paramSearch}`, "get", null).then((res) => {
-      if (res && res.status === 200 && res.data) {
-        setData([...res.data]);
-      } else setData([]);
-    });
+  const handleSearch = (keyword) => {
+    dispatch(actFetchProductRequest({ ...filters, q: keyword }));
+    dispatch(actFetchTotalRowsRequest({ q: keyword }));
   };
 
   const handleEdit = (id) => {
@@ -104,6 +105,8 @@ const ProductManagement = () => {
             </div>
           )}
         </div>
+
+        <Pagination totalRows={totalRows} />
       </div>
     </div>
   );

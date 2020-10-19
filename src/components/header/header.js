@@ -70,7 +70,7 @@ const Header = (props) => {
 
       await callApi(`products?${paramString}`, "get", null).then((res) => {
         if (res && res.status && res.data) {
-          console.log("res.data :>> ", res.data);
+          setDataSearch([...res.data]);
         } else setDataSearch([]);
       });
     } else {
