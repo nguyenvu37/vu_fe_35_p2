@@ -8,6 +8,7 @@ import callApi from "../../../common/callApi";
 import { withRouter } from "react-router-dom";
 import Waiting from "../../../common/waiting";
 import ViewAll from "../../../common/viewAll";
+import { getPrice } from "../../../common/calculation";
 
 const NewProducts = (props) => {
   const { t } = useTranslation("translation");
@@ -95,7 +96,7 @@ const NewProducts = (props) => {
                       {item.name}
                     </button>
                     <span className="price">
-                      {Math.floor(item.price * ((100 - item.discount) / 100))
+                      {getPrice(item)
                         .toString()
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                       <small>đ</small>

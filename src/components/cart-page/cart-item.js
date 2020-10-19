@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
-import { actDelCart, actNumCart } from "../../actions/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { actAddCart, actDelCart, actNumCart } from "../../actions/actions";
 import { withRouter } from "react-router-dom";
 import { getPrice, getTotal } from "../../common/calculation";
 
@@ -10,7 +10,7 @@ const CartItem = (props) => {
   const { data, onChangeQuantity, onDeleteElement } = props;
   const inputQuan = useRef();
   const [total, setTotal] = useState(0);
-  const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
+  const inCart = useSelector((state) => state.addCart);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const CartItem = (props) => {
           ...inCart[index],
           quantity: parseInt(inputQuan.current.value),
         };
-        localStorage.setItem("inCart", JSON.stringify([...inCart]));
+        dispatch(actAddCart([...inCart]));
         dispatch(actNumCart(inputQuan.current.value));
       }
       setTotal(totalPrice);
@@ -53,7 +53,7 @@ const CartItem = (props) => {
           ...inCart[index],
           quantity: parseInt(inputQuan.current.value),
         };
-        localStorage.setItem("inCart", JSON.stringify([...inCart]));
+        dispatch(actAddCart([...inCart]));
         dispatch(actNumCart(inputQuan.current.value));
       }
       setTotal(totalPrice);
@@ -68,8 +68,7 @@ const CartItem = (props) => {
     } else {
       if (window.confirm(t("want-del"))) {
         let dataCart = inCart.filter((item) => item.id !== id);
-
-        localStorage.setItem("inCart", JSON.stringify([...dataCart]));
+        dispatch(actAddCart([...dataCart]));
         dispatch(actDelCart(id));
       }
     }

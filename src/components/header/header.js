@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,18 +9,21 @@ import {
 import NotificationManager from "react-notifications/lib/NotificationManager";
 import { actLogout } from "../../actions/actions";
 import callApi from "../../common/callApi";
+import TranslationBtn from "../../common/translationBtn";
+import queryString from "query-string";
+import ResultSearchProduct from "../../common/resultSearchProduct";
 
 const Header = (props) => {
-  const { t, i18n } = useTranslation("translation");
-  const [en, setEn] = useState(true);
-  const [vn, setVn] = useState(false);
+  const { t } = useTranslation("translation");
+  const inputSearch = useRef();
   const dispatch = useDispatch();
   const dispatchToTalRow = useDispatch();
   const dispatchLogout = useDispatch();
   const loggedIn = useSelector((state) => state.users.loggedIn);
   const [quanProduct, setQuanProduct] = useState(0);
+  const [dataSearch, setDataSearch] = useState([]);
   const numCart = useSelector((state) => state.numCart.num);
-  const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
+  const inCart = useSelector((state) => state.addCart);
   const actionDelProduct = useSelector((state) => state.delCart.id);
 
   useEffect(() => {
@@ -51,24 +54,27 @@ const Header = (props) => {
     }
   }, [numCart, inCart, actionDelProduct]);
 
-  const handleChangeLanguage = (ln) => {
-    i18n.changeLanguage(ln);
-    setVn(!vn);
-    setEn(!en);
-  };
-
-  let classEn = "",
-    classVn = "";
-
-  if (en) classEn = "active";
-
-  if (vn) classVn = "active";
-
   const handleLogout = () => {
     if (window.confirm(t("query-logout"))) {
       dispatchLogout(actLogout());
       props.history.push("/");
       NotificationManager.success("Success message", t("logout.success"));
+    }
+  };
+
+  const handleSearch = async () => {
+    if (inputSearch.current.value !== "") {
+      const paramString = queryString.stringify({
+        q: inputSearch.current.value,
+      });
+
+      await callApi(`products?${paramString}`, "get", null).then((res) => {
+        if (res && res.status && res.data) {
+          console.log("res.data :>> ", res.data);
+        } else setDataSearch([]);
+      });
+    } else {
+      setDataSearch([]);
     }
   };
 
@@ -190,9 +196,16 @@ const Header = (props) => {
                   className="input-search"
                   type="text"
                   name="search"
-                  placeholder="Search.."
+                  placeholder={t("admin.search")}
+                  ref={inputSearch}
+                  onKeyUp={handleSearch}
                 />
                 <i className="fas fa-search search"></i>
+                {dataSearch.length > 0 ? (
+                  <ResultSearchProduct data={dataSearch} />
+                ) : (
+                  ""
+                )}
               </div>
               <div className="access">
                 <div className="access-btn">
@@ -271,20 +284,7 @@ const Header = (props) => {
                       </Link>
                     </div>
                   )}
-                  <div className="btn-translate">
-                    <button
-                      className={`${classEn}`}
-                      onClick={() => handleChangeLanguage("en")}
-                    >
-                      En
-                    </button>
-                    <button
-                      className={`${classVn}`}
-                      onClick={() => handleChangeLanguage("vn")}
-                    >
-                      Vn
-                    </button>
-                  </div>
+                  <TranslationBtn />
                 </div>
               </div>
             </div>

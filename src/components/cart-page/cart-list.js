@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import callApi from "../../common/callApi";
 import CartItem from "./cart-item";
 import { withRouter } from "react-router-dom";
-import { actDelCart, actNumCart } from "../../actions/actions";
+import { actAddCart, actDelCart, actNumCart } from "../../actions/actions";
 import { getSummary } from "../../common/calculation";
 
 const CartList = (props) => {
@@ -15,10 +15,10 @@ const CartList = (props) => {
   const [dataCarts, setDataCarts] = useState([]);
   const numProduct = useSelector((state) => state.numCart.num);
   const actionDelProduct = useSelector((state) => state.delCart.id);
+  const inCart = useSelector((state) => state.addCart);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
     if (localStorage.getItem("Token") !== null) {
       const fetchData = async () => {
         await callApi(
@@ -48,7 +48,7 @@ const CartList = (props) => {
       setSum(summary);
       setData([...inCart]);
     }
-  }, [numProduct, actionDelProduct]);
+  }, [numProduct, actionDelProduct, inCart]);
 
   const handleContinueShopping = () => {
     props.history.push("/");
@@ -61,11 +61,11 @@ const CartList = (props) => {
           `carts/${JSON.parse(localStorage.getItem("Token")).id}`,
           "delete",
           null
-        ).then((res) => {
+        ).then(() => {
           dispatch(actDelCart(JSON.parse(localStorage.getItem("Token")).id));
         });
       } else {
-        localStorage.removeItem("inCart");
+        dispatch(actAddCart([]));
         dispatch(actDelCart(1));
       }
     }
@@ -89,7 +89,7 @@ const CartList = (props) => {
     };
     callApi(`carts/${JSON.parse(localStorage.getItem("Token")).id}`, "put", {
       ...cart,
-    }).then((res) => {
+    }).then(() => {
       dispatch(actNumCart(data[index].quantity));
     });
   };
@@ -102,7 +102,7 @@ const CartList = (props) => {
     };
     callApi(`carts/${JSON.parse(localStorage.getItem("Token")).id}`, "put", {
       ...cart,
-    }).then((res) => {
+    }).then(() => {
       dispatch(actDelCart(id));
     });
   };

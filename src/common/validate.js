@@ -1,4 +1,13 @@
 import i18next from "i18next";
+import {
+  address,
+  email,
+  firstname,
+  fullname,
+  lastname,
+  password,
+  phone,
+} from "./constCommon";
 
 export const validateInput = (type, checkingText, pass) => {
   if (checkingText === "") {
@@ -6,7 +15,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "email") {
-    const regexp = /\S+@\S+\.\S+/;
+    const regexp = email;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };
@@ -18,7 +27,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "firstname") {
-    const regexp = /^[a-zA-Z]+$/;
+    const regexp = firstname;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };
@@ -30,7 +39,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "lastname") {
-    const regexp = /^[a-zA-Z]+$/;
+    const regexp = lastname;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };
@@ -42,7 +51,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "phone") {
-    const regexp = /^\d{10}$/;
+    const regexp = phone;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };
@@ -54,7 +63,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "password") {
-    const regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    const regexp = password;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };
@@ -77,7 +86,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "fullname") {
-    const regexp = /^[a-zA-Z ]+$/;
+    const regexp = fullname;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };
@@ -89,7 +98,7 @@ export const validateInput = (type, checkingText, pass) => {
   }
 
   if (type === "address") {
-    const regexp = /^[a-zA-Z0-9\s,-]*$/;
+    const regexp = address;
     const checkingResult = regexp.exec(checkingText);
     if (checkingResult !== null) {
       return { errorMessage: "" };

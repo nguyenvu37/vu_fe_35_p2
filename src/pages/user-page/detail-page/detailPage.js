@@ -5,6 +5,7 @@ import callApi from "../../../common/callApi";
 import Waiting from "../../../common/waiting";
 import DetailProduct from "../../../components/detail-page/detail";
 import RecentlyProduct from "../../../components/detail-page/recentlyProduct";
+import { FacebookProvider, Comments } from "react-facebook";
 
 function DetailPage(props) {
   const product = useSelector((state) => state.dataDetail);
@@ -58,6 +59,21 @@ function DetailPage(props) {
     <main>
       <DetailProduct data={data} />
       <RecentlyProduct dataRecentlyProduct={dataRecentlyProduct} />
+
+      <div
+        className=""
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "20px 0 70px",
+        }}
+      >
+        <FacebookProvider appId="ZDnNMmzL">
+          <Comments href={`http://localhost:3000/detail/${idProduct}`} />
+        </FacebookProvider>
+      </div>
     </main>
   ) : (
     <div style={{ height: "600px" }}>

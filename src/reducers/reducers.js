@@ -6,7 +6,7 @@ import filters from "./filters";
 import users from "./user";
 import numCart from "./numCart";
 import delCart from "./delCart";
-import quantity from "./quantity";
+import addCart from "./addCart";
 
 const reducer = combineReducers({
   products,
@@ -16,7 +16,7 @@ const reducer = combineReducers({
   users,
   numCart,
   delCart,
-  quantity,
+  addCart,
 });
 
 export default reducer;

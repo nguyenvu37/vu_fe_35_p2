@@ -19,10 +19,15 @@ const OrderList = (props) => {
         null
       ).then((res) => {
         if (res && res.status === 200 && res.data) {
-          const dataProducts = [...res.data][0].data;
-          let summary = getSummary(dataProducts);
-          setData([...dataProducts]);
-          setSum(summary);
+          if (res.data[0] !== undefined) {
+            const dataProducts = [...res.data][0].data;
+            let summary = getSummary(dataProducts);
+            setData([...dataProducts]);
+            setSum(summary);
+          } else {
+            setData([]);
+            setSum(0);
+          }
         } else {
           setData([]);
           setSum(0);
@@ -31,6 +36,7 @@ const OrderList = (props) => {
     };
     fetchData();
   }, []);
+
   return (
     <section className="cart" style={{ minHeight: "500px" }}>
       {data.length > 0 ? (

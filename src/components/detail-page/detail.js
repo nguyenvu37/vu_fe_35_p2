@@ -1,19 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
-import { actQuantity } from "../../actions/actions";
+import React, { useEffect, useState } from "react";
 import AddToCart from "../../common/addToCart";
 import { getPrice } from "../../common/calculation";
 
 const DetailProduct = (props) => {
   const { data } = props;
   const [img, setImg] = useState(data[0].img);
-  const inputQuantity = useRef();
-  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     if (data.length !== 0) setImg(data[0].img);
 
-    return function cleanup() {
+    return () => {
       setImg("");
     };
   }, [data]);
@@ -22,12 +19,6 @@ const DetailProduct = (props) => {
     setImg(item);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (inputQuantity.current.value !== "") {
-      dispatch(actQuantity(inputQuantity.current.value));
-    } else dispatch(actQuantity(1));
-  };
   return (
     <section>
       <div className="box">
@@ -94,27 +85,30 @@ const DetailProduct = (props) => {
               </small>
             </div>
             <p style={{ marginBottom: "20px" }}>{data[0].info}</p>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <div className="detail__info__quantity item-input">
-                <label
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "18px",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  số lượng
-                </label>
-                <input
-                  type="number"
-                  style={{ margin: "10px 0" }}
-                  ref={inputQuantity}
-                />
-              </div>
-              <div style={{ float: "left" }}>
-                <AddToCart rate={data[0].rating} data={data[0]} />
-              </div>
-            </form>
+            <div className="detail__info__quantity item-input">
+              <label
+                style={{
+                  fontWeight: "600",
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                }}
+              >
+                số lượng
+              </label>
+              <input
+                type="number"
+                style={{ margin: "10px 0" }}
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+              />
+            </div>
+            <div style={{ float: "left" }}>
+              <AddToCart
+                rate={data[0].rating}
+                data={data[0]}
+                quanDetail={quantity}
+              />
+            </div>
           </div>
         </div>
       </div>

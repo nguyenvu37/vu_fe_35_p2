@@ -6,6 +6,7 @@ import PaymentItem from "./paymentItem";
 import { v4 as uuidv4 } from "uuid";
 import { withRouter } from "react-router-dom";
 import { getSummary, getTotal } from "../../common/calculation";
+import { useSelector } from "react-redux";
 
 const PaymentList = (props) => {
   const { t } = useTranslation("translation");
@@ -13,6 +14,7 @@ const PaymentList = (props) => {
   const [dataCustomer, setDataCustomer] = useState([]);
   const [dataProduct, setDataProduct] = useState([]);
   const [sum, setSum] = useState(0);
+  const inCart = useSelector((state) => state.addCart);
 
   useEffect(() => {
     const fetchDataCustomer = async () => {
@@ -48,7 +50,6 @@ const PaymentList = (props) => {
           }
         });
       } else {
-        const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
         const summary = getSummary(inCart);
         setDataProduct([...inCart]);
         setSum(summary);
@@ -57,7 +58,7 @@ const PaymentList = (props) => {
 
     fetchDataCustomer();
     fetchDataProduct();
-  }, [idCustomer]);
+  }, [idCustomer, inCart]);
 
   const handleBackInformation = () => {
     props.history.push("/information-customer");
@@ -70,6 +71,7 @@ const PaymentList = (props) => {
         let dataOrder = {
           ...item,
           total: getTotal(item, item.quantity),
+          time: Date.now(),
         };
         products.push({ ...dataOrder });
       });
@@ -81,12 +83,12 @@ const PaymentList = (props) => {
       };
       localStorage.setItem("order", JSON.stringify({ ...order }));
     } else {
-      const inCart = JSON.parse(localStorage.getItem("inCart")) || [];
       const products = [];
       await inCart.forEach((item) => {
         let dataOrder = {
           ...item,
           total: getTotal(item, item.quantity),
+          time: Date.now(),
         };
         products.push({ ...dataOrder });
       });

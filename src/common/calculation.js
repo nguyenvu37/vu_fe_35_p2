@@ -21,3 +21,26 @@ export const getPrice = (data) => {
 export const getQuantity = (arr) => {
   return arr.map((item) => item.quantity).reduce((a, b) => a + b, 0);
 };
+
+export const getKeywordText = (str) => {
+  return str
+    .toUpperCase()
+    .split(" ")
+    .filter((x) => x !== "")
+    .join("");
+};
+
+export const getKeywordId = (str) => {
+  return str
+    .toUpperCase()
+    .split("-")
+    .filter((x) => x !== "-")
+    .join("");
+};
+
+export function formCurencyVN(price) {
+  return price.toLocaleString("it-IT", {
+    style: "currency",
+    currency: "VND",
+  });
+}

@@ -5,6 +5,8 @@ import NotificationManager from "react-notifications/lib/NotificationManager";
 import { Link } from "react-router-dom";
 import callApi from "../../../common/callApi";
 import { withRouter } from "react-router-dom";
+import { actAddCart } from "../../../actions/actions";
+import { useDispatch } from "react-redux";
 
 const CreditCard = (props) => {
   const { t } = useTranslation("translation");
@@ -15,6 +17,7 @@ const CreditCard = (props) => {
   const [number, setNumber] = useState("4231412342345234");
   const order = JSON.parse(localStorage.getItem("order")) || {};
   const [data, setData] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.getItem("order") !== null) {
@@ -67,10 +70,7 @@ const CreditCard = (props) => {
               ).then((res) => {
                 localStorage.removeItem("idCustomer");
                 localStorage.removeItem("order");
-                NotificationManager.success(
-                  "Success message",
-                  t("pay-success.title")
-                );
+                NotificationManager.success(t("pay-success.title"));
                 props.history.push("/");
               });
             }
@@ -90,18 +90,15 @@ const CreditCard = (props) => {
             data: [...products],
           };
 
-          callApi(`order`, "post", { ...dataOrder }).then((res) => {
+          callApi(`order`, "post", { ...dataOrder }).then(() => {
             callApi(
               `carts/${JSON.parse(localStorage.getItem("Token")).id}`,
               "delete",
               null
-            ).then((res) => {
+            ).then(() => {
               localStorage.removeItem("idCustomer");
               localStorage.removeItem("order");
-              NotificationManager.success(
-                "Success message",
-                t("pay-success.title")
-              );
+              NotificationManager.success(t("pay-success.title"));
               props.history.push("/");
             });
           });
@@ -126,13 +123,10 @@ const CreditCard = (props) => {
             `carts/${JSON.parse(localStorage.getItem("Token")).id}`,
             "delete",
             null
-          ).then((res) => {
+          ).then(() => {
             localStorage.removeItem("idCustomer");
             localStorage.removeItem("order");
-            NotificationManager.success(
-              "Success message",
-              t("pay-success.title")
-            );
+            NotificationManager.success(t("pay-success.title"));
             props.history.push("/");
           });
         });
@@ -163,13 +157,11 @@ const CreditCard = (props) => {
             }
           });
           callApi(`order/${arrOrder[0].id}`, "put", { ...arrOrder[0] }).then(
-            (res) => {
+            () => {
               localStorage.clear();
-              NotificationManager.success(
-                "Success message",
-                t("pay-success.title")
-              );
+              NotificationManager.success(t("pay-success.title"));
               props.history.push("/");
+              dispatch(actAddCart([]));
             }
           );
         } else {
@@ -189,11 +181,9 @@ const CreditCard = (props) => {
 
           callApi(`order`, "post", { ...dataOrder }).then((res) => {
             localStorage.clear();
-            NotificationManager.success(
-              "Success message",
-              t("pay-success.title")
-            );
+            NotificationManager.success(t("pay-success.title"));
             props.history.push("/");
+            dispatch(actAddCart([]));
           });
         }
       } else {
@@ -218,6 +208,7 @@ const CreditCard = (props) => {
             t("pay-success.title")
           );
           props.history.push("/");
+          dispatch(actAddCart([]));
         });
       }
     }

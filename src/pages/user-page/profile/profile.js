@@ -20,8 +20,10 @@ const Profile = (props) => {
         null
       ).then((res) => {
         if (res && res.status === 200 && res.data) {
-          const carts = [...res.data][0].data;
-          setDataCart([...carts]);
+          if (res.data[0] !== undefined) {
+            const orders = [...res.data][0].data;
+            setDataCart([...orders]);
+          } else setDataCart([]);
         } else setDataCart([]);
       });
     };
@@ -33,8 +35,10 @@ const Profile = (props) => {
         null
       ).then((res) => {
         if (res && res.status === 200 && res.data) {
-          const orders = [...res.data][0].data;
-          setDataOrder([...orders]);
+          if (res.data[0] !== undefined) {
+            const orders = [...res.data][0].data;
+            setDataOrder([...orders]);
+          } else setDataOrder([]);
         } else setDataOrder([]);
       });
     };

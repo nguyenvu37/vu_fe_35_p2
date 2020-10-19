@@ -20,7 +20,7 @@ function HomePage() {
   }, [dataHotTrend, dataNewProduct]);
 
   return (
-    <main>
+    <main style={{ position: "relative" }}>
       <div className="background">
         <div className="background__img">
           <Sliders />
@@ -48,6 +48,23 @@ function HomePage() {
       <CurrentOffers />
       <NewProducts dataNewProducts={dataNewProducts} />
       <VisitUs />
+      <div className="share-facebook">
+        {/* <FacebookProvider appId="15ghIr53">
+          <div
+            className="fb-share-button"
+            data-href="http://localhost:3000/"
+            data-layout="button"
+            data-size="large"
+          >
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2F&amp;src=sdkpreparse"
+              className="fb-xfbml-parse-ignore"
+            >
+              Chia sẻ
+            </a>
+          </div>
+        </FacebookProvider> */}
+      </div>
     </main>
   );
 }

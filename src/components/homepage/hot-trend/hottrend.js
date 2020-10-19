@@ -8,6 +8,7 @@ import AddToCart from "../../../common/addToCart";
 import callApi from "../../../common/callApi";
 import Waiting from "../../../common/waiting";
 import ViewAll from "../../../common/viewAll";
+import { getPrice } from "../../../common/calculation";
 
 const Hottrend = (props) => {
   const { t } = useTranslation("translation");
@@ -99,7 +100,7 @@ const Hottrend = (props) => {
                         {item.name}
                       </button>
                       <span className="price">
-                        {Math.floor(item.price * ((100 - item.discount) / 100))
+                        {getPrice(item)
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                         <small>đ</small>

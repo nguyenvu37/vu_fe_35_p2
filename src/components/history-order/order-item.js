@@ -1,8 +1,10 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { getPrice, getTotal } from "../../common/calculation";
 
 const OrderItem = (props) => {
   const { data } = props;
+  const history = useHistory();
   return (
     <tr>
       <td style={{ textTransform: "uppercase" }}>
@@ -15,7 +17,7 @@ const OrderItem = (props) => {
       </td>
       <td
         style={{ width: "200px", padding: "0 5px", cursor: "pointer" }}
-        onClick={() => props.history.push(`/detail/${data.id}`)}
+        onClick={() => history.push(`/detail/${data.code}`)}
       >
         {data.name}
       </td>
