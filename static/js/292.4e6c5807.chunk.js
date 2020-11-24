@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[292],{315:function(i,e,p){i.exports=p.p+"static/media/yehwadam-revitalizing-moisturizing-cream-special-gift-set-1-500x500.c7ccaf21.jpg"}}]);
+//# sourceMappingURL=292.4e6c5807.chunk.js.map

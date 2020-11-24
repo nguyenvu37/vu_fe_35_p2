@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[332],{170:function(p,s,a){p.exports=a.p+"static/media/mandala-store.bb1b717c.jpg"}}]);
+//# sourceMappingURL=332.7bd3544c.chunk.js.map

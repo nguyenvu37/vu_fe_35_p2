@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[211],{234:function(a,e,n){a.exports=n.p+"static/media/sua-rua-mat-loai-bo-ba-nhon-chiet-xuat-chanh-va-tra-xanh-enesti-daytoday-lemon-and-green-tea-cleansing-foam-160ml-31-500x500.a12a190e.jpg"}}]);
+//# sourceMappingURL=211.bc965399.chunk.js.map

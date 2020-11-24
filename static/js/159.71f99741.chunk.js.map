@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/font/utm-avobold.ttf"],"names":["module","exports"],"mappings":"iGAAAA,EAAOC,QAAU,IAA0B","file":"static/js/159.71f99741.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/utm-avobold.a48e217e.ttf\";"],"sourceRoot":""}

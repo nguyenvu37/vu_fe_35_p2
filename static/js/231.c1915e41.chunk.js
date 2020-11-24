@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[231],{254:function(p,e,s){p.exports=s.p+"static/media/innisfree2.bcb85492.jpg"}}]);
+//# sourceMappingURL=231.c1915e41.chunk.js.map

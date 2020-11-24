@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[110],{97:function(n,e,t){"use strict";function o(){return!!localStorage.getItem("Token")}function c(){return!!localStorage.getItem("TokenAdmin")}t.r(e),t.d(e,"checkTokenLogin",(function(){return o})),t.d(e,"checkTokenLoginAdmin",(function(){return c}))}}]);
+//# sourceMappingURL=110.93245f0a.chunk.js.map

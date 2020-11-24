@@ -1,0 +1,1 @@
+{"version":3,"sources":["config/config.js"],"names":["host"],"mappings":"6GAAA,4CAAO,IAAMA,EAAO","file":"static/js/115.6bfd756c.chunk.js","sourcesContent":["export const host = \"https://data-mandala.herokuapp.com\";\r\n"],"sourceRoot":""}

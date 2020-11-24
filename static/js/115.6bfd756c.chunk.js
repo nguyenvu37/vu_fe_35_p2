@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[115],{64:function(t,p,a){"use strict";a.r(p),a.d(p,"host",(function(){return s}));var s="https://data-mandala.herokuapp.com"}}]);
+//# sourceMappingURL=115.6bfd756c.chunk.js.map

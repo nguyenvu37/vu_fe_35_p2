@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[157],{501:function(p,e,t){p.exports=t.p+"static/media/UTMASGraceland.612bb0de.ttf"}}]);
+//# sourceMappingURL=157.1e201cb5.chunk.js.map

@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[266],{289:function(a,p,e){a.exports=e.p+"static/media/kem-duong-am-sang-da-gao-romand-back-me-tone-up-cream.html9-500x500.ff184311.jpg"}}]);
+//# sourceMappingURL=266.2d6fa85e.chunk.js.map

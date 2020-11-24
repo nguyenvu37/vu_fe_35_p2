@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[158],{502:function(p,t,e){p.exports=e.p+"static/media/UTMAndrogyne.954afb47.ttf"}}]);
+//# sourceMappingURL=158.139b8607.chunk.js.map

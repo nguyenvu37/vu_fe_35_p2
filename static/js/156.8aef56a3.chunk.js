@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[156],{500:function(p,e,s){p.exports=s.p+"static/media/TimesNewRoman400.3f7dc90a.ttf"}}]);
+//# sourceMappingURL=156.8aef56a3.chunk.js.map

@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[206],{229:function(a,e,s){a.exports=s.p+"static/media/xit-khoang-duong-am-chiet-xuat-lo-hoi-enesti-suansu-aloe-vera-skin-mist-150ml-10-500x500.e31aa007.jpg"}}]);
+//# sourceMappingURL=206.fafbd224.chunk.js.map

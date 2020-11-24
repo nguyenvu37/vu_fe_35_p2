@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[159],{503:function(p,t,e){p.exports=e.p+"static/media/utm-avobold.a48e217e.ttf"}}]);
+//# sourceMappingURL=159.71f99741.chunk.js.map

@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[331],{353:function(p,s,t){p.exports=t.p+"static/media/bg-discount1.08a99488.jpg"}}]);
+//# sourceMappingURL=331.43d4eaf0.chunk.js.map

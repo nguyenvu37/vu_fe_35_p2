@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[342],{359:function(p,e,s){p.exports=s.p+"static/media/bg-product.35e65f08.jpg"}}]);
+//# sourceMappingURL=342.385f156f.chunk.js.map

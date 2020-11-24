@@ -1,0 +1,2 @@
+(this.webpackJsonpvu_fe_35_p2=this.webpackJsonpvu_fe_35_p2||[]).push([[256],{279:function(p,e,i){p.exports=i.p+"static/media/Lime-Giga-White-Tone-Up-Cream-36-500x500.f770ac15.jpg"}}]);
+//# sourceMappingURL=256.c0d8d8c3.chunk.js.map
